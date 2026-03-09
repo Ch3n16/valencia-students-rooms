@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estancias de Verano Valencia | Alquiler Julio y Agosto Estudiantes</title>
+    <meta name="description"
+        content="Alquiler de habitaciones en verano en Valencia para estudiantes y jóvenes profesionales. Julio y agosto cerca de la UPV y UV. Todo incluido, sin comisiones.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="top-bar">
+        <span id="top-bar-text">☀️ Verano: <strong>Julio & Agosto Disponibles</strong>. ¡Reserva ahora!</span>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="logo"><img src="logo.png" alt="Gorgos" style="height: 55px; width: auto;"></a>
+            <div class="nav-links">
+                <a href="index.html" id="nav-home">Inicio</a>
+                <div class="dropdown-container">
+                    <a href="ubicacion.html" id="nav-loc">Ubicación ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="ubicacion.html" class="dropdown-item">📍 Plaza Xúquer</a>
+                        <a href="zonas-comunes.html" class="dropdown-item">🛋️ Zonas Comunes</a>
+                    </div>
+                </div>
+                <a href="habitaciones.html" id="nav-rooms">Habitaciones</a>
+                <a href="verano.html" class="active" id="nav-summer">Estancias de Verano</a>
+                <a href="vivir-valencia.html" id="nav-life">Vivir en Valencia</a>
+                <a href="faqs.html" id="nav-faqs">FAQs</a>
+                <a href="contacto.html" class="btn btn-primary" id="nav-book">Reservar</a>
+
+                <div class="lang-toggle">
+                    <div class="lang-opt active" data-lang="es">ES</div>
+                    <div class="lang-opt" data-lang="en">EN</div>
+                </div>
+            </div>
+            <div class="mobile-toggle">☰</div>
+        </div>
+    </nav>
+
+    <!-- Summer Hero -->
+    <main class="section">
+        <div class="container">
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <div>
+                    <div class="badge"
+                        style="margin-bottom: 1.5rem; background: var(--accent); color: white; font-size: 0.95rem;">☀️
+                        Julio & Agosto</div>
+                    <h1 id="summer-title" style="font-size: clamp(2.2rem, 4vw, 3.2rem);">Alquiler de habitaciones en
+                        verano en Valencia
+                        para estudiantes y profesionales</h1>
+                    <p id="summer-subtitle" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                        Disponible también como
+                        alojamiento de verano para estudiantes internacionales, cursos intensivos, prácticas
+                        universitarias o por motivos profesionales durante los meses de julio y agosto.</p>
+                    <p style="font-size: 1.05rem; color: var(--text-light);">Ubicado en Plaza Xúquer, a 5 minutos
+                        andando de la UPV y la Universidad de Valencia, este piso ofrece una opción segura, equipada y
+                        bien situada para combinar estudio o trabajo y verano en Valencia.</p>
+                </div>
+                <div class="room-img-container" style="height: 500px;">
+                    <img src="city_vibe.png" alt="Verano estudiantes Valencia" style="height: 100%; object-fit: cover;">
+                    <div
+                        style="position: absolute; bottom: 2rem; left: 2rem; background: white; padding: 1.5rem; border-radius: 16px; box-shadow: var(--shadow-lg);">
+                        <p style="margin: 0; font-weight: 700; color: var(--accent); font-size: 1.2rem;">☀️ Summer Stays
+                        </p>
+                        <p style="margin: 0.3rem 0 0; font-size: 0.9rem; color: var(--text-light);">Julio & Agosto 2026
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Programas de Verano -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="card" style="background: white; padding: 3rem;">
+                <h2 style="margin-bottom: 1.5rem;">Ideal para cursos intensivos, programas internacionales y por motivos
+                    laborales en verano.
+                </h2>
+
+
+                <p style="color: var(--text-light); font-size: 1rem; margin-bottom: 0.5rem;">Alquiler mensual o
+                    quincenal, con todos los suministros incluidos y sin comisiones de agencia.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Alta Demanda -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div
+                style="background: linear-gradient(135deg, #FF6600 0%, #FF8833 100%); padding: 3rem; border-radius: var(--radius); color: white; text-align: center;">
+                <h2 style="color: white; margin-bottom: 1.5rem;">⚡ Alta demanda en meses de verano</h2>
+                <p style="font-size: 1.15rem; color: rgba(255,255,255,0.95); max-width: 700px; margin: 0 auto 1rem;">
+                    Valencia es uno de los destinos académicos más demandados en verano. Las habitaciones en Plaza
+                    Xúquer suelen reservarse con antelación, especialmente para programas internacionales.</p>
+                <p style="font-size: 1.1rem; color: rgba(255,255,255,0.9); margin-bottom: 2rem;">Se recomienda consultar
+                    disponibilidad con tiempo.</p>
+                <a href="contacto.html?period=Verano26" class="btn"
+                    style="background: white; color: var(--accent); font-weight: 700; padding: 1rem 3rem;">Consultar
+                    Disponibilidad en Verano</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll Down Arrow -->
+    <div class="scroll-arrow" id="scrollArrow" onclick="scrollToNext()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 16l-6-6h12z" />
+        </svg>
+    </div>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .scroll-arrow {
+            position: fixed;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(255, 102, 0, 0.3);
+            transition: all 0.3s ease;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-arrow:hover {
+            transform: translateX(-50%) scale(1.1);
+            box-shadow: 0 6px 30px rgba(255, 102, 0, 0.5);
+        }
+
+        .scroll-arrow svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+    </style>
+
+    <script>
+        function scrollToNext() {
+            const sections = document.querySelectorAll('.section, section');
+            const scrollPosition = window.scrollY + window.innerHeight / 2;
+            for (let i = 0; i < sections.length; i++) {
+                const section = sections[i];
+                if (scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
+                    if (i < sections.length - 1) sections[i + 1].scrollIntoView({ behavior: 'smooth' });
+                    else document.getElementById('scrollArrow').style.display = 'none';
+                    break;
+                }
+            }
+        }
+        window.addEventListener('scroll', () => {
+            const scrollArrow = document.getElementById('scrollArrow');
+            const scrollPosition = window.scrollY + window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            scrollArrow.style.display = scrollPosition >= documentHeight - 100 ? 'none' : 'flex';
+        });
+    </script>
+
+    <footer style="background: #111; color: white; padding: 4rem 0;">
+        <div class="container" style="text-align: center; opacity: 0.7;">
+            <p style="color: white; margin-bottom: 0;">&copy; 2026 Gorgos Living. Valencia Premium Student Housing.</p>
+        </div>
+    </footer>
+
+    <a id="wa-float-btn" href="https://wa.me/34000000000" target="_blank" class="wa-float-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.103 1.522 5.83L.057 23.882a.5.5 0 0 0 .61.637l6.264-1.643A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.944 9.944 0 0 1-5.17-1.448l-.37-.22-3.828 1.004 1.018-3.717-.242-.38A9.944 9.944 0 0 1 2 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/>
+        </svg>
+
+    </a>
+
+</body>
+
+</html>

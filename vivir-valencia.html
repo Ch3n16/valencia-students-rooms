@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivir en Valencia | Guía para Estudiantes</title>
+    <meta name="description"
+        content="Guía para vivir en Valencia como estudiante. Descubre la ciudad, playas, ocio, transporte y todo lo que necesitas saber.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="top-bar">
+        <span id="top-bar-text">☀️ Verano: <strong>Julio & Agosto Disponibles</strong>. ¡Reserva ahora!</span>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="logo"><img src="logo.png" alt="Gorgos" style="height: 55px; width: auto;"></a>
+            <div class="nav-links">
+                <a href="index.html" id="nav-home">Inicio</a>
+                <div class="dropdown-container">
+                    <a href="ubicacion.html" id="nav-loc">Ubicación ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="ubicacion.html" class="dropdown-item">📍 Plaza Xúquer</a>
+                        <a href="zonas-comunes.html" class="dropdown-item">🛋️ Zonas Comunes</a>
+                    </div>
+                </div>
+                <a href="habitaciones.html" id="nav-rooms">Habitaciones</a>
+                <a href="verano.html" id="nav-summer">Estancias de Verano</a>
+                <a href="vivir-valencia.html" class="active" id="nav-life">Vivir en Valencia</a>
+                <a href="faqs.html" id="nav-faqs">FAQs</a>
+                <a href="contacto.html" class="btn btn-primary" id="nav-book">Reservar</a>
+
+                <div class="lang-toggle">
+                    <div class="lang-opt active" data-lang="es">ES</div>
+                    <div class="lang-opt" data-lang="en">EN</div>
+                </div>
+            </div>
+            <div class="mobile-toggle">☰</div>
+        </div>
+    </nav>
+
+    <main class="container section">
+        <h1 style="text-align: center; margin-bottom: 3rem;" id="life-title">Vivir en Valencia</h1>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem;">
+
+            <div class="card">
+                <h3 id="life-city-title">🏙️ Conoce la Ciudad</h3>
+                <ul style="margin-top: 1rem; color: #555;">
+                    <li><a href="https://www.visitvalencia.com/" target="_blank" style="text-decoration:underline;">Qué
+                            Visitar en Valencia</a></li>
+                    <li><a href="https://www.roigarena.com/es/" target="_blank" style="text-decoration:underline;">Roig
+                            Arena</a></li>
+                    <li><a href="https://www.cac.es/" target="_blank" style="text-decoration:underline;">Ciudad de las
+                            Artes y las Ciencias</a>
+                    </li>
+                    <li><a href="https://www.visitvalencia.com/que-ver-valencia/valencia-en-tres-dias" target="_blank"
+                            style="text-decoration:underline;">Valencia en 3 Días</a></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3 id="life-beach-title">🏖️ La Playa</h3>
+                <ul style="margin-top: 1rem; color: #555;">
+                    <li><a href="https://www.visitvalencia.com/que-ver-valencia/playas-de-valencia" target="_blank"
+                            style="text-decoration:underline;">Las Playas de Valencia</a>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3 id="life-night-title">🌙 La Noche</h3>
+                <ul style="margin-top: 1rem; color: #555;">
+                    <li><a href="https://www.visitvalencia.com/que-hacer-valencia/ocio" target="_blank"
+                            style="text-decoration:underline;">Ocio y Vida Nocturna</a></li>
+                    <li><a href="https://planvalencia.com/valencia-de-noche-vida-nocturna-y-ocio-para-disfrutar-al-maximo/"
+                            target="_blank" style="text-decoration:underline;">Barrios de Moda</a></li>
+                    <li><a href="https://www.marinabeachclub.com/" target="_blank"
+                            style="text-decoration:underline;">Marina Beach Club</a></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3 id="life-poi-title">🌳 Zonas de Interés</h3>
+                <ul style="margin-top: 1rem; color: #555;">
+                    <li><a href="https://www.visitvalencia.com/que-hacer-valencia/naturaleza-en-valencia"
+                            target="_blank" style="text-decoration:underline;">Naturaleza en Valencia</a></li>
+                    <li><a href="https://albufera.valencia.es/" target="_blank"
+                            style="text-decoration:underline;">Parque Natural de la Albufera</a></li>
+                    <li><a href="https://www.visitvalencia.com/que-ver-valencia/jardines-del-turia" target="_blank"
+                            style="text-decoration:underline;">Jardin del Turia</a></li>
+                    <li><a href="https://www.bioparcvalencia.es/" target="_blank"
+                            style="text-decoration:underline;">Bioparc Valencia</a></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3 id="life-shop-title">🛍️ Shopping</h3>
+                <ul style="margin-top: 1rem; color: #555;">
+                    <li><a href="https://www.visitvalencia.com/que-hacer-valencia/de-compras-en-valencia"
+                            target="_blank" style="text-decoration:underline;">De Compras en Valencia</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Calle_de_Colón_(Valencia)" target="_blank"
+                            style="text-decoration:underline;">Calle Colón</a></li>
+                    <li><a href="https://www.mercadocentralvalencia.es/" target="_blank"
+                            style="text-decoration:underline;">Mercado Central</a></li>
+                    <li><a href="https://aqua-multiespacio.com/" target="_blank" style="text-decoration:underline;">C.C
+                            Aqua</a></li>
+                    <li><a href="https://www.ccsaler.com/ES" target="_blank" style="text-decoration:underline;">C.C
+                            Saler</a></li>
+                    <li><a href="https://www.bonaire.es/" target="_blank" style="text-decoration:underline;">Bonaire
+                            (Outlet)</a></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3 id="life-secret-title">🥘 Secretos & Fiestas</h3>
+                <ul style="margin-top: 1rem; color: #555;">
+                    <li><a href="https://www.visitvalencia.com/que-hacer-valencia/gastronomia/que-comer-valencia"
+                            target="_blank" style="text-decoration:underline;">Gastronomía Valenciana</a></li>
+                    <li><a href="https://www.fallas.com/" target="_blank" style="text-decoration:underline;">Las Fallas
+                            (Marzo)</a></li>
+                    <li><a href="https://www.visitvalencia.com/agenda-valencia/fiestas" target="_blank"
+                            style="text-decoration:underline;">Fiestas Tradicionales</a></li>
+                    <li><a href="https://www.valencia.es/es/agenda" target="_blank"
+                            style="text-decoration:underline;">Agenda y Eventos</a></li>
+                    <li><a href="https://latomatina.info/" target="_blank" style="text-decoration:underline;">La
+                            Tomatina (Buñol)</a></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3 id="life-move-title">🚲 Muévete</h3>
+                <ul style="margin-top: 1rem; color: #555;">
+                    <li><a href="https://www.metrovalencia.es/" target="_blank" style="text-decoration:underline;">En
+                            Metro</a></li>
+                    <li><a href="https://www.emtvalencia.es/" target="_blank" style="text-decoration:underline;">En
+                            Autobus</a></li>
+                    <li><a href="https://www.valenbisi.es/" target="_blank" style="text-decoration:underline;">En
+                            Bici</a></li>
+                    <li><a href="https://www.rideyego.com/es/ciudades/valencia/" target="_blank"
+                            style="text-decoration:underline;">Con Yego</a></li>
+                    <li><a href="https://www.cooltra.com/es/valencia/" target="_blank"
+                            style="text-decoration:underline;">Con Cooltra</a></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3 id="life-phone-title">📞 Teléfonos de Interés</h3>
+                <ul style="margin-top: 1rem; color: #555;">
+                    <li><a href="https://www.visitvalencia.com/planifica-tu-viaje-a-valencia/oficinas-de-turismo-valencia"
+                            target="_blank" style="text-decoration:underline;">Información Turística</a></li>
+                    <li>Emergencias: 112</li>
+                    <li>Policía: 091 / 092</li>
+                    <li><a href="https://www.valencia.es/cas/atencion-ciudadana-covid-19/-/content/tel%C3%A9fonos-de-urgencia-en-la-ciudad-de-valencia"
+                            target="_blank" style="text-decoration:underline;">Telefonos de urgencia</a></li>
+                    <li><a href="https://www.google.com/maps/place/Hospital+Cl%C3%ADnico+Universitario+de+Valencia/@39.4786824,-0.3638653,16z/data=!3m2!4b1!5s0xd6048a442228c23:0xadd8ba9c5a89dfa9!4m6!3m5!1s0xd6048a470403373:0x22bf10f332155e7a!8m2!3d39.4786783!4d-0.3612904!16s%2Fg%2F1211jj37?entry=ttu&g_ep=EgoyMDI2MDIwMS4wIKXMDSoASAFQAw%3D%3D"
+                            target="_blank" style="text-decoration:underline;">Hospital Clinico</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Scroll Down Arrow -->
+    <div class="scroll-arrow" id="scrollArrow" onclick="scrollToNext()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 16l-6-6h12z" />
+        </svg>
+    </div>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .scroll-arrow {
+            position: fixed;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(255, 102, 0, 0.3);
+            transition: all 0.3s ease;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-arrow:hover {
+            transform: translateX(-50%) scale(1.1);
+            box-shadow: 0 6px 30px rgba(255, 102, 0, 0.5);
+        }
+
+        .scroll-arrow svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+    </style>
+
+    <script>
+        function scrollToNext() {
+            const sections = document.querySelectorAll('.section, section');
+            const scrollPosition = window.scrollY + window.innerHeight / 2;
+            for (let i = 0; i < sections.length; i++) {
+                const section = sections[i];
+                if (scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
+                    if (i < sections.length - 1) sections[i + 1].scrollIntoView({ behavior: 'smooth' });
+                    else document.getElementById('scrollArrow').style.display = 'none';
+                    break;
+                }
+            }
+        }
+        window.addEventListener('scroll', () => {
+            const scrollArrow = document.getElementById('scrollArrow');
+            const scrollPosition = window.scrollY + window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            scrollArrow.style.display = scrollPosition >= documentHeight - 100 ? 'none' : 'flex';
+        });
+    </script>
+
+    <a id="wa-float-btn" href="https://wa.me/34000000000" target="_blank" class="wa-float-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.103 1.522 5.83L.057 23.882a.5.5 0 0 0 .61.637l6.264-1.643A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.944 9.944 0 0 1-5.17-1.448l-.37-.22-3.828 1.004 1.018-3.717-.242-.38A9.944 9.944 0 0 1 2 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/>
+        </svg>
+
+    </a>
+
+</body>
+
+</html>

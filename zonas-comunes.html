@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zonas Comunes y Servicios | Habitaciones Estudiantes Valencia</title>
+    <meta name="description"
+        content="Zonas comunes amplias y funcionales. 2 baños completos, cocina equipada, lavadora, climatización. Vivienda exclusiva para chicas estudiantes.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="top-bar">
+        <span id="top-bar-text">☀️ Verano: <strong>Julio & Agosto Disponibles</strong>. ¡Reserva ahora!</span>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="logo"><img src="logo.png" alt="Gorgos" style="height: 55px; width: auto;"></a>
+            <div class="nav-links">
+                <a href="index.html" id="nav-home">Inicio</a>
+                <div class="dropdown-container">
+                    <a href="ubicacion.html" id="nav-loc">Ubicación ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="ubicacion.html" class="dropdown-item">📍 Plaza Xúquer</a>
+                        <a href="zonas-comunes.html" class="dropdown-item active">🛋️ Zonas Comunes</a>
+                    </div>
+                </div>
+                <a href="habitaciones.html" id="nav-rooms">Habitaciones</a>
+                <a href="verano.html" id="nav-summer">Estancias de Verano</a>
+                <a href="vivir-valencia.html" id="nav-life">Vivir en Valencia</a>
+                <a href="faqs.html" id="nav-faqs">FAQs</a>
+                <a href="contacto.html" class="btn btn-primary" id="nav-book">Reservar</a>
+
+                <div class="lang-toggle">
+                    <div class="lang-opt active" data-lang="es">ES</div>
+                    <div class="lang-opt" data-lang="en">EN</div>
+                </div>
+            </div>
+            <div class="mobile-toggle">☰</div>
+        </div>
+    </nav>
+
+    <!-- Zonas Comunes Section -->
+    <main class="container section">
+        <h1 style="text-align: center; margin-bottom: 1rem;" id="common-title">Zonas comunes y servicios</h1>
+        <p
+            style="text-align: center; max-width: 700px; margin: 0 auto 1rem; font-size: 1.15rem; color: var(--text-light);">
+            Espacios comunes amplios, funcionales y pensados para la convivencia</p>
+        <p
+            style="text-align: center; max-width: 700px; margin: 0 auto 3rem; font-size: 1.05rem; color: var(--text-light);">
+            Vivienda exclusiva para chicas estudiantes, con convivencia organizada y un entorno seguro</p>
+
+        <div class="grid" style="grid-template-columns: 1fr 2fr; gap: 4rem;">
+
+            <div class="card">
+                <h3 id="common-list-title">Servicios Comunes</h3>
+                <ul style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem;" id="common-list">
+                    <li>🚿 <strong>2 baños completos</strong> con ducha</li>
+                    <li>🍳 <strong>Cocina totalmente completa</strong> con lavavajillas y menaje completo</li>
+                    <li>❄️ <strong>2 frigoríficos combi</strong> con espacios asignados por habitación</li>
+                    <li>🧺 <strong>Lavadora 8kg</strong>, plancha y aspiradora</li>
+                    <li>🌀 <strong>Ventiladores de techo</strong> y calefacción por radiadores</li>
+                    <li>📚 <strong>Ambiente tranquilo</strong> y respetuoso, ideal para concentración académica</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 style="margin-bottom: 2rem;" id="common-gallery-title">Disfruta de todas las comodidades</h3>
+                <p style="margin-bottom: 1rem; font-size: 0.9rem; color: #666;" id="common-gallery-sub">Pasa el ratón (o
+                    pulsa) para ampliar.</p>
+
+                <div class="gallery-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;">
+                    <style>
+                        .gallery-img {
+                            aspect-ratio: 16/9;
+                            cursor: pointer;
+                            transition: transform 0.3s;
+                            width: 100%;
+                            border-radius: 8px;
+                        }
+
+                        .gallery-img:hover {
+                            transform: scale(1.5);
+                            z-index: 10;
+                            position: relative;
+                            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+                        }
+                    </style>
+                    <img src="common_kitchen.png" class="gallery-img" alt="Cocina compartida estudiantes">
+                    <img src="room_1.png" class="gallery-img" alt="Habitación estudiantes Valencia">
+                    <img src="common_kitchen.png" class="gallery-img" alt="Zonas comunes cocina">
+                    <img src="room_1.png" class="gallery-img" alt="Habitación amueblada">
+                    <img src="common_kitchen.png" class="gallery-img" alt="Cocina totalmente equipada">
+                    <img src="room_1.png" class="gallery-img" alt="Habitación confort">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Info Block -->
+        <div
+            style="margin-top: 3rem; background: #f8fafc; padding: 2rem; border-radius: 16px; border: 1px solid #e2e8f0;">
+            <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 0.5rem;">Todas las habitaciones están
+                pensadas para estudiantes que buscan alquiler por meses en Valencia con altos estándares de seguridad,
+                confort y estabilidad académica.</p>
+            <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 0;">Cada espacio ha sido equipado
+                para facilitar el estudio, el descanso y la organización durante el curso completo.</p>
+        </div>
+    </main>
+
+    <!-- Modelo de Convivencia Section -->
+    <section class="section" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white;">
+        <div class="container" style="max-width: 900px; text-align: center;">
+            <h2 style="color: white; margin-bottom: 2rem; font-size: clamp(2rem, 4vw, 3rem);">🛡️ Modelo de convivencia
+                estable y seguro</h2>
+            <p style="font-size: 1.15rem; color: rgba(255,255,255,0.9); line-height: 1.8; margin-bottom: 1.5rem;">La
+                vivienda está orientada exclusivamente a chicas estudiantes universitarias con el objetivo de mantener
+                un entorno homogéneo, organizado y especialmente tranquilo durante todo el curso académico.</p>
+            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); line-height: 1.8;">Este modelo favorece la
+                estabilidad, el respeto mutuo y la convivencia a largo plazo, aspectos especialmente valorados por las
+                familias cuando se trata de estudiantes desplazadas de su ciudad o país de origen.</p>
+        </div>
+    </section>
+
+    <!-- Scroll Down Arrow -->
+    <div class="scroll-arrow" id="scrollArrow" onclick="scrollToNext()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 16l-6-6h12z" />
+        </svg>
+    </div>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .scroll-arrow {
+            position: fixed;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(255, 102, 0, 0.3);
+            transition: all 0.3s ease;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-arrow:hover {
+            transform: translateX(-50%) scale(1.1);
+            box-shadow: 0 6px 30px rgba(255, 102, 0, 0.5);
+        }
+
+        .scroll-arrow svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+    </style>
+
+    <script>
+        function scrollToNext() {
+            const sections = document.querySelectorAll('.section, section');
+            const scrollPosition = window.scrollY + window.innerHeight / 2;
+            for (let i = 0; i < sections.length; i++) {
+                const section = sections[i];
+                if (scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
+                    if (i < sections.length - 1) sections[i + 1].scrollIntoView({ behavior: 'smooth' });
+                    else document.getElementById('scrollArrow').style.display = 'none';
+                    break;
+                }
+            }
+        }
+        window.addEventListener('scroll', () => {
+            const scrollArrow = document.getElementById('scrollArrow');
+            const scrollPosition = window.scrollY + window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            scrollArrow.style.display = scrollPosition >= documentHeight - 100 ? 'none' : 'flex';
+        });
+    </script>
+
+    <a id="wa-float-btn" href="https://wa.me/34000000000" target="_blank" class="wa-float-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.103 1.522 5.83L.057 23.882a.5.5 0 0 0 .61.637l6.264-1.643A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.944 9.944 0 0 1-5.17-1.448l-.37-.22-3.828 1.004 1.018-3.717-.242-.38A9.944 9.944 0 0 1 2 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/>
+        </svg>
+
+    </a>
+
+</body>
+
+</html>

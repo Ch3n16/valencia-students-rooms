@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto y Reserva | Habitaciones Estudiantes Valencia</title>
+    <meta name="description"
+        content="Reserva tu habitación de estudiante en Valencia. Formulario de contacto directo sin intermediarios ni comisiones de agencia.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="top-bar">
+        <span id="top-bar-text">☀️ Verano: <strong>Julio & Agosto Disponibles</strong>. ¡Reserva ahora!</span>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="logo"><img src="logo.png" alt="Gorgos" style="height: 55px; width: auto;"></a>
+            <div class="nav-links">
+                <a href="index.html" id="nav-home">Inicio</a>
+                <div class="dropdown-container">
+                    <a href="ubicacion.html" id="nav-loc">Ubicación ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="ubicacion.html" class="dropdown-item">📍 Plaza Xúquer</a>
+                        <a href="zonas-comunes.html" class="dropdown-item">🛋️ Zonas Comunes</a>
+                    </div>
+                </div>
+                <a href="habitaciones.html" id="nav-rooms">Habitaciones</a>
+                <a href="verano.html" id="nav-summer">Estancias de Verano</a>
+                <a href="vivir-valencia.html" id="nav-life">Vivir en Valencia</a>
+                <a href="faqs.html" id="nav-faqs">FAQs</a>
+                <a href="contacto.html" class="active btn btn-primary" id="nav-book">Reservar</a>
+
+                <div class="lang-toggle">
+                    <div class="lang-opt active" data-lang="es">ES</div>
+                    <div class="lang-opt" data-lang="en">EN</div>
+                </div>
+            </div>
+            <div class="mobile-toggle">☰</div>
+        </div>
+    </nav>
+
+    <main class="container section">
+
+        <div style="text-align: center; margin-bottom: 4rem; position: relative;">
+            <h1 id="contact-main-title">Contacta con nosotros</h1>
+            <p id="contact-subtitle">Reserva directa sin intermediarios.</p>
+        </div>
+
+        <div class="grid" style="grid-template-columns: 1fr 2fr; gap: 4rem; align-items: start;">
+
+            <!-- Left Info -->
+            <div class="card">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <div style="font-size: 1.5rem; font-weight: 700;">GORGOS LIVING</div>
+                </div>
+
+                <ul style="display: grid; gap: 1.5rem;">
+                    <li>
+                        <strong id="contact-phone-label">WhatsApp / Teléfono:</strong>
+                        <div style="display: flex; align-items: center; gap: 10px; margin-top: 4px;">
+                            <span id="wa-phone-wrapper" style="font-size: 1.2rem; color: var(--accent);">+34 000 000 000</span>
+                            <a href="https://wa.me/34000000000" target="_blank" style="display:flex; align-items:center; justify-content:center; width:38px; height:38px; background:#25D366; border-radius:50%; text-decoration:none; box-shadow:0 3px 12px rgba(37,211,102,0.35); flex-shrink:0;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.103 1.522 5.83L.057 23.882a.5.5 0 0 0 .61.637l6.264-1.643A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.944 9.944 0 0 1-5.17-1.448l-.37-.22-3.828 1.004 1.018-3.717-.242-.38A9.944 9.944 0 0 1 2 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Email:</strong>
+                        <div>reservas@estudentsrooms.com</div>
+                    </li>
+                    <li>
+                        <strong id="contact-hours-label">Horario Atención:</strong>
+                        <div id="contact-days">Lunes a Domingo</div>
+                        <div>09:00h - 20:00h</div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Right Form -->
+            <div class="card">
+                <h3 id="form-title">Formulario de Reserva</h3>
+                <form>
+
+                    <div class="form-grid">
+                        <div>
+                            <label id="lbl-name">Nombre</label>
+                            <input type="text" id="input-name" placeholder="Tu nombre">
+                        </div>
+                        <div>
+                            <label id="lbl-surname">Apellidos</label>
+                            <input type="text" id="input-surname" placeholder="Tus apellidos">
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div>
+                            <label id="lbl-phone">Teléfono (con prefijo)</label>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <select style="width: 140px; text-overflow: ellipsis;">
+                                    <option value="+34">🇪🇸 +34</option>
+                                    <option value="+33">🇫🇷 +33</option>
+                                    <option value="+39">🇮🇹 +39</option>
+                                    <option value="+49">🇩🇪 +49</option>
+                                    <option value="+44">🇬🇧 +44</option>
+                                    <option value="+351">🇵🇹 +351</option>
+                                    <option value="+31">🇳🇱 +31</option>
+                                    <option value="+32">🇧🇪 +32</option>
+                                    <option value="+41">🇨🇭 +41</option>
+                                    <option value="+353">🇮🇪 +353</option>
+                                    <option value="+43">🇦🇹 +43</option>
+                                    <option value="+46">🇸🇪 +46</option>
+                                    <option value="+47">🇳🇴 +47</option>
+                                    <option value="+45">🇩🇰 +45</option>
+                                    <option value="+358">🇫🇮 +358</option>
+                                    <option value="+48">🇵🇱 +48</option>
+                                    <option value="+1">🇺🇸/🇨🇦 +1</option>
+                                    <option value="+52">🇲🇽 +52</option>
+                                    <option value="+54">🇦🇷 +54</option>
+                                    <option value="+57">🇨🇴 +57</option>
+                                    <option value="+56">🇨🇱 +56</option>
+                                    <option value="+51">🇵🇪 +51</option>
+                                    <option value="+55">🇧🇷 +55</option>
+                                    <option value="+86">🇨🇳 +86</option>
+                                    <option value="+81">🇯🇵 +81</option>
+                                    <option value="+82">🇰🇷 +82</option>
+                                    <option value="+91">🇮🇳 +91</option>
+                                    <option value="+61">🇦🇺 +61</option>
+                                    <option value="+64">🇳🇿 +64</option>
+                                    <option value="+971">🇦🇪 +971</option>
+                                    <option value="+966">🇸🇦 +966</option>
+                                    <option value="+212">🇲🇦 +212</option>
+                                    <option value="+20">🇪🇬 +20</option>
+                                    <option value="+27">🇿🇦 +27</option>
+                                    <option value="">Otro...</option>
+                                </select>
+                                <input type="tel" id="input-phone" placeholder="600...">
+                            </div>
+                        </div>
+                        <div>
+                            <label>Email</label>
+                            <input type="email" id="input-email" placeholder="@email.com">
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div>
+                            <label id="lbl-age">Edad</label>
+                            <input type="number" id="input-age" placeholder="Ej: 21">
+                        </div>
+                        <div>
+                            <label id="lbl-gender">Género</label>
+                            <select id="select-gender">
+                                <option value="">-- Seleccionar --</option>
+                                <option value="male">Masculino</option>
+                                <option value="female">Femenino</option>
+                                <option value="other">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div>
+                            <label id="lbl-country">País / Nacionalidad</label>
+                            <input type="text" id="input-country" placeholder="Español, Italiano...">
+                        </div>
+                        <div>
+                            <label id="lbl-uni">Universidad / Estudios</label>
+                            <input type="text" id="input-uni" placeholder="UPV, UV, ESIC...">
+                        </div>
+                    </div>
+
+                    <!-- Availability Section -->
+                    <div style="margin-top: 2rem; border-top: 1px solid #eee; padding-top: 2rem;">
+                        <h4 style="margin-bottom: 1rem;" id="form-avail-title">Disponibilidad de Estancia</h4>
+
+                        <label id="lbl-period"
+                            style="color: var(--accent); font-size: 1.1rem; margin-bottom: 1rem;">Selecciona tu Periodo
+                            de Estancia (Obligatorio)</label>
+
+                        <div
+                            style="display: grid; gap: 0.8rem; margin-bottom: 2rem; background: #f8fafc; padding: 1.5rem; border-radius: 12px; border: 1px solid #e2e8f0;">
+
+                            <label class="radio-period"
+                                style="display: flex; align-items: center; gap: 0.8rem; font-weight: 400; cursor: pointer; margin: 0;">
+                                <input type="radio" name="period" value="Curso25-26"
+                                    style="width: auto; height: 1.2rem;">
+                                <span id="opt-curso"><strong>Curso Completo:</strong> Sep 2025 - Junio 2026</span>
+                            </label>
+
+                            <label class="radio-period"
+                                style="display: flex; align-items: center; gap: 0.8rem; font-weight: 400; cursor: pointer; margin: 0;">
+                                <input type="radio" name="period" value="CursoExt25-26"
+                                    style="width: auto; height: 1.2rem;">
+                                <span id="opt-curso-ext"><strong>Curso Extendido:</strong> Sep 2025 - Julio 2026</span>
+                            </label>
+
+                            <label class="radio-period"
+                                style="display: flex; align-items: center; gap: 0.8rem; font-weight: 400; cursor: pointer; margin: 0;">
+                                <input type="radio" name="period" value="Semestre1"
+                                    style="width: auto; height: 1.2rem;">
+                                <span id="opt-sem1"><strong>Primer Semestre:</strong> Sep 2025 - Enero 2026</span>
+                            </label>
+
+                            <label class="radio-period"
+                                style="display: flex; align-items: center; gap: 0.8rem; font-weight: 400; cursor: pointer; margin: 0;">
+                                <input type="radio" name="period" value="Semestre2"
+                                    style="width: auto; height: 1.2rem;">
+                                <span id="opt-sem2"><strong>Segundo Semestre:</strong> Feb 2026 - Junio 2026</span>
+                            </label>
+
+                            <label class="radio-period"
+                                style="display: flex; align-items: center; gap: 0.8rem; font-weight: 400; cursor: pointer; margin: 0;">
+                                <input type="radio" name="period" value="Verano26" style="width: auto; height: 1.2rem;">
+                                <span id="opt-summer"><strong>Verano:</strong> Julio 2026 - Agosto 2026</span>
+                            </label>
+
+                        </div>
+
+                        <label id="lbl-comments">Comentarios / ¿Necesitas ayuda con algo?</label>
+                        <textarea rows="4" id="input-comments" placeholder="Me gustaría saber si..."></textarea>
+
+                    </div>
+
+                    <div style="margin-top: 2rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="checkbox" id="robot-check" style="width:auto;">
+                        <label for="robot-check" style="margin:0; font-weight: 400;" id="lbl-robot">No soy un
+                            robot</label>
+                    </div>
+
+                    <button type="button" class="btn btn-primary" style="width: 100%; margin-top: 2rem;"
+                        id="btn-submit">Enviar Reserva</button>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- CAPTCHA MODAL -->
+    <div id="captcha-modal" class="captcha-overlay">
+        <div class="captcha-card">
+            <div class="captcha-header">
+                <span style="font-size:0.9rem; opacity:0.9;" id="captcha-instr">Selecciona todas las imágenes de:</span>
+                <span class="captcha-target" id="captcha-target-label">COCHES</span>
+            </div>
+
+            <div class="captcha-grid" id="captcha-grid">
+                <!-- Tiles injected via JS -->
+            </div>
+
+            <div id="captcha-msg" class="captcha-status"></div>
+            <button class="btn btn-primary" id="btn-verify" style="width:100%;">Verificar</button>
+        </div>
+    </div>
+
+    <a id="wa-float-btn" href="https://wa.me/34000000000" target="_blank" class="wa-float-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.103 1.522 5.83L.057 23.882a.5.5 0 0 0 .61.637l6.264-1.643A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.944 9.944 0 0 1-5.17-1.448l-.37-.22-3.828 1.004 1.018-3.717-.242-.38A9.944 9.944 0 0 1 2 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/>
+        </svg>
+
+    </a>
+
+    <script>
+        // Pre-select logic if URL param exists (modified for radios)
+        const params = new URLSearchParams(window.location.search);
+        const period = params.get('period');
+        if (period) {
+            const radio = document.querySelector(`input[name="period"][value="${period}"]`);
+            if (radio) radio.checked = true;
+        }
+    </script>
+
+    <!-- Scroll Down Arrow -->
+    <div class="scroll-arrow" id="scrollArrow" onclick="scrollToNext()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 16l-6-6h12z" />
+        </svg>
+    </div>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .scroll-arrow {
+            position: fixed;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(255, 102, 0, 0.3);
+            transition: all 0.3s ease;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-arrow:hover {
+            transform: translateX(-50%) scale(1.1);
+            box-shadow: 0 6px 30px rgba(255, 102, 0, 0.5);
+        }
+
+        .scroll-arrow svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+    </style>
+
+    <script>
+        function scrollToNext() {
+            const sections = document.querySelectorAll('.section, section');
+            const scrollPosition = window.scrollY + window.innerHeight / 2;
+            for (let i = 0; i < sections.length; i++) {
+                const section = sections[i];
+                if (scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
+                    if (i < sections.length - 1) sections[i + 1].scrollIntoView({ behavior: 'smooth' });
+                    else document.getElementById('scrollArrow').style.display = 'none';
+                    break;
+                }
+            }
+        }
+        window.addEventListener('scroll', () => {
+            const scrollArrow = document.getElementById('scrollArrow');
+            const scrollPosition = window.scrollY + window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            scrollArrow.style.display = scrollPosition >= documentHeight - 100 ? 'none' : 'flex';
+        });
+    </script>
+
+</body>
+
+</html>

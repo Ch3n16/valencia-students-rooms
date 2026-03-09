@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alquiler Habitaciones Estudiantes Valencia | Plaza Xúquer</title>
+    <meta name="description"
+        content="Alquiler de habitaciones para estudiantes en Valencia – Plaza Xúquer. Vivienda exclusiva para chicas universitarias a 5 minutos del campus. Todo incluido, sin comisiones.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Blobs Background -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <span id="top-bar-text">☀️ Verano: <strong>Julio & Agosto Disponibles</strong>. ¡Reserva ahora!</span>
+    </div>
+
+    <!-- Floating Glass Navbar -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="logo"><img src="logo.png" alt="Gorgos" style="height: 55px; width: auto;"></a>
+
+            <div class="nav-links">
+                <a href="index.html" class="active" id="nav-home">Inicio</a>
+
+                <div class="dropdown-container">
+                    <a href="ubicacion.html" id="nav-loc">Ubicación ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="ubicacion.html" class="dropdown-item">📍 Plaza Xúquer</a>
+                        <a href="zonas-comunes.html" class="dropdown-item">🛋️ Zonas Comunes</a>
+                    </div>
+                </div>
+
+                <a href="habitaciones.html" id="nav-rooms">Habitaciones</a>
+                <a href="verano.html" id="nav-summer">Estancias de Verano</a>
+                <a href="vivir-valencia.html" id="nav-life">Vivir en Valencia</a>
+                <a href="faqs.html" id="nav-faqs">FAQs</a>
+                <a href="contacto.html" class="btn btn-primary" id="nav-book">Reservar</a>
+
+                <!-- Language Switcher -->
+                <div class="lang-toggle">
+                    <div class="lang-opt active" data-lang="es">ES</div>
+                    <div class="lang-opt" data-lang="en">EN</div>
+                </div>
+            </div>
+
+            <div class="mobile-toggle">☰</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="section hero">
+        <div class="container grid" style="grid-template-columns: 1.2fr 1fr; align-items: center; gap: 5rem;">
+
+            <!-- Text Content -->
+            <div>
+                <h1 style="margin-bottom: 1.5rem;" id="hero-title">Alquiler de habitaciones para estudiantes en <span
+                        style="color: var(--accent);">Valencia – Plaza Xúquer</span></h1>
+                <p style="font-size: 1.15rem; margin-bottom: 1rem; max-width: 560px;" id="hero-desc">
+                    Vivienda exclusiva para <strong>chicas universitarias</strong> a 5 minutos andando del campus
+                    universitario.
+                </p>
+                <p style="font-size: 1.05rem; margin-bottom: 1rem; max-width: 560px; color: var(--text-light);">
+                    Alquiler de habitaciones para estudiantes en Valencia por meses, ideal para universitarias de la
+                    <strong>Universidad Politécnica (UPV)</strong>, <strong>Universidad Valencia</strong> y <strong>ESIC
+                        Marketing & Business School</strong>.
+                </p>
+                <p style="font-size: 1rem; margin-bottom: 2rem; max-width: 560px; color: var(--text-light);">
+                    También adecuado para estudiantes Erasmus e internacionales que buscan habitación en alquiler por
+                    meses en Valencia.
+                </p>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 20px; box-shadow: var(--shadow-md); margin-bottom: 2.5rem; border: 1px solid #f0f0f0;">
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <div class="badge" id="hero-rooms">🏠 7 habitaciones premium</div>
+                        <div class="badge" id="hero-all">✨ Todo incluido</div>
+                        <div class="badge" id="hero-safe">🛡️ Zona segura</div>
+                        <div class="badge" id="hero-nocomm">🚫 Sin comisiones</div>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="habitaciones.html" class="btn btn-primary" id="btn-rooms">Ver Habitaciones Disponibles</a>
+                    <a href="contacto.html" class="btn btn-secondary" id="btn-contact">Consultar Disponibilidad</a>
+                </div>
+            </div>
+
+            <!-- Hero Image -->
+            <div class="room-img-container" style="height: 650px; transform: rotate(2deg);">
+                <img src="common_kitchen.png" alt="Cocina Estudiantes Valencia"
+                    style="height: 100%; object-fit: cover;">
+
+                <!-- Floating Card Overlay -->
+                <div
+                    style="position: absolute; bottom: 3rem; left: -2rem; background: white; padding: 1.5rem; border-radius: 16px; box-shadow: var(--shadow-lg); max-width: 250px;">
+                    <p style="margin: 0; font-weight: 700; color: #111; font-size: 1.1rem;" id="overlay-title">Sin
+                        Comisiones</p>
+                    <p style="margin: 0.5rem 0 0; font-size: 0.9rem;" id="overlay-desc">Trato directo con la propiedad.
+                        Ahorra gastos de gestión.</p>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Todo Incluido Section -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="card grid"
+                style="grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; background: white;">
+                <div class="room-img-container" style="height: 450px;">
+                    <img src="city_vibe.png" alt="Valencia estudiantes">
+                </div>
+                <div>
+                    <h2 id="teaser-title">Todo incluido. Sin facturas, sin sorpresas y sin preocupaciones</h2>
+                    <p id="teaser-desc">Alquiler mensual para estudiantes en Valencia con todos los gastos incluidos y
+                        sin comisiones de agencia.</p>
+                    <p style="color: var(--text-light); font-size: 1rem;">Olvídate de contratos de suministros,
+                        reparaciones o gestiones complicadas. Aquí todo está preparado para que tu única preocupación
+                        sea estudiar y disfrutar de tu experiencia universitaria en Valencia.</p>
+
+                    <ul style="display: grid; gap: 1rem; margin-top: 2rem;">
+                        <li style="display: flex; align-items: center; gap: 1rem;">
+                            <span
+                                style="background: #eef2ff; color: var(--accent); padding: 0.5rem; border-radius: 50%;">🚀</span>
+                            <span id="feat-wifi"><strong>Wifi fibra 1 Gbps</strong></span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 1rem;">
+                            <span
+                                style="background: #eef2ff; color: var(--accent); padding: 0.5rem; border-radius: 50%;">🧹</span>
+                            <span id="feat-clean"><strong>Limpieza semanal</strong> de zonas comunes</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 1rem;">
+                            <span
+                                style="background: #eef2ff; color: var(--accent); padding: 0.5rem; border-radius: 50%;">❄️</span>
+                            <span id="feat-fridge"><strong>Espacios individuales</strong> en cocina y nevera</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 1rem;">
+                            <span
+                                style="background: #eef2ff; color: var(--accent); padding: 0.5rem; border-radius: 50%;">🔧</span>
+                            <span><strong>Mantenimiento incluido</strong></span>
+                        </li>
+                    </ul>
+
+                    <p style="margin-top: 2rem; font-size: 0.95rem; color: var(--text-light);">Todas las habitaciones
+                        están pensadas para estudiantes que buscan alquiler por meses en Valencia con altos estándares
+                        de seguridad, confort y estabilidad académica.</p>
+                    <p style="font-size: 0.95rem; color: var(--text-light);">Cada espacio ha sido equipado para
+                        facilitar el estudio, el descanso y la organización durante el curso completo.</p>
+
+                    <a href="ubicacion.html" class="btn btn-secondary" style="margin-top: 2rem;" id="btn-loc">Descubre
+                        Ubicación →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll Down Arrow -->
+    <div class="scroll-arrow" id="scrollArrow" onclick="scrollToNext()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 16l-6-6h12z" />
+        </svg>
+    </div>
+
+    <style>
+        /* Scroll Snap */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Scroll Down Arrow */
+        .scroll-arrow {
+            position: fixed;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(255, 102, 0, 0.3);
+            transition: all 0.3s ease;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-arrow:hover {
+            transform: translateX(-50%) scale(1.1);
+            box-shadow: 0 6px 30px rgba(255, 102, 0, 0.5);
+        }
+
+        .scroll-arrow svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+    </style>
+
+    <script>
+        // Scroll functionality
+        function scrollToNext() {
+            const sections = document.querySelectorAll('.section, section');
+            const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+            for (let i = 0; i < sections.length; i++) {
+                const section = sections[i];
+                const sectionTop = section.offsetTop;
+                const sectionBottom = sectionTop + section.offsetHeight;
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                    if (i < sections.length - 1) {
+                        sections[i + 1].scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        // Hide arrow on last section
+                        document.getElementById('scrollArrow').style.display = 'none';
+                    }
+                    break;
+                }
+            }
+        }
+
+        // Hide arrow when reaching bottom
+        window.addEventListener('scroll', () => {
+            const scrollArrow = document.getElementById('scrollArrow');
+            const scrollPosition = window.scrollY + window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+
+            if (scrollPosition >= documentHeight - 100) {
+                scrollArrow.style.display = 'none';
+            } else {
+                scrollArrow.style.display = 'flex';
+            }
+        });
+    </script>
+
+    <footer style="background: #111; color: white; padding: 4rem 0;">
+        <div class="container" style="text-align: center; opacity: 0.7;">
+            <p style="color: white; margin-bottom: 0;">&copy; 2026 Gorgos Living. Valencia Premium Student Housing.</p>
+        </div>
+    </footer>
+
+    <a id="wa-float-btn" href="https://wa.me/34000000000" target="_blank" class="wa-float-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.103 1.522 5.83L.057 23.882a.5.5 0 0 0 .61.637l6.264-1.643A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.944 9.944 0 0 1-5.17-1.448l-.37-.22-3.828 1.004 1.018-3.717-.242-.38A9.944 9.944 0 0 1 2 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/>
+        </svg>
+
+    </a>
+
+</body>
+
+</html>
