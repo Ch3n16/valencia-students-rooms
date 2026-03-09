@@ -306,8 +306,28 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             mobileToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            // Cerrar dropdowns al cerrar el menú
+            if (!navLinks.classList.contains('active')) {
+                document.querySelectorAll('.dropdown-container.open')
+                    .forEach(c => c.classList.remove('open'));
+            }
         });
     }
+
+    // Dropdown móvil — toggle al pulsar el enlace de "Ubicación"
+    document.querySelectorAll('.dropdown-container > a').forEach(link => {
+        link.addEventListener('click', e => {
+            if (window.innerWidth <= 1024) {
+                e.preventDefault();
+                const container = link.closest('.dropdown-container');
+                const isOpen = container.classList.contains('open');
+                // Cerrar todos los demás dropdowns abiertos
+                document.querySelectorAll('.dropdown-container.open')
+                    .forEach(c => c.classList.remove('open'));
+                if (!isOpen) container.classList.add('open');
+            }
+        });
+    });
 
     // Language Toggle Logic
     const langOpts = document.querySelectorAll('.lang-opt');

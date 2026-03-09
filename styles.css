@@ -536,13 +536,26 @@ label {
         display: flex;
     }
 
+    /* Dropdown: oculto por defecto en mobile, se abre con clase .open */
     .dropdown-menu {
         position: static;
         transform: none;
         box-shadow: none;
         border: 1px solid #eee;
+        border-radius: 10px;
         opacity: 1;
         visibility: visible;
+        display: none;
+        margin: 0.4rem 0 0.4rem 0.5rem;
+    }
+
+    .dropdown-container.open .dropdown-menu {
+        display: block;
+    }
+
+    /* Indicador visual de que el link tiene sub-menú */
+    .dropdown-container > a {
+        cursor: pointer;
     }
 
     .mobile-toggle {
@@ -583,6 +596,129 @@ label {
         width: 100%;
         margin: 0;
         text-align: center;
+    }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   MOBILE — diseño optimizado para pantallas ≤ 767px
+   ══════════════════════════════════════════════════════════════ */
+@media (max-width: 767px) {
+
+    /* ── Tipografía ─────────────────────────────────────────── */
+    h1 {
+        font-size: 2rem !important;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+    }
+
+    h2 {
+        font-size: 1.65rem;
+        line-height: 1.25;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        line-height: 1.3;
+    }
+
+    p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-bottom: 1.1rem;
+    }
+
+    /* ── Layout general ─────────────────────────────────────── */
+    .section {
+        padding: 2.5rem 0;
+    }
+
+    .container {
+        width: 95%;
+        padding: 0 0.75rem;
+    }
+
+    .grid {
+        gap: 1.75rem;
+    }
+
+    /* ── Tarjetas ───────────────────────────────────────────── */
+    .card {
+        padding: 1.4rem;
+        border-radius: 16px;
+    }
+
+    /* ── Top bar ────────────────────────────────────────────── */
+    .top-bar {
+        font-size: 0.78rem;
+        padding: 0.4rem 0.5rem;
+        line-height: 1.4;
+    }
+
+    /* ── Botones ────────────────────────────────────────────── */
+    .btn {
+        padding: 0.85rem 1.6rem;
+        font-size: 0.92rem;
+    }
+
+    /* ── Hero (index.html) ──────────────────────────────────── */
+    .hero {
+        min-height: auto;
+        padding: 1.5rem 0 2.5rem;
+    }
+
+    /* Imagen del hero: altura contenida, sin rotación, imagen primero */
+    .hero .room-img-container {
+        height: 260px !important;
+        transform: none !important;
+        border-radius: 16px;
+        order: -1;
+    }
+
+    /* Ocultar la tarjeta flotante superpuesta dentro de la imagen del hero */
+    .hero .room-img-container > div {
+        display: none !important;
+    }
+
+    /* Badges de características */
+    .badge {
+        font-size: 0.78rem;
+        padding: 0.35rem 0.65rem;
+    }
+
+    /* ── Imágenes en secciones ─────────────────────────────── */
+    .room-img-container {
+        height: 230px !important;
+    }
+
+    .room-img-container img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* ── Bento grid ─────────────────────────────────────────── */
+    .bento-grid {
+        gap: 0.9rem;
+    }
+
+    /* ── Formulario ─────────────────────────────────────────── */
+    input,
+    select,
+    textarea {
+        padding: 0.95rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .form-grid {
+        gap: 1rem;
+    }
+
+    /* ── Tag overlay en imágenes ────────────────────────────── */
+    .tag-overlay {
+        top: 0.75rem;
+        left: 0.75rem;
+        padding: 0.4rem 0.85rem;
+        font-size: 0.75rem;
     }
 }
 

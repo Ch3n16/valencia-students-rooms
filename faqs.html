@@ -13,10 +13,13 @@
     <style>
         /* ── Neutralizar conflictos Bootstrap vs navbar personalizado ─────── */
 
-        /* Bootstrap oculta .dropdown-menu con display:none;
-           nuestro navbar usa opacity/visibility → hay que restaurar display */
-        .navbar .dropdown-menu {
-            display: block;
+        /* Bootstrap oculta .dropdown-menu con display:none.
+           Solo en desktop restauramos display:block para que funcione el hover con opacity/visibility.
+           En mobile (≤1024px) el sistema .open de styles.css lo gestiona. */
+        @media (min-width: 1025px) {
+            .navbar .dropdown-menu {
+                display: block;
+            }
         }
 
         /* Bootstrap convierte .navbar en display:flex, lo que hace que
