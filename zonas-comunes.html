@@ -21,7 +21,7 @@
 
     <nav class="navbar">
         <div class="nav-inner">
-            <a href="index.html" class="logo"><img src="logo.png" alt="Gorgos" style="height: 55px; width: auto;"></a>
+            <a href="index.html" class="logo-link" aria-label="Valencia Students Rooms – Inicio"><img src="logo.png" alt="Xuquer Living" class="logo-img"><span class="logo-text"><span class="logo-text-name">Valencia</span><span class="logo-text-tagline">Students Rooms</span></span></a>
             <div class="nav-links">
                 <a href="index.html" id="nav-home">Inicio</a>
                 <div class="dropdown-container">
@@ -46,21 +46,38 @@
         </div>
     </nav>
 
-    <!-- Zonas Comunes Section -->
-    <main class="container section">
-        <h1 style="text-align: center; margin-bottom: 1rem;" id="common-title">Zonas comunes y servicios</h1>
-        <p
-            style="text-align: center; max-width: 700px; margin: 0 auto 1rem; font-size: 1.15rem; color: var(--text-light);">
-            Espacios comunes amplios, funcionales y pensados para la convivencia</p>
-        <p
-            style="text-align: center; max-width: 700px; margin: 0 auto 3rem; font-size: 1.05rem; color: var(--text-light);">
-            Vivienda exclusiva para chicas estudiantes, con convivencia organizada y un entorno seguro</p>
+    <!-- VISTA 1: Fotos full-bleed -->
+    <section class="zc-snap zc-photos">
 
-        <div class="grid" style="grid-template-columns: 1fr 2fr; gap: 4rem;">
+        <!-- Mosaico edge-to-edge -->
+        <div class="zc-mosaic">
+            <div class="zc-tile zc-t1"><img src="common_kitchen.png" alt="Cocina"><span class="zc-tag">🍳 Cocina</span></div>
+            <div class="zc-tile zc-t2"><img src="room_1.png"         alt="Habitación"><span class="zc-tag">🛏 Habitación</span></div>
+            <div class="zc-tile zc-t3"><img src="common_kitchen.png" alt="Zona común"><span class="zc-tag">🛋 Salón</span></div>
+            <div class="zc-tile zc-t4"><img src="room_1.png"         alt="Escritorio"><span class="zc-tag">📚 Estudio</span></div>
+            <div class="zc-tile zc-t5"><img src="common_kitchen.png" alt="Servicios"><span class="zc-tag">✨ Servicios</span></div>
+        </div>
 
-            <div class="card">
+        <!-- Tarjeta flotante de cristal -->
+        <div class="zc-glass-card">
+            <div class="zc-glass-bar"></div>
+            <p class="zc-glass-label" id="common-title">Zonas Comunes</p>
+            <h1 class="zc-glass-title">Espacios para<br><em>vivir bien</em></h1>
+            <p class="zc-glass-sub">Amplios · Funcionales · Exclusivos para chicas estudiantes</p>
+        </div>
+
+        <!-- Gradiente superior para el navbar -->
+        <div class="zc-top-fade"></div>
+
+    </section>
+
+    <!-- VISTA 2: Texto -->
+    <section class="zc-snap zc-text">
+        <div class="zc-text-grid">
+
+            <div class="card" style="background: white;">
                 <h3 id="common-list-title">Servicios Comunes</h3>
-                <ul style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem;" id="common-list">
+                <ul id="common-list">
                     <li>🚿 <strong>2 baños completos</strong> con ducha</li>
                     <li>🍳 <strong>Cocina totalmente completa</strong> con lavavajillas y menaje completo</li>
                     <li>❄️ <strong>2 frigoríficos combi</strong> con espacios asignados por habitación</li>
@@ -70,145 +87,325 @@
                 </ul>
             </div>
 
-            <div>
-                <h3 style="margin-bottom: 2rem;" id="common-gallery-title">Disfruta de todas las comodidades</h3>
-                <p style="margin-bottom: 1rem; font-size: 0.9rem; color: #666;" id="common-gallery-sub">Pasa el ratón (o
-                    pulsa) para ampliar.</p>
-
-                <div class="gallery-grid"
-                    style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;">
-                    <style>
-                        .gallery-img {
-                            aspect-ratio: 16/9;
-                            cursor: pointer;
-                            transition: transform 0.3s;
-                            width: 100%;
-                            border-radius: 8px;
-                        }
-
-                        .gallery-img:hover {
-                            transform: scale(1.5);
-                            z-index: 10;
-                            position: relative;
-                            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-                        }
-                    </style>
-                    <img src="common_kitchen.png" class="gallery-img" alt="Cocina compartida estudiantes">
-                    <img src="room_1.png" class="gallery-img" alt="Habitación estudiantes Valencia">
-                    <img src="common_kitchen.png" class="gallery-img" alt="Zonas comunes cocina">
-                    <img src="room_1.png" class="gallery-img" alt="Habitación amueblada">
-                    <img src="common_kitchen.png" class="gallery-img" alt="Cocina totalmente equipada">
-                    <img src="room_1.png" class="gallery-img" alt="Habitación confort">
+            <div class="zc-right">
+                <div class="zc-convivencia">
+                    <h2 id="common-conv-title">🛡️ Modelo de convivencia estable y seguro</h2>
+                    <p>La vivienda está orientada exclusivamente a chicas estudiantes universitarias con el objetivo de mantener un entorno homogéneo, organizado y especialmente tranquilo durante todo el curso académico.</p>
+                    <p>Este modelo favorece la estabilidad, el respeto mutuo y la convivencia a largo plazo, aspectos especialmente valorados por las familias cuando se trata de estudiantes desplazadas de su ciudad o país de origen.</p>
+                </div>
+                <div class="zc-seo">
+                    <p>Todas las habitaciones están pensadas para estudiantes que buscan alquiler por meses en Valencia con altos estándares de seguridad, confort y estabilidad académica.</p>
+                    <p style="margin-bottom:0;">Cada espacio ha sido equipado para facilitar el estudio, el descanso y la organización durante el curso completo.</p>
                 </div>
             </div>
 
         </div>
-
-        <!-- Info Block -->
-        <div
-            style="margin-top: 3rem; background: #f8fafc; padding: 2rem; border-radius: 16px; border: 1px solid #e2e8f0;">
-            <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 0.5rem;">Todas las habitaciones están
-                pensadas para estudiantes que buscan alquiler por meses en Valencia con altos estándares de seguridad,
-                confort y estabilidad académica.</p>
-            <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 0;">Cada espacio ha sido equipado
-                para facilitar el estudio, el descanso y la organización durante el curso completo.</p>
-        </div>
-    </main>
-
-    <!-- Modelo de Convivencia Section -->
-    <section class="section" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white;">
-        <div class="container" style="max-width: 900px; text-align: center;">
-            <h2 style="color: white; margin-bottom: 2rem; font-size: clamp(2rem, 4vw, 3rem);">🛡️ Modelo de convivencia
-                estable y seguro</h2>
-            <p style="font-size: 1.15rem; color: rgba(255,255,255,0.9); line-height: 1.8; margin-bottom: 1.5rem;">La
-                vivienda está orientada exclusivamente a chicas estudiantes universitarias con el objetivo de mantener
-                un entorno homogéneo, organizado y especialmente tranquilo durante todo el curso académico.</p>
-            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); line-height: 1.8;">Este modelo favorece la
-                estabilidad, el respeto mutuo y la convivencia a largo plazo, aspectos especialmente valorados por las
-                familias cuando se trata de estudiantes desplazadas de su ciudad o país de origen.</p>
-        </div>
     </section>
 
-    <!-- Scroll Down Arrow -->
+    <!-- Scroll Arrow -->
     <div class="scroll-arrow" id="scrollArrow" onclick="scrollToNext()">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M12 16l-6-6h12z" />
-        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 16l-6-6h12z"/></svg>
     </div>
 
     <style>
-        html {
-            scroll-behavior: smooth;
+        html { scroll-behavior: smooth; }
+
+        body {
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
         }
 
+        .zc-snap {
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            height: 100vh;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        /* ══════════════════════════════════════════════
+           VISTA 1 — MOSAICO FULL-BLEED
+        ══════════════════════════════════════════════ */
+
+        .zc-photos {
+            position: relative;
+            padding: 0;
+        }
+
+        /* Mosaico edge-to-edge */
+        .zc-mosaic {
+            position: absolute;
+            inset: 0;
+            display: grid;
+            grid-template-columns: 3fr 1.4fr 1.4fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 3px;
+        }
+
+        /* Asignación de celdas */
+        .zc-t1 { grid-column: 1; grid-row: 1 / 3; }  /* hero vertical */
+        .zc-t2 { grid-column: 2; grid-row: 1; }
+        .zc-t3 { grid-column: 3; grid-row: 1; }
+        .zc-t4 { grid-column: 2; grid-row: 2; }
+        .zc-t5 { grid-column: 3; grid-row: 2; }
+
+        .zc-tile {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .zc-tile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .zc-tile:hover img { transform: scale(1.05); }
+
+        /* Tags en cada foto */
+        .zc-tag {
+            position: absolute;
+            top: 0.75rem;
+            left: 0.75rem;
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            color: #111;
+            font-family: var(--font-heading);
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.3rem 0.7rem;
+            border-radius: 50px;
+            letter-spacing: 0.01em;
+            opacity: 0;
+            transform: translateY(-4px);
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+        .zc-tile:hover .zc-tag {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Vignette en cada foto para profundidad */
+        .zc-tile::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                160deg,
+                rgba(0,0,0,0.08) 0%,
+                transparent 50%,
+                rgba(0,0,0,0.18) 100%
+            );
+            pointer-events: none;
+        }
+
+        /* Gradiente superior para que el navbar sea legible */
+        .zc-top-fade {
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 5rem;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.75), transparent);
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        /* Tarjeta de cristal flotante */
+        .zc-glass-card {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 2.5rem;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.82);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.6);
+            border-radius: 24px;
+            padding: 1.5rem 2rem;
+            max-width: 360px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .zc-glass-bar {
+            width: 36px;
+            height: 3px;
+            background: #FF6600;
+            border-radius: 2px;
+            margin-bottom: 0.75rem;
+        }
+
+        .zc-glass-label {
+            font-family: var(--font-heading);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #263bb6;
+            margin-bottom: 0.4rem;
+        }
+
+        .zc-glass-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+            font-weight: 700;
+            color: #0c0c0d;
+            line-height: 1.15;
+            margin-bottom: 0.65rem;
+            letter-spacing: -0.02em;
+        }
+
+        .zc-glass-title em {
+            font-style: normal;
+            color: #FF6600;
+        }
+
+        .zc-glass-sub {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+
+        /* ══════════════════════════════════════════════
+           VISTA 2 — TEXTO
+        ══════════════════════════════════════════════ */
+
+        .zc-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 5rem 5% 1.5rem;
+        }
+
+        .zc-text-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 2.5rem;
+            height: 100%;
+        }
+
+        .zc-text .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: white;
+        }
+
+        .zc-text .card h3 { margin-bottom: 1.25rem; }
+
+        .zc-text .card ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .zc-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+
+        .zc-convivencia {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 1.75rem 2rem;
+            flex: 1;
+        }
+
+        .zc-convivencia h2 {
+            color: white;
+            font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+            margin-bottom: 0.75rem;
+        }
+
+        .zc-convivencia p {
+            color: rgba(255,255,255,0.85);
+            font-size: 0.92rem;
+            line-height: 1.65;
+            margin-bottom: 0.6rem;
+        }
+
+        .zc-convivencia p:last-child { margin-bottom: 0; }
+
+        .zc-seo {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 1rem 1.25rem;
+        }
+
+        .zc-seo p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 0.35rem;
+        }
+
+        /* ── Scroll arrow ─────────────────────────────── */
         .scroll-arrow {
             position: fixed;
-            bottom: 3rem;
+            bottom: 2rem;
             left: 50%;
             transform: translateX(-50%);
             z-index: 1000;
-            width: 50px;
-            height: 50px;
-            background: var(--accent);
+            width: 46px;
+            height: 46px;
+            background: white;
+            border: 2px solid rgba(255,102,0,0.3);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            box-shadow: 0 4px 20px rgba(255, 102, 0, 0.3);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
             transition: all 0.3s ease;
             animation: bounce 2s infinite;
         }
 
         .scroll-arrow:hover {
+            background: #FF6600;
+            border-color: #FF6600;
             transform: translateX(-50%) scale(1.1);
-            box-shadow: 0 6px 30px rgba(255, 102, 0, 0.5);
         }
 
+        .scroll-arrow:hover svg { fill: white; }
+
         .scroll-arrow svg {
-            width: 24px;
-            height: 24px;
-            fill: white;
+            width: 20px;
+            height: 20px;
+            fill: #FF6600;
+            transition: fill 0.2s;
         }
 
         @keyframes bounce {
-
-            0%,
-            20%,
-            50%,
-            80%,
-            100% {
-                transform: translateX(-50%) translateY(0);
-            }
-
-            40% {
-                transform: translateX(-50%) translateY(-10px);
-            }
-
-            60% {
-                transform: translateX(-50%) translateY(-5px);
-            }
+            0%,20%,50%,80%,100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-7px); }
+            60% { transform: translateX(-50%) translateY(-3px); }
         }
     </style>
 
     <script>
         function scrollToNext() {
-            const sections = document.querySelectorAll('.section, section');
-            const scrollPosition = window.scrollY + window.innerHeight / 2;
-            for (let i = 0; i < sections.length; i++) {
-                const section = sections[i];
-                if (scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
-                    if (i < sections.length - 1) sections[i + 1].scrollIntoView({ behavior: 'smooth' });
+            const snaps = document.querySelectorAll('.zc-snap');
+            const mid = window.scrollY + window.innerHeight / 2;
+            for (let i = 0; i < snaps.length; i++) {
+                if (mid >= snaps[i].offsetTop && mid < snaps[i].offsetTop + snaps[i].offsetHeight) {
+                    if (i < snaps.length - 1) snaps[i + 1].scrollIntoView({ behavior: 'smooth' });
                     else document.getElementById('scrollArrow').style.display = 'none';
                     break;
                 }
             }
         }
         window.addEventListener('scroll', () => {
-            const scrollArrow = document.getElementById('scrollArrow');
-            const scrollPosition = window.scrollY + window.innerHeight;
-            const documentHeight = document.documentElement.scrollHeight;
-            scrollArrow.style.display = scrollPosition >= documentHeight - 100 ? 'none' : 'flex';
+            const arrow = document.getElementById('scrollArrow');
+            arrow.style.display = (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 80) ? 'none' : 'flex';
         });
     </script>
 

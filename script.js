@@ -11,21 +11,21 @@ const translations = {
 
         // Form
         contactMainTitle: 'Contacta con nosotros',
-        contactSubtitle: 'Reserva directa sin intermediarios.',
-        contactPhoneLabel: 'WhatsApp / Teléfono:',
+        contactSubtitle: 'RESERVA DIRECTA · SIN INTERMEDIARIOS · NI COMISIONES',
+        contactPhoneLabel: 'WhatsApp:',
         contactHoursLabel: 'Horario Atención:',
         contactDays: 'Lunes a Domingo',
         formTitle: 'Formulario de Reserva',
 
-        lblName: 'Nombre',
-        lblSurname: 'Apellidos',
-        lblPhone: 'Teléfono (con prefijo)',
-        lblAge: 'Edad',
-        lblGender: 'Género',
-        lblCountry: 'País / Nacionalidad',
-        lblUni: 'Universidad / Estudios',
+        lblName: 'Nombre *',
+        lblSurname: 'Apellidos *',
+        lblPhone: 'Teléfono (con prefijo) *',
+        lblAge: 'Edad *',
+        lblGender: 'Género *',
+        lblCountry: 'País / Nacionalidad *',
+        lblUni: 'Universidad / Estudios *',
         formAvailTitle: 'Disponibilidad',
-        lblPeriod: 'Selecciona tu Periodo de Estancia (Obligatorio)',
+        lblPeriod: 'Selecciona tu Periodo de Estancia *',
 
         optCurso: '<strong>Curso Completo:</strong> Sep 2025 - Junio 2026',
         optCursoExt: '<strong>Curso Extendido:</strong> Sep 2025 - Julio 2026',
@@ -68,7 +68,7 @@ const translations = {
         btnLoc: 'Descubre Ubicación →',
 
         // Location
-        locTitle: 'Ubicación estratégica en Plaza Xúquer, cerca de la UPV y Universidad de Valencia',
+        locTitle: 'Ubicación estratégica cerca de la UPV y Universidad de Valencia',
         locDesc: 'Ubicado en una de las zonas más demandadas por estudiantes nacionales e internacionales, a <strong>5 minutos andando</strong> de la Universidad Politécnica, Universidad de Valencia (UV) y ESIC Marketing & Business School.',
 
         // Common Areas
@@ -141,11 +141,11 @@ const translations = {
         // Rooms page titles
         room1Title: 'Habitación 1 – Terraza privada y vistas arboladas',
         room2Title: 'Habitación 2 – Exterior luminosa y funcional',
-        room3Title: 'Habitación 3 – Mayor amplitud y zona diferenciada de descanso',
+        room3Title: 'Habitación 3 – Amplitud y zona de descanso',
         room4Title: 'Habitación 4 – Silencio interior, concentración absoluta',
-        room5Title: 'Habitación 5 – Máxima luminosidad y tranquilidad total',
-        room6Title: 'Habitación 6 – Máxima luminosidad y ambiente sereno',
-        room7Title: 'Habitación 7 – Luminosidad amplia y confort adicional',
+        room5Title: 'Habitación 5 – Máxima luminosidad y tranquilidad',
+        room6Title: 'Habitación 6 – Máxima luminosidad y tranquilidad',
+        room7Title: 'Habitación 7 – Luminosidad y confort adicional',
     },
     en: {
         topBar: '☀️ Summer: <strong>July & August Available</strong>. Book now!',
@@ -159,21 +159,21 @@ const translations = {
 
         // Form
         contactMainTitle: 'Contact Us',
-        contactSubtitle: 'Direct booking without intermediaries.',
-        contactPhoneLabel: 'WhatsApp / Phone:',
+        contactSubtitle: 'DIRECT BOOKING · NO INTERMEDIARIES · NO COMMISSIONS',
+        contactPhoneLabel: 'WhatsApp:',
         contactHoursLabel: 'Opening Hours:',
         contactDays: 'Monday to Sunday',
         formTitle: 'Booking Form',
 
-        lblName: 'Name',
-        lblSurname: 'Surnames',
-        lblPhone: 'Phone (with prefix)',
-        lblAge: 'Age',
-        lblGender: 'Gender',
-        lblCountry: 'Country / Nationality',
-        lblUni: 'University / Studies',
+        lblName: 'Name *',
+        lblSurname: 'Surnames *',
+        lblPhone: 'Phone (with prefix) *',
+        lblAge: 'Age *',
+        lblGender: 'Gender *',
+        lblCountry: 'Country / Nationality *',
+        lblUni: 'University / Studies *',
         formAvailTitle: 'Availability',
-        lblPeriod: 'Select your Stay Period (Mandatory)',
+        lblPeriod: 'Select your Stay Period *',
 
         optCurso: '<strong>Full Year:</strong> Sep 2025 - June 2026',
         optCursoExt: '<strong>Extended Year:</strong> Sep 2025 - July 2026',
@@ -216,7 +216,7 @@ const translations = {
         btnLoc: 'Discover Location →',
 
         // Location
-        locTitle: 'Strategic location at Plaza Xúquer, near UPV and University of Valencia',
+        locTitle: 'Strategic location near UPV and University of Valencia',
         locDesc: 'Located in one of the most sought-after areas by national and international students, <strong>5 minutes walking</strong> from the Polytechnic University, University of Valencia (UV) and ESIC Marketing & Business School.',
 
         // Common Areas
@@ -289,11 +289,11 @@ const translations = {
         // Rooms page titles
         room1Title: 'Room 1 – Private terrace with tree-lined views',
         room2Title: 'Room 2 – Bright and functional exterior room',
-        room3Title: 'Room 3 – Extra space with separate rest area',
+        room3Title: 'Room 3 – Space and rest area',
         room4Title: 'Room 4 – Interior silence, absolute concentration',
-        room5Title: 'Room 5 – Maximum brightness and total tranquility',
-        room6Title: 'Room 6 – Maximum brightness and serene atmosphere',
-        room7Title: 'Room 7 – Broad brightness and additional comfort',
+        room5Title: 'Room 5 – Maximum brightness and tranquility',
+        room6Title: 'Room 6 – Maximum brightness and tranquility',
+        room7Title: 'Room 7 – Brightness and additional comfort',
     }
 };
 

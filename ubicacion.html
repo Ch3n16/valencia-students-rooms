@@ -21,7 +21,7 @@
 
     <nav class="navbar">
         <div class="nav-inner">
-            <a href="index.html" class="logo"><img src="logo.png" alt="Gorgos" style="height: 55px; width: auto;"></a>
+            <a href="index.html" class="logo-link" aria-label="Valencia Students Rooms – Inicio"><img src="logo.png" alt="Xuquer Living" class="logo-img"><span class="logo-text"><span class="logo-text-name">Valencia</span><span class="logo-text-tagline">Students Rooms</span></span></a>
             <div class="nav-links">
                 <a href="index.html" id="nav-home">Inicio</a>
                 <div class="dropdown-container">
@@ -46,122 +46,108 @@
         </div>
     </nav>
 
-    <main class="container section">
-        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
+    <main class="loc-main">
+        <div class="loc-grid">
 
-            <div class="room-img-container"
-                style="height: 500px; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg);">
+            <!-- Mapa: centrado para mostrar Xuquer Living, UPV y UV -->
+            <div class="loc-map-wrap">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.9!2d-0.347!3d39.473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDI4JzIyLjgiTiAwwrAyMCczCS42Ilc!5e0!3m2!1ses!2ses!4v1600000000000!5m2!1ses!2ses"
-                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6282.5!2d-0.3510!3d39.4800!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f14.0!3m3!1m2!1s0xd604f4cf0efb06f%3A0x4f2b5d8e9c1a4b4!2sPlaza+de+X%C3%BAquer%2C+Valencia!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
+                    width="100%" height="100%" style="border:0; display:block;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
-            <div>
-                <h1 id="loc-title" style="font-size: clamp(2rem, 4vw, 3rem);">Ubicación estratégica en Plaza Xúquer,
-                    cerca de la UPV y Universidad de Valencia</h1>
-                <p id="loc-desc" style="font-size: 1.1rem;">Ubicado en una de las zonas más demandadas por estudiantes
-                    nacionales e internacionales, a <strong>5 minutos andando</strong> de la Universidad Politécnica,
-                    Universidad de Valencia (UV) y ESIC Marketing & Business School.</p>
-                <p style="color: var(--text-light);">Zona consolidada, segura y con todos los servicios: supermercados,
-                    bibliotecas, transporte público, farmacias y zona de ocio.</p>
-
-                <div
-                    style="margin-top: 2rem; background: #f8fafc; padding: 2rem; border-radius: 16px; border: 1px solid #e2e8f0;">
-                    <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 0.5rem;">Todas las
-                        habitaciones están pensadas para estudiantes que buscan alquiler por meses en Valencia con altos
-                        estándares de seguridad, confort y estabilidad académica.</p>
-                    <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 0;">Cada espacio ha sido
-                        equipado para facilitar el estudio, el descanso y la organización durante la estancia.</p>
+            <!-- Texto -->
+            <div class="loc-info">
+                <div class="loc-legend">
+                    <span><span style="color:#FF6600;">📍</span> <strong>Xuquer Living</strong> (tu piso)</span>
+                    <span><span style="color:#4285F4;">🎓</span> <strong>UPV</strong> – 5 min andando</span>
+                    <span><span style="color:#34A853;">🎓</span> <strong>UV</strong> – 5 min andando</span>
                 </div>
-
-
+                <h1 id="loc-title">Ubicación estratégica cerca de la UPV y Universidad de Valencia</h1>
+                <p id="loc-desc">Ubicado en una de las zonas más demandadas por estudiantes nacionales e internacionales, a <strong>5 minutos andando</strong> de la Universidad Politécnica, Universidad de Valencia (UV) y ESIC Marketing & Business School.</p>
+                <p style="color: var(--text-light);">Zona consolidada, segura y con todos los servicios: supermercados, bibliotecas, transporte público, farmacias y zona de ocio.</p>
+                <div class="loc-card">
+                    <p>Todas las habitaciones están pensadas para estudiantes que buscan alquiler por meses en Valencia con altos estándares de seguridad, confort y estabilidad académica.</p>
+                    <p style="margin-bottom:0;">Cada espacio ha sido equipado para facilitar el estudio, el descanso y la organización durante la estancia.</p>
+                </div>
             </div>
         </div>
     </main>
 
-    <!-- Scroll Down Arrow -->
-    <div class="scroll-arrow" id="scrollArrow" onclick="scrollToNext()">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M12 16l-6-6h12z" />
-        </svg>
-    </div>
-
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
+        html, body { height: 100%; overflow: hidden; }
 
-        .scroll-arrow {
-            position: fixed;
-            bottom: 3rem;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-            width: 50px;
-            height: 50px;
-            background: var(--accent);
-            border-radius: 50%;
+        body {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 20px rgba(255, 102, 0, 0.3);
-            transition: all 0.3s ease;
-            animation: bounce 2s infinite;
+            flex-direction: column;
+            height: 100dvh;
         }
 
-        .scroll-arrow:hover {
-            transform: translateX(-50%) scale(1.1);
-            box-shadow: 0 6px 30px rgba(255, 102, 0, 0.5);
+        .top-bar { flex-shrink: 0; }
+        .navbar   { flex-shrink: 0; }
+
+        .loc-main {
+            flex: 1;
+            min-height: 0;
+            padding: 1.25rem 5%;
         }
 
-        .scroll-arrow svg {
-            width: 24px;
-            height: 24px;
-            fill: white;
+        .loc-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 2.5rem;
+            height: 100%;
         }
 
-        @keyframes bounce {
+        .loc-map-wrap {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            height: 100%;
+        }
 
-            0%,
-            20%,
-            50%,
-            80%,
-            100% {
-                transform: translateX(-50%) translateY(0);
-            }
+        .loc-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow-y: auto;
+            padding: 0.25rem 0;
+        }
 
-            40% {
-                transform: translateX(-50%) translateY(-10px);
-            }
+        .loc-legend {
+            display: flex;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+        }
 
-            60% {
-                transform: translateX(-50%) translateY(-5px);
-            }
+        .loc-info h1 {
+            font-size: clamp(1.6rem, 3vw, 2.3rem);
+            margin-bottom: 0;
+            line-height: 1.15;
+        }
+
+        .loc-info > p {
+            font-size: 1rem;
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        .loc-card {
+            background: #f8fafc;
+            padding: 1.1rem 1.4rem;
+            border-radius: 14px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .loc-card p {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            margin-bottom: 0.4rem;
+            line-height: 1.6;
         }
     </style>
-
-    <script>
-        function scrollToNext() {
-            const sections = document.querySelectorAll('.section, section');
-            const scrollPosition = window.scrollY + window.innerHeight / 2;
-            for (let i = 0; i < sections.length; i++) {
-                const section = sections[i];
-                if (scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
-                    if (i < sections.length - 1) sections[i + 1].scrollIntoView({ behavior: 'smooth' });
-                    else document.getElementById('scrollArrow').style.display = 'none';
-                    break;
-                }
-            }
-        }
-        window.addEventListener('scroll', () => {
-            const scrollArrow = document.getElementById('scrollArrow');
-            const scrollPosition = window.scrollY + window.innerHeight;
-            const documentHeight = document.documentElement.scrollHeight;
-            scrollArrow.style.display = scrollPosition >= documentHeight - 100 ? 'none' : 'flex';
-        });
-    </script>
 
     <a id="wa-float-btn" href="https://wa.me/34000000000" target="_blank" class="wa-float-btn">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">

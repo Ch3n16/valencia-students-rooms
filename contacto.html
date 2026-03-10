@@ -21,7 +21,7 @@
 
     <nav class="navbar">
         <div class="nav-inner">
-            <a href="index.html" class="logo"><img src="logo.png" alt="Gorgos" style="height: 55px; width: auto;"></a>
+            <a href="index.html" class="logo-link" aria-label="Valencia Students Rooms – Inicio"><img src="logo.png" alt="Xuquer Living" class="logo-img"><span class="logo-text"><span class="logo-text-name">Valencia</span><span class="logo-text-tagline">Students Rooms</span></span></a>
             <div class="nav-links">
                 <a href="index.html" id="nav-home">Inicio</a>
                 <div class="dropdown-container">
@@ -50,7 +50,7 @@
 
         <div style="text-align: center; margin-bottom: 4rem; position: relative;">
             <h1 id="contact-main-title">Contacta con nosotros</h1>
-            <p id="contact-subtitle">Reserva directa sin intermediarios.</p>
+            <p id="contact-subtitle" style="font-size: 1.8rem; font-weight: 900; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.5rem;">RESERVA DIRECTA · SIN INTERMEDIARIOS · NI COMISIONES</p>
         </div>
 
         <div class="grid" style="grid-template-columns: 1fr 2fr; gap: 4rem; align-items: start;">
@@ -58,19 +58,17 @@
             <!-- Left Info -->
             <div class="card">
                 <div style="text-align: center; margin-bottom: 2rem;">
-                    <div style="font-size: 1.5rem; font-weight: 700;">GORGOS LIVING</div>
+                    <div style="font-size: 1.5rem; font-weight: 700;">XUQUER LIVING</div>
                 </div>
 
                 <ul style="display: grid; gap: 1.5rem;">
                     <li>
-                        <strong id="contact-phone-label">WhatsApp / Teléfono:</strong>
+                        <strong id="contact-phone-label">WhatsApp:</strong>
                         <div style="display: flex; align-items: center; gap: 10px; margin-top: 4px;">
-                            <span id="wa-phone-wrapper" style="font-size: 1.2rem; color: var(--accent);">+34 000 000 000</span>
-                            <a href="https://wa.me/34000000000" target="_blank" style="display:flex; align-items:center; justify-content:center; width:38px; height:38px; background:#25D366; border-radius:50%; text-decoration:none; box-shadow:0 3px 12px rgba(37,211,102,0.35); flex-shrink:0;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
-                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.103 1.522 5.83L.057 23.882a.5.5 0 0 0 .61.637l6.264-1.643A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.944 9.944 0 0 1-5.17-1.448l-.37-.22-3.828 1.004 1.018-3.717-.242-.38A9.944 9.944 0 0 1 2 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/>
-                                </svg>
+                            <span id="wa-phone-wrapper"></span>
+                            <a href="https://wa.me/34000000000" target="_blank" style="display:flex; align-items:center; gap:8px; background:#25D366; color:white; border-radius:24px; padding:10px 18px; text-decoration:none; font-weight:600; box-shadow:0 3px 12px rgba(37,211,102,0.35);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.103 1.522 5.83L.057 23.882a.5.5 0 0 0 .61.637l6.264-1.643A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.944 9.944 0 0 1-5.17-1.448l-.37-.22-3.828 1.004 1.018-3.717-.242-.38A9.944 9.944 0 0 1 2 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/></svg>
+                                Contactar por WhatsApp
                             </a>
                         </div>
                     </li>
@@ -93,18 +91,18 @@
 
                     <div class="form-grid">
                         <div>
-                            <label id="lbl-name">Nombre</label>
+                            <label id="lbl-name">Nombre *</label>
                             <input type="text" id="input-name" placeholder="Tu nombre">
                         </div>
                         <div>
-                            <label id="lbl-surname">Apellidos</label>
+                            <label id="lbl-surname">Apellidos *</label>
                             <input type="text" id="input-surname" placeholder="Tus apellidos">
                         </div>
                     </div>
 
                     <div class="form-grid">
                         <div>
-                            <label id="lbl-phone">Teléfono (con prefijo)</label>
+                            <label id="lbl-phone">Teléfono (con prefijo) *</label>
                             <div style="display: flex; gap: 0.5rem;">
                                 <select style="width: 140px; text-overflow: ellipsis;">
                                     <option value="+34">🇪🇸 +34</option>
@@ -147,18 +145,18 @@
                             </div>
                         </div>
                         <div>
-                            <label>Email</label>
+                            <label>Email *</label>
                             <input type="email" id="input-email" placeholder="@email.com">
                         </div>
                     </div>
 
                     <div class="form-grid">
                         <div>
-                            <label id="lbl-age">Edad</label>
+                            <label id="lbl-age">Edad *</label>
                             <input type="number" id="input-age" placeholder="Ej: 21">
                         </div>
                         <div>
-                            <label id="lbl-gender">Género</label>
+                            <label id="lbl-gender">Género *</label>
                             <select id="select-gender">
                                 <option value="">-- Seleccionar --</option>
                                 <option value="male">Masculino</option>
@@ -170,11 +168,11 @@
 
                     <div class="form-grid">
                         <div>
-                            <label id="lbl-country">País / Nacionalidad</label>
+                            <label id="lbl-country">País / Nacionalidad *</label>
                             <input type="text" id="input-country" placeholder="Español, Italiano...">
                         </div>
                         <div>
-                            <label id="lbl-uni">Universidad / Estudios</label>
+                            <label id="lbl-uni">Universidad / Estudios *</label>
                             <input type="text" id="input-uni" placeholder="UPV, UV, ESIC...">
                         </div>
                     </div>
@@ -185,7 +183,7 @@
 
                         <label id="lbl-period"
                             style="color: var(--accent); font-size: 1.1rem; margin-bottom: 1rem;">Selecciona tu Periodo
-                            de Estancia (Obligatorio)</label>
+                            de Estancia *</label>
 
                         <div
                             style="display: grid; gap: 0.8rem; margin-bottom: 2rem; background: #f8fafc; padding: 1.5rem; border-radius: 12px; border: 1px solid #e2e8f0;">
@@ -235,6 +233,11 @@
                         <input type="checkbox" id="robot-check" style="width:auto;">
                         <label for="robot-check" style="margin:0; font-weight: 400;" id="lbl-robot">No soy un
                             robot</label>
+                    </div>
+
+                    <div style="margin-top: 1.5rem; display: flex; align-items: flex-start; gap: 0.5rem;">
+                        <input type="checkbox" id="privacy-check" style="width:auto; margin-top:4px; flex-shrink:0;">
+                        <label for="privacy-check" id="lbl-privacy" style="margin:0; font-weight: 400; font-size: 0.9rem; color: var(--text-light);">He leído y acepto recibir la información solicitada sobre habitaciones disponibles. Tus datos serán tratados conforme a la <strong>Ley Orgánica de Protección de Datos (LOPD)</strong> y el <strong>RGPD</strong>, exclusivamente para gestionar tu solicitud de reserva. No se cederán a terceros.</label>
                     </div>
 
                     <button type="button" class="btn btn-primary" style="width: 100%; margin-top: 2rem;"
@@ -362,6 +365,102 @@
             scrollArrow.style.display = scrollPosition >= documentHeight - 100 ? 'none' : 'flex';
         });
     </script>
+
+<script>
+// Validación del formulario
+document.getElementById('btn-submit').addEventListener('click', function() {
+    const requiredFields = [
+        { id: 'input-name', label: 'Nombre' },
+        { id: 'input-surname', label: 'Apellidos' },
+        { id: 'input-phone', label: 'Teléfono' },
+        { id: 'input-email', label: 'Email' },
+        { id: 'input-age', label: 'Edad' },
+        { id: 'select-gender', label: 'Género' },
+        { id: 'input-country', label: 'País / Nacionalidad' },
+        { id: 'input-uni', label: 'Universidad / Estudios' },
+    ];
+
+    // Check period selection
+    const periodSelected = document.querySelector('input[name="period"]:checked');
+
+    // Check privacy checkbox
+    const privacyCheck = document.getElementById('privacy-check');
+
+    for (const field of requiredFields) {
+        const el = document.getElementById(field.id);
+        if (!el || !el.value.trim()) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            el.focus();
+            el.style.borderColor = '#ef4444';
+            setTimeout(() => { el.style.borderColor = ''; }, 3000);
+            return;
+        }
+    }
+
+    if (!periodSelected) {
+        const periodSection = document.getElementById('form-avail-title');
+        periodSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        document.getElementById('lbl-period').style.color = '#ef4444';
+        setTimeout(() => { document.getElementById('lbl-period').style.color = 'var(--accent)'; }, 3000);
+        return;
+    }
+
+    if (privacyCheck && !privacyCheck.checked) {
+        privacyCheck.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        document.getElementById('lbl-privacy').style.color = '#ef4444';
+        setTimeout(() => { document.getElementById('lbl-privacy').style.color = ''; }, 3000);
+        return;
+    }
+
+    // If all valid, show CAPTCHA
+    const robotCheck = document.getElementById('robot-check');
+    if (robotCheck && !robotCheck.checked) {
+        robotCheck.click();
+    } else {
+        // All good - submit form (here would be the actual submit)
+        handleFormSubmit();
+    }
+});
+
+function handleFormSubmit() {
+    // Build email body
+    const name = document.getElementById('input-name').value;
+    const surname = document.getElementById('input-surname').value;
+    const phone = document.getElementById('input-phone').value;
+    const email = document.getElementById('input-email').value;
+    const age = document.getElementById('input-age').value;
+    const gender = document.getElementById('select-gender').value;
+    const country = document.getElementById('input-country').value;
+    const uni = document.getElementById('input-uni').value;
+    const period = document.querySelector('input[name="period"]:checked')?.value || '';
+    const comments = document.getElementById('input-comments').value;
+
+    const subject = encodeURIComponent(`Nueva solicitud de reserva – ${name} ${surname}`);
+    const body = encodeURIComponent(
+`NUEVA SOLICITUD DE RESERVA – XUQUER LIVING
+==========================================
+
+DATOS PERSONALES:
+• Nombre: ${name} ${surname}
+• Teléfono: ${phone}
+• Email: ${email}
+• Edad: ${age}
+• Género: ${gender}
+• País / Nacionalidad: ${country}
+• Universidad / Estudios: ${uni}
+
+PERIODO SOLICITADO: ${period}
+
+COMENTARIOS:
+${comments || '(Sin comentarios)'}
+
+==========================================
+Enviado desde el formulario de reserva de valenciastudentsrooms.com`
+    );
+
+    window.location.href = `mailto:reservas@estudentsrooms.com?subject=${subject}&body=${body}`;
+}
+</script>
 
 </body>
 

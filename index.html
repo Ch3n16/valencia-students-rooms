@@ -25,7 +25,7 @@
     <!-- Floating Glass Navbar -->
     <nav class="navbar">
         <div class="nav-inner">
-            <a href="index.html" class="logo"><img src="logo.png" alt="Gorgos" style="height: 55px; width: auto;"></a>
+            <a href="index.html" class="logo-link" aria-label="Valencia Students Rooms – Inicio"><img src="logo.png" alt="Xuquer Living" class="logo-img"><span class="logo-text"><span class="logo-text-name">Valencia</span><span class="logo-text-tagline">Students Rooms</span></span></a>
 
             <div class="nav-links">
                 <a href="index.html" class="active" id="nav-home">Inicio</a>
@@ -56,30 +56,26 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="section hero">
-        <div class="container grid" style="grid-template-columns: 1.2fr 1fr; align-items: center; gap: 5rem;">
+    <header class="section hero" style="padding-top: 1rem; padding-bottom: 1rem;">
+        <div class="container grid" style="grid-template-columns: 1.2fr 1fr; align-items: center; gap: 3rem;">
 
             <!-- Text Content -->
             <div>
-                <h1 style="margin-bottom: 1.5rem;" id="hero-title">Alquiler de habitaciones para estudiantes en <span
+                <h1 style="margin-bottom: 0.75rem; font-size: clamp(2.6rem, 4.5vw, 3.8rem);" id="hero-title">Alquiler de habitaciones para estudiantes en <span
                         style="color: var(--accent);">Valencia – Plaza Xúquer</span></h1>
-                <p style="font-size: 1.15rem; margin-bottom: 1rem; max-width: 560px;" id="hero-desc">
+                <p style="font-size: 1.05rem; margin-bottom: 0.6rem; max-width: 560px;" id="hero-desc">
                     Vivienda exclusiva para <strong>chicas universitarias</strong> a 5 minutos andando del campus
                     universitario.
                 </p>
-                <p style="font-size: 1.05rem; margin-bottom: 1rem; max-width: 560px; color: var(--text-light);">
-                    Alquiler de habitaciones para estudiantes en Valencia por meses, ideal para universitarias de la
-                    <strong>Universidad Politécnica (UPV)</strong>, <strong>Universidad Valencia</strong> y <strong>ESIC
-                        Marketing & Business School</strong>.
-                </p>
-                <p style="font-size: 1rem; margin-bottom: 2rem; max-width: 560px; color: var(--text-light);">
-                    También adecuado para estudiantes Erasmus e internacionales que buscan habitación en alquiler por
-                    meses en Valencia.
+                <p style="font-size: 0.95rem; margin-bottom: 0.6rem; max-width: 560px; color: var(--text-light);">
+                    Alquiler por meses ideal para universitarias de la
+                    <strong>UPV</strong>, <strong>UV</strong> y <strong>ESIC</strong>.
+                    También para estudiantes Erasmus e internacionales.
                 </p>
 
                 <div
-                    style="background: white; padding: 2rem; border-radius: 20px; box-shadow: var(--shadow-md); margin-bottom: 2.5rem; border: 1px solid #f0f0f0;">
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    style="background: white; padding: 1rem 1.25rem; border-radius: 16px; box-shadow: var(--shadow-md); margin-bottom: 1.25rem; margin-top: 0.5rem; border: 1px solid #f0f0f0;">
+                    <div style="display: flex; gap: 0.65rem; flex-wrap: wrap;">
                         <div class="badge" id="hero-rooms">🏠 7 habitaciones premium</div>
                         <div class="badge" id="hero-all">✨ Todo incluido</div>
                         <div class="badge" id="hero-safe">🛡️ Zona segura</div>
@@ -94,7 +90,7 @@
             </div>
 
             <!-- Hero Image -->
-            <div class="room-img-container" style="height: 650px; transform: rotate(2deg);">
+            <div class="room-img-container" style="height: 520px; transform: rotate(2deg);">
                 <img src="common_kitchen.png" alt="Cocina Estudiantes Valencia"
                     style="height: 100%; object-fit: cover;">
 
@@ -112,52 +108,41 @@
     </header>
 
     <!-- Todo Incluido Section -->
-    <section class="section" style="padding-top: 0;">
+    <section class="section" style="padding-top: 0; padding-bottom: 1rem;">
         <div class="container">
             <div class="card grid"
-                style="grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; background: white;">
-                <div class="room-img-container" style="height: 450px;">
+                style="grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; background: white; padding: 1.75rem;">
+                <div class="room-img-container" style="height: 360px;">
                     <img src="city_vibe.png" alt="Valencia estudiantes">
                 </div>
                 <div>
-                    <h2 id="teaser-title">Todo incluido. Sin facturas, sin sorpresas y sin preocupaciones</h2>
-                    <p id="teaser-desc">Alquiler mensual para estudiantes en Valencia con todos los gastos incluidos y
-                        sin comisiones de agencia.</p>
-                    <p style="color: var(--text-light); font-size: 1rem;">Olvídate de contratos de suministros,
-                        reparaciones o gestiones complicadas. Aquí todo está preparado para que tu única preocupación
-                        sea estudiar y disfrutar de tu experiencia universitaria en Valencia.</p>
+                    <h2 style="font-size: clamp(1.6rem, 3vw, 2.1rem); margin-bottom: 0.5rem;" id="teaser-title">Todo incluido. Sin facturas, sin sorpresas y sin preocupaciones</h2>
+                    <p style="margin-bottom: 0.4rem; font-size: 0.95rem;" id="teaser-desc">Alquiler mensual para estudiantes en Valencia con todos los gastos incluidos y sin comisiones de agencia.</p>
+                    <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 0;">Olvídate de contratos de suministros, reparaciones o gestiones complicadas. Aquí todo está preparado para que tu única preocupación sea estudiar y disfrutar de tu experiencia universitaria en Valencia.</p>
 
-                    <ul style="display: grid; gap: 1rem; margin-top: 2rem;">
-                        <li style="display: flex; align-items: center; gap: 1rem;">
-                            <span
-                                style="background: #eef2ff; color: var(--accent); padding: 0.5rem; border-radius: 50%;">🚀</span>
+                    <ul style="display: grid; gap: 0.5rem; margin-top: 0.75rem;">
+                        <li style="display: flex; align-items: center; gap: 0.75rem;">
+                            <span style="background: #eef2ff; color: var(--accent); padding: 0.4rem; border-radius: 50%; font-size: 0.85rem; line-height:1;">🚀</span>
                             <span id="feat-wifi"><strong>Wifi fibra 1 Gbps</strong></span>
                         </li>
-                        <li style="display: flex; align-items: center; gap: 1rem;">
-                            <span
-                                style="background: #eef2ff; color: var(--accent); padding: 0.5rem; border-radius: 50%;">🧹</span>
+                        <li style="display: flex; align-items: center; gap: 0.75rem;">
+                            <span style="background: #eef2ff; color: var(--accent); padding: 0.4rem; border-radius: 50%; font-size: 0.85rem; line-height:1;">🧹</span>
                             <span id="feat-clean"><strong>Limpieza semanal</strong> de zonas comunes</span>
                         </li>
-                        <li style="display: flex; align-items: center; gap: 1rem;">
-                            <span
-                                style="background: #eef2ff; color: var(--accent); padding: 0.5rem; border-radius: 50%;">❄️</span>
+                        <li style="display: flex; align-items: center; gap: 0.75rem;">
+                            <span style="background: #eef2ff; color: var(--accent); padding: 0.4rem; border-radius: 50%; font-size: 0.85rem; line-height:1;">❄️</span>
                             <span id="feat-fridge"><strong>Espacios individuales</strong> en cocina y nevera</span>
                         </li>
-                        <li style="display: flex; align-items: center; gap: 1rem;">
-                            <span
-                                style="background: #eef2ff; color: var(--accent); padding: 0.5rem; border-radius: 50%;">🔧</span>
+                        <li style="display: flex; align-items: center; gap: 0.75rem;">
+                            <span style="background: #eef2ff; color: var(--accent); padding: 0.4rem; border-radius: 50%; font-size: 0.85rem; line-height:1;">🔧</span>
                             <span><strong>Mantenimiento incluido</strong></span>
                         </li>
                     </ul>
 
-                    <p style="margin-top: 2rem; font-size: 0.95rem; color: var(--text-light);">Todas las habitaciones
-                        están pensadas para estudiantes que buscan alquiler por meses en Valencia con altos estándares
-                        de seguridad, confort y estabilidad académica.</p>
-                    <p style="font-size: 0.95rem; color: var(--text-light);">Cada espacio ha sido equipado para
-                        facilitar el estudio, el descanso y la organización durante el curso completo.</p>
+                    <p style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.25rem;">Todas las habitaciones están pensadas para estudiantes que buscan alquiler por meses en Valencia con altos estándares de seguridad, confort y estabilidad académica.</p>
+                    <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 0;">Cada espacio ha sido equipado para facilitar el estudio, el descanso y la organización durante el curso completo.</p>
 
-                    <a href="ubicacion.html" class="btn btn-secondary" style="margin-top: 2rem;" id="btn-loc">Descubre
-                        Ubicación →</a>
+                    <a href="ubicacion.html" class="btn btn-secondary" style="margin-top: 1rem;" id="btn-loc">Descubre Ubicación →</a>
                 </div>
             </div>
         </div>
@@ -264,9 +249,9 @@
         });
     </script>
 
-    <footer style="background: #111; color: white; padding: 4rem 0;">
+    <footer style="background: #111; color: white; padding: 1.25rem 0;">
         <div class="container" style="text-align: center; opacity: 0.7;">
-            <p style="color: white; margin-bottom: 0;">&copy; 2026 Gorgos Living. Valencia Premium Student Housing.</p>
+            <p style="color: white; margin-bottom: 0;">&copy; 2026 Xuquer Living. Valencia Premium Student Housing.</p>
         </div>
     </footer>
 
