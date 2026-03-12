@@ -655,7 +655,7 @@ label {
     }
 
     p {
-        font-size: 0.95rem;
+        font-size: 1rem;
         line-height: 1.7;
         margin-bottom: 1.1rem;
     }
@@ -671,12 +671,12 @@ label {
     }
 
     .grid {
-        gap: 1.75rem;
+        gap: 1.5rem !important;
     }
 
     /* ── Tarjetas ───────────────────────────────────────────── */
     .card {
-        padding: 1.4rem;
+        padding: 1.25rem !important;
         border-radius: 16px;
     }
 

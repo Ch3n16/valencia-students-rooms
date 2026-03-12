@@ -294,6 +294,31 @@
             fill: #FF6600;
             transition: fill 0.2s;
         }
+
+        @media (max-width: 767px) {
+            /* Ocultar thumbnails — mostrar solo imagen principal en móvil */
+            .rm-t1, .rm-t2, .rm-t3 { display: none; }
+
+            /* Mosaicos: 1 columna con altura fija para imagen principal */
+            .room-mosaic-3,
+            .room-mosaic-2,
+            .room-mosaic-1 {
+                grid-template-columns: 1fr !important;
+                grid-template-rows: 230px !important;
+            }
+            .room-mosaic-3 .rm-main,
+            .room-mosaic-2 .rm-main,
+            .room-mosaic-1 .rm-main {
+                grid-column: 1 !important;
+                grid-row: 1 !important;
+            }
+
+            /* Price box: reducir h3 de 2rem a 1.5rem */
+            .price-box h3 { font-size: 1.5rem; }
+
+            /* Features list: mejor espaciado */
+            .room-features li { font-size: 1rem; padding: 0.45rem 0; }
+        }
     </style>
 </head>
 
