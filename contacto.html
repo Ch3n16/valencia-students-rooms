@@ -9,6 +9,7 @@
         content="Reserva tu habitación de estudiante en Valencia. Formulario de contacto directo sin intermediarios ni comisiones de agencia.">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -229,10 +230,8 @@
 
                     </div>
 
-                    <div style="margin-top: 2rem; display: flex; align-items: center; gap: 0.5rem;">
-                        <input type="checkbox" id="robot-check" style="width:auto;">
-                        <label for="robot-check" style="margin:0; font-weight: 400;" id="lbl-robot">No soy un
-                            robot</label>
+                    <div style="margin-top: 2rem;">
+                        <div class="g-recaptcha" data-sitekey="TU_SITE_KEY_AQUI"></div>
                     </div>
 
                     <div style="margin-top: 1.5rem; display: flex; align-items: flex-start; gap: 0.5rem;">
@@ -247,23 +246,6 @@
             </div>
         </div>
     </main>
-
-    <!-- CAPTCHA MODAL -->
-    <div id="captcha-modal" class="captcha-overlay">
-        <div class="captcha-card">
-            <div class="captcha-header">
-                <span style="font-size:0.9rem; opacity:0.9;" id="captcha-instr">Selecciona todas las imágenes de:</span>
-                <span class="captcha-target" id="captcha-target-label">COCHES</span>
-            </div>
-
-            <div class="captcha-grid" id="captcha-grid">
-                <!-- Tiles injected via JS -->
-            </div>
-
-            <div id="captcha-msg" class="captcha-status"></div>
-            <button class="btn btn-primary" id="btn-verify" style="width:100%;">Verificar</button>
-        </div>
-    </div>
 
     <a id="wa-float-btn" href="https://wa.me/34000000000" target="_blank" class="wa-float-btn">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
@@ -412,14 +394,14 @@ document.getElementById('btn-submit').addEventListener('click', function() {
         return;
     }
 
-    // If all valid, show CAPTCHA
-    const robotCheck = document.getElementById('robot-check');
-    if (robotCheck && !robotCheck.checked) {
-        robotCheck.click();
-    } else {
-        // All good - submit form (here would be the actual submit)
-        handleFormSubmit();
+    // Verificar reCAPTCHA
+    if (!grecaptcha.getResponse()) {
+        const recaptchaDiv = document.querySelector('.g-recaptcha');
+        if (recaptchaDiv) recaptchaDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
     }
+
+    handleFormSubmit();
 });
 
 function handleFormSubmit() {

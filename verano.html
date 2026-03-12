@@ -79,31 +79,31 @@
         </div>
     </main>
 
-    <!-- Programas de Verano -->
-    <section class="section" style="padding-top: 0;">
+    <!-- Segunda slide: info + alta demanda en un solo vistazo -->
+    <section style="height: 100vh; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; padding: 5.5rem 0 1.5rem;">
         <div class="container">
-            <div class="card" style="background: white; padding: 3rem;">
-                <h2 style="margin-bottom: 1.5rem;">Ideal para cursos intensivos, programas internacionales y por motivos
-                    laborales en verano.
-                </h2>
+            <div style="display: grid; grid-template-columns: 1fr 1.3fr; gap: 1.75rem; align-items: stretch;">
 
+                <!-- Info card -->
+                <div class="card" style="background: white; padding: 2rem 2.25rem; display: flex; flex-direction: column; justify-content: center; gap: 1rem;">
+                    <h2 style="font-size: clamp(1.2rem, 2vw, 1.5rem); margin: 0;">Ideal para cursos intensivos, programas internacionales y estancias por motivos laborales en verano.</h2>
+                    <p style="color: var(--text-light); font-size: 0.95rem; margin: 0;">Alquiler mensual o quincenal, con todos los suministros incluidos y sin comisiones de agencia.</p>
+                    <ul style="display: flex; flex-direction: column; gap: 0.5rem; margin: 0; padding: 0; list-style: none;">
+                        <li style="font-size: 0.9rem;">🎓 Cursos intensivos de idiomas y universidad</li>
+                        <li style="font-size: 0.9rem;">💼 Prácticas y trabajo en Valencia</li>
+                        <li style="font-size: 0.9rem;">🌍 Programas Erasmus de verano</li>
+                        <li style="font-size: 0.9rem;">📍 A 5 min de la UPV y Universidad de Valencia</li>
+                    </ul>
+                </div>
 
-                <p style="color: var(--text-light); font-size: 1rem; margin-bottom: 0.5rem;">Alquiler mensual o
-                    quincenal, con todos los suministros incluidos y sin comisiones de agencia.</p>
+                <!-- Alta demanda -->
+                <div style="background: linear-gradient(135deg, #FF6600 0%, #FF8833 100%); padding: 2.5rem 2.25rem; border-radius: var(--radius); color: white; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;">
+                    <h2 style="color: white; margin: 0; font-size: clamp(1.5rem, 2.5vw, 2.2rem);">⚡ Alta demanda en meses de verano</h2>
+                    <p style="font-size: 0.95rem; color: rgba(255,255,255,0.95); max-width: 480px; margin: 0; line-height: 1.65;">Valencia es uno de los destinos académicos más demandados en verano. Las habitaciones en Plaza Xúquer suelen reservarse con antelación, especialmente para programas internacionales.</p>
+                    <p style="font-size: 0.9rem; color: rgba(255,255,255,0.85); margin: 0;">Se recomienda consultar disponibilidad con tiempo.</p>
+                    <a href="contacto.html?period=Verano26" class="btn" style="background: white; color: var(--accent); font-weight: 700; padding: 0.9rem 2.5rem; font-size: 1rem; border-radius: 50px; margin-top: 0.5rem;">Consultar Disponibilidad en Verano</a>
+                </div>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- Alta Demanda - Un solo pantallazo -->
-    <section style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 2rem 0;">
-        <div class="container" style="width:100%;">
-            <div style="background: linear-gradient(135deg, #FF6600 0%, #FF8833 100%); padding: 4rem 3rem; border-radius: var(--radius); color: white; text-align: center; min-height: 70vh; display:flex; flex-direction:column; align-items:center; justify-content:center;">
-                <h2 style="color: white; margin-bottom: 1.5rem; font-size: clamp(2rem, 4vw, 3rem);">⚡ Alta demanda en meses de verano</h2>
-                <p style="font-size: 1.2rem; color: rgba(255,255,255,0.95); max-width: 700px; margin: 0 auto 1rem;">
-                    Valencia es uno de los destinos académicos más demandados en verano. Las habitaciones en Plaza Xúquer suelen reservarse con antelación, especialmente para programas internacionales.</p>
-                <p style="font-size: 1.15rem; color: rgba(255,255,255,0.9); margin-bottom: 3rem;">Se recomienda consultar disponibilidad con tiempo.</p>
-                <a href="contacto.html?period=Verano26" class="btn" style="background: white; color: var(--accent); font-weight: 700; padding: 1.2rem 3.5rem; font-size: 1.1rem; border-radius: 50px;">Consultar Disponibilidad en Verano</a>
             </div>
         </div>
     </section>
@@ -191,7 +191,7 @@
         });
     </script>
 
-    <footer style="background: #111; color: white; padding: 4rem 0;">
+    <footer style="background: #111; color: white; padding: 1.25rem 0;">
         <div class="container" style="text-align: center; opacity: 0.7;">
             <p style="color: white; margin-bottom: 0;">&copy; 2026 Xuquer Living. Valencia Premium Student Housing.</p>
         </div>
