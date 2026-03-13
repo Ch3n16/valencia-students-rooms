@@ -157,32 +157,51 @@
             width: 46px;
             height: 46px;
             background: white;
-            border: 2px solid rgba(255,102,0,0.3);
+            border: 2px solid rgba(255, 102, 0, 0.3);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
             transition: all 0.3s ease;
             animation: bounce 2s infinite;
         }
+
         .scroll-arrow:hover {
             background: #FF6600;
             border-color: #FF6600;
             transform: translateX(-50%) scale(1.1);
         }
-        .scroll-arrow:hover svg { fill: white; }
+
+        .scroll-arrow:hover svg {
+            fill: white;
+        }
+
         .scroll-arrow svg {
             width: 20px;
             height: 20px;
             fill: #FF6600;
             transition: fill 0.2s;
         }
+
         @keyframes bounce {
-            0%,20%,50%,80%,100% { transform: translateX(-50%) translateY(0); }
-            40% { transform: translateX(-50%) translateY(-7px); }
-            60% { transform: translateX(-50%) translateY(-3px); }
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            40% {
+                transform: translateX(-50%) translateY(-7px);
+            }
+
+            60% {
+                transform: translateX(-50%) translateY(-3px);
+            }
         }
 
         /* ── Photo Mosaic ─────────────────────────────────── */
@@ -207,36 +226,75 @@
             transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .rm-tile:hover img { transform: scale(1.06); }
+        .rm-tile:hover img {
+            transform: scale(1.06);
+        }
 
-        .rm-main { position: relative; overflow: hidden; }
+        .rm-main {
+            position: relative;
+            overflow: hidden;
+        }
 
         /* 3 thumbnails: tall main left + 2 stacked right + wide strip bottom */
         .room-mosaic-3 {
             grid-template-columns: 2fr 1fr;
             grid-template-rows: 150px 150px 80px;
         }
-        .room-mosaic-3 .rm-main { grid-column: 1; grid-row: 1 / 3; }
-        .room-mosaic-3 .rm-t1   { grid-column: 2; grid-row: 1; }
-        .room-mosaic-3 .rm-t2   { grid-column: 2; grid-row: 2; }
-        .room-mosaic-3 .rm-t3   { grid-column: 1 / 3; grid-row: 3; }
+
+        .room-mosaic-3 .rm-main {
+            grid-column: 1;
+            grid-row: 1 / 3;
+        }
+
+        .room-mosaic-3 .rm-t1 {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .room-mosaic-3 .rm-t2 {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        .room-mosaic-3 .rm-t3 {
+            grid-column: 1 / 3;
+            grid-row: 3;
+        }
 
         /* 2 thumbnails: tall main left + 2 stacked right */
         .room-mosaic-2 {
             grid-template-columns: 2fr 1fr;
             grid-template-rows: 170px 170px;
         }
-        .room-mosaic-2 .rm-main { grid-column: 1; grid-row: 1 / 3; }
-        .room-mosaic-2 .rm-t1   { grid-column: 2; grid-row: 1; }
-        .room-mosaic-2 .rm-t2   { grid-column: 2; grid-row: 2; }
+
+        .room-mosaic-2 .rm-main {
+            grid-column: 1;
+            grid-row: 1 / 3;
+        }
+
+        .room-mosaic-2 .rm-t1 {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .room-mosaic-2 .rm-t2 {
+            grid-column: 2;
+            grid-row: 2;
+        }
 
         /* 1 thumbnail: wide main + tall side thumbnail */
         .room-mosaic-1 {
             grid-template-columns: 3fr 2fr;
             grid-template-rows: 300px;
         }
-        .room-mosaic-1 .rm-main { grid-column: 1; }
-        .room-mosaic-1 .rm-t1   { grid-column: 2; }
+
+        .room-mosaic-1 .rm-main {
+            grid-column: 1;
+        }
+
+        .room-mosaic-1 .rm-t1 {
+            grid-column: 2;
+        }
 
         .room-features li {
             padding: 0.3rem 0;
@@ -273,21 +331,26 @@
             width: 46px;
             height: 46px;
             background: white;
-            border: 2px solid rgba(255,102,0,0.3);
+            border: 2px solid rgba(255, 102, 0, 0.3);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
             transition: all 0.3s ease;
         }
+
         .scroll-arrow-up:hover {
             background: #FF6600;
             border-color: #FF6600;
             transform: translateX(-50%) scale(1.1);
         }
-        .scroll-arrow-up:hover svg { fill: white; }
+
+        .scroll-arrow-up:hover svg {
+            fill: white;
+        }
+
         .scroll-arrow-up svg {
             width: 20px;
             height: 20px;
@@ -296,8 +359,13 @@
         }
 
         @media (max-width: 767px) {
+
             /* Ocultar thumbnails — mostrar solo imagen principal en móvil */
-            .rm-t1, .rm-t2, .rm-t3 { display: none; }
+            .rm-t1,
+            .rm-t2,
+            .rm-t3 {
+                display: none;
+            }
 
             /* Mosaicos: 1 columna con altura fija para imagen principal */
             .room-mosaic-3,
@@ -306,6 +374,7 @@
                 grid-template-columns: 1fr !important;
                 grid-template-rows: 230px !important;
             }
+
             .room-mosaic-3 .rm-main,
             .room-mosaic-2 .rm-main,
             .room-mosaic-1 .rm-main {
@@ -314,10 +383,15 @@
             }
 
             /* Price box: reducir h3 de 2rem a 1.5rem */
-            .price-box h3 { font-size: 1.5rem; }
+            .price-box h3 {
+                font-size: 1.5rem;
+            }
 
             /* Features list: mejor espaciado */
-            .room-features li { font-size: 1rem; padding: 0.45rem 0; }
+            .room-features li {
+                font-size: 1rem;
+                padding: 0.45rem 0;
+            }
         }
     </style>
 </head>
@@ -332,7 +406,10 @@
 
     <nav class="navbar">
         <div class="nav-inner">
-            <a href="index.html" class="logo-link" aria-label="Valencia Students Rooms – Inicio"><img src="logo.png" alt="Xuquer Living" class="logo-img"><span class="logo-text"><span class="logo-text-name">Valencia</span><span class="logo-text-tagline">Students Rooms</span></span></a>
+            <a href="index.html" class="logo-link" aria-label="Valencia Students Rooms – Inicio"><img src="logo.png"
+                    alt="Xuquer Living" class="logo-img"><span class="logo-text"><span
+                        class="logo-text-name">Valencia</span><span class="logo-text-tagline">Students
+                        Rooms</span></span></a>
             <div class="nav-links">
                 <a href="index.html" id="nav-home">Inicio</a>
                 <div class="dropdown-container">
@@ -364,12 +441,16 @@
                 <div>
                     <div class="room-mosaic room-mosaic-3">
                         <div class="rm-tile rm-main">
-                            <img src="h1%20principal.png" alt="Habitación 1 con terraza privada Valencia" onclick="openGallery(1, 0)">
+                            <img src="h1%20principal.png" alt="Habitación 1 con terraza privada Valencia"
+                                onclick="openGallery(1, 0)">
                             <div class="tag-overlay" style="background: var(--accent); color: white;">Habitación 1</div>
                         </div>
-                        <div class="rm-tile rm-t1"><img src="h1%20s1.png" alt="Terraza privada" onclick="openGallery(1, 1)"></div>
-                        <div class="rm-tile rm-t2"><img src="h1%20s2.png" alt="Escritorio estudio" onclick="openGallery(1, 2)"></div>
-                        <div class="rm-tile rm-t3"><img src="h1%20s3.png" alt="Detalle habitación" onclick="openGallery(1, 3)"></div>
+                        <div class="rm-tile rm-t1"><img src="h1%20s1.png" alt="Terraza privada"
+                                onclick="openGallery(1, 1)"></div>
+                        <div class="rm-tile rm-t2"><img src="h1%20s2.png" alt="Escritorio estudio"
+                                onclick="openGallery(1, 2)"></div>
+                        <div class="rm-tile rm-t3"><img src="h1%20s3.png" alt="Detalle habitación"
+                                onclick="openGallery(1, 3)"></div>
                     </div>
                     <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0;">
                         <h3>550€/mes</h3>
@@ -378,7 +459,8 @@
                 </div>
 
                 <div class="card" style="padding: 2.5rem; border-color: var(--accent);">
-                    <h2 id="room-1-title" style="font-size: 1.6rem; text-align: center;">Habitación 1 – Terraza privada y vistas arboladas
+                    <h2 id="room-1-title" style="font-size: 1.6rem; text-align: center;">Habitación 1 – Terraza privada
+                        y vistas arboladas
                     </h2>
                     <p style="font-size: 0.95rem;">Habitación exterior con terraza privada, luz natural agradable,
                         ventilación natural constante y fresca durante el verano. Un plus de privacidad y bienestar que
@@ -408,11 +490,14 @@
                 <div>
                     <div class="room-mosaic room-mosaic-2">
                         <div class="rm-tile rm-main">
-                            <img src="h2%20principal.png" alt="Habitación 2 exterior luminosa" onclick="openGallery(2, 0)">
+                            <img src="h2%20principal.png" alt="Habitación 2 exterior luminosa"
+                                onclick="openGallery(2, 0)">
                             <div class="tag-overlay" style="background: var(--accent); color: white;">Habitación 2</div>
                         </div>
-                        <div class="rm-tile rm-t1"><img src="h2%20s1.png" alt="Detalle 1" onclick="openGallery(2, 1)"></div>
-                        <div class="rm-tile rm-t2"><img src="h2%20s2.png" alt="Detalle 2" onclick="openGallery(2, 2)"></div>
+                        <div class="rm-tile rm-t1"><img src="h2%20s1.png" alt="Detalle 1" onclick="openGallery(2, 1)">
+                        </div>
+                        <div class="rm-tile rm-t2"><img src="h2%20s2.png" alt="Detalle 2" onclick="openGallery(2, 2)">
+                        </div>
                     </div>
                     <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0;">
                         <h3>500€/mes</h3>
@@ -421,7 +506,8 @@
                 </div>
 
                 <div class="card" style="padding: 2.5rem; border-color: var(--accent);">
-                    <h2 id="room-2-title" style="font-size: 1.6rem; text-align: center;">Habitación 2 – Exterior luminosa y funcional</h2>
+                    <h2 id="room-2-title" style="font-size: 1.6rem; text-align: center;">Habitación 2 – Exterior
+                        luminosa y funcional</h2>
                     <p style="font-size: 0.95rem;">Habitación exterior con entrada de luz natural y vistas arboladas.
                         Diseñada para ofrecer un entorno fresco en verano, comodidad y concentración durante todo el año
                         académico.</p>
@@ -450,12 +536,16 @@
                 <div>
                     <div class="room-mosaic room-mosaic-3">
                         <div class="rm-tile rm-main">
-                            <img src="h3%20principal.png" alt="Habitación 3 amplia Valencia" onclick="openGallery(3, 0)">
+                            <img src="h3%20principal.png" alt="Habitación 3 amplia Valencia"
+                                onclick="openGallery(3, 0)">
                             <div class="tag-overlay" style="background: var(--accent); color: white;">Habitación 3</div>
                         </div>
-                        <div class="rm-tile rm-t1"><img src="h3%20s1.png" alt="Detalle 1" onclick="openGallery(3, 1)"></div>
-                        <div class="rm-tile rm-t2"><img src="h3%20s2.png" alt="Detalle 2" onclick="openGallery(3, 2)"></div>
-                        <div class="rm-tile rm-t3"><img src="h3%20s3.png" alt="Detalle 3" onclick="openGallery(3, 3)"></div>
+                        <div class="rm-tile rm-t1"><img src="h3%20s1.png" alt="Detalle 1" onclick="openGallery(3, 1)">
+                        </div>
+                        <div class="rm-tile rm-t2"><img src="h3%20s2.png" alt="Detalle 2" onclick="openGallery(3, 2)">
+                        </div>
+                        <div class="rm-tile rm-t3"><img src="h3%20s4.png" alt="Detalle 3" onclick="openGallery(3, 3)">
+                        </div>
                     </div>
                     <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0;">
                         <h3>625€/mes</h3>
@@ -464,8 +554,10 @@
                 </div>
 
                 <div class="card" style="padding: 2.5rem; border-color: var(--accent);">
-                    <h2 id="room-3-title" style="font-size: 1.6rem; text-align: center;">Habitación 3 – Amplitud y zona de descanso</h2>
-                    <p style="font-size: 0.95rem;">Dispone de más superficie útil, creando una auténtica sensación de hogar durante todo el curso.</p>
+                    <h2 id="room-3-title" style="font-size: 1.6rem; text-align: center;">Habitación 3 – Amplitud y zona
+                        de descanso</h2>
+                    <p style="font-size: 0.95rem;">Dispone de más superficie útil, creando una auténtica sensación de
+                        hogar durante todo el curso.</p>
 
                     <ul class="room-features"
                         style="display: grid; grid-template-columns: 1fr; gap: 0.5rem; margin-top: 0.75rem;">
@@ -491,12 +583,16 @@
                 <div>
                     <div class="room-mosaic room-mosaic-3">
                         <div class="rm-tile rm-main">
-                            <img src="h4%20principal.png" alt="Habitación 4 interior silenciosa" onclick="openGallery(4, 0)">
+                            <img src="h4%20principal.png" alt="Habitación 4 interior silenciosa"
+                                onclick="openGallery(4, 0)">
                             <div class="tag-overlay" style="background: var(--accent); color: white;">Habitación 4</div>
                         </div>
-                        <div class="rm-tile rm-t1"><img src="h4%20s1.png" alt="Detalle 1" onclick="openGallery(4, 1)"></div>
-                        <div class="rm-tile rm-t2"><img src="h4%20s2.png" alt="Detalle 2" onclick="openGallery(4, 2)"></div>
-                        <div class="rm-tile rm-t3"><img src="h4%20s3.png" alt="Detalle 3" onclick="openGallery(4, 3)"></div>
+                        <div class="rm-tile rm-t1"><img src="h4%20s1.png" alt="Detalle 1" onclick="openGallery(4, 1)">
+                        </div>
+                        <div class="rm-tile rm-t2"><img src="h4%20s2.png" alt="Detalle 2" onclick="openGallery(4, 2)">
+                        </div>
+                        <div class="rm-tile rm-t3"><img src="h4%20s3.png" alt="Detalle 3" onclick="openGallery(4, 3)">
+                        </div>
                     </div>
                     <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0;">
                         <h3>450€/mes</h3>
@@ -505,7 +601,8 @@
                 </div>
 
                 <div class="card" style="padding: 2.5rem; border-color: var(--accent);">
-                    <h2 id="room-4-title" style="font-size: 1.6rem; text-align: center;">Habitación 4 – Silencio interior, concentración
+                    <h2 id="room-4-title" style="font-size: 1.6rem; text-align: center;">Habitación 4 – Silencio
+                        interior, concentración
                         absoluta</h2>
                     <p style="font-size: 0.95rem;">Habitación interior especialmente silenciosa, ideal para estudiantes
                         que priorizan la concentración y el rendimiento académico durante todo el curso.</p>
@@ -538,7 +635,8 @@
                             <img src="h5%20principal.png" alt="Habitación 5 luminosa" onclick="openGallery(5, 0)">
                             <div class="tag-overlay" style="background: var(--accent); color: white;">Habitación 5</div>
                         </div>
-                        <div class="rm-tile rm-t1"><img src="h5%20s1.png" alt="Detalle habitación 5" onclick="openGallery(5, 1)"></div>
+                        <div class="rm-tile rm-t1"><img src="h5%20s1.png" alt="Detalle habitación 5"
+                                onclick="openGallery(5, 1)"></div>
                     </div>
                     <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0;">
                         <h3>500€/mes</h3>
@@ -547,7 +645,8 @@
                 </div>
 
                 <div class="card" style="padding: 2.5rem; border-color: var(--accent);">
-                    <h2 id="room-5-title" style="font-size: 1.6rem; text-align: center;">Habitación 5 – Máxima luminosidad y tranquilidad</h2>
+                    <h2 id="room-5-title" style="font-size: 1.6rem; text-align: center;">Habitación 5 – Máxima
+                        luminosidad y tranquilidad</h2>
                     <p style="font-size: 0.95rem;">Habitación exterior a amplio patio de manzana, lo que garantiza un
                         ambiente especialmente silencioso y una entrada constante de luz natural durante todo el día.
                     </p>
@@ -576,10 +675,12 @@
                 <div>
                     <div class="room-mosaic room-mosaic-1">
                         <div class="rm-tile rm-main">
-                            <img src="h6%20principal.png" alt="Habitación 6 luminosa y serena" onclick="openGallery(6, 0)">
+                            <img src="h6%20principal.png" alt="Habitación 6 luminosa y serena"
+                                onclick="openGallery(6, 0)">
                             <div class="tag-overlay" style="background: var(--accent); color: white;">Habitación 6</div>
                         </div>
-                        <div class="rm-tile rm-t1"><img src="h6%20s1.png" alt="Detalle habitación 6" onclick="openGallery(6, 1)"></div>
+                        <div class="rm-tile rm-t1"><img src="h6%20s1.png" alt="Detalle habitación 6"
+                                onclick="openGallery(6, 1)"></div>
                     </div>
                     <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0;">
                         <h3>480€/mes</h3>
@@ -588,7 +689,8 @@
                 </div>
 
                 <div class="card" style="padding: 2.5rem; border-color: var(--accent);">
-                    <h2 id="room-6-title" style="font-size: 1.6rem; text-align: center;">Habitación 6 – Máxima luminosidad y tranquilidad</h2>
+                    <h2 id="room-6-title" style="font-size: 1.6rem; text-align: center;">Habitación 6 – Máxima
+                        luminosidad y tranquilidad</h2>
                     <p style="font-size: 0.95rem;">Habitación exterior a patio interior amplio, muy luminosa y
                         especialmente silenciosa. Ideal para estudiantes que buscan concentración y estabilidad durante
                         todo el año académico.</p>
@@ -619,8 +721,10 @@
                             <img src="h7%20s1.png" alt="Habitación 7 confort adicional" onclick="openGallery(7, 0)">
                             <div class="tag-overlay" style="background: var(--accent); color: white;">Habitación 7</div>
                         </div>
-                        <div class="rm-tile rm-t1"><img src="h7%20s2.png" alt="Detalle 1" onclick="openGallery(7, 1)"></div>
-                        <div class="rm-tile rm-t2"><img src="h7%20s3.png" alt="Detalle 2" onclick="openGallery(7, 2)"></div>
+                        <div class="rm-tile rm-t1"><img src="h7%20s2.png" alt="Detalle 1" onclick="openGallery(7, 1)">
+                        </div>
+                        <div class="rm-tile rm-t2"><img src="h7%20s3.png" alt="Detalle 2" onclick="openGallery(7, 2)">
+                        </div>
                     </div>
                     <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0;">
                         <h3>500€/mes</h3>
@@ -629,7 +733,8 @@
                 </div>
 
                 <div class="card" style="padding: 2.5rem; border-color: var(--accent);">
-                    <h2 id="room-7-title" style="font-size: 1.6rem; text-align: center;">Habitación 7 – Luminosidad y confort adicional</h2>
+                    <h2 id="room-7-title" style="font-size: 1.6rem; text-align: center;">Habitación 7 – Luminosidad y
+                        confort adicional</h2>
                     <p style="font-size: 0.95rem;">Habitación exterior con excelente entrada de luz natural y entorno
                         silencioso. Su equipamiento adicional aporta mayor comodidad durante el curso académico
                         completo.</p>
@@ -783,8 +888,10 @@
 
     <a id="wa-float-btn" href="https://wa.me/34000000000" target="_blank" class="wa-float-btn">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.103 1.522 5.83L.057 23.882a.5.5 0 0 0 .61.637l6.264-1.643A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.944 9.944 0 0 1-5.17-1.448l-.37-.22-3.828 1.004 1.018-3.717-.242-.38A9.944 9.944 0 0 1 2 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/>
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+            <path
+                d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.103 1.522 5.83L.057 23.882a.5.5 0 0 0 .61.637l6.264-1.643A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.944 9.944 0 0 1-5.17-1.448l-.37-.22-3.828 1.004 1.018-3.717-.242-.38A9.944 9.944 0 0 1 2 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z" />
         </svg>
 
     </a>
