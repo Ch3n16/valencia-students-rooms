@@ -27,17 +27,16 @@
             scroll-snap-stop: always;
             display: flex;
             align-items: center;
-            padding: 0.25rem 0;
-            padding-top: 1rem;
+            padding: 6rem 0 2rem;
         }
 
         .room-section:first-of-type {
-            padding-top: 3rem;
+            padding-top: 7rem;
             align-items: flex-start;
         }
 
         .room-section .grid {
-            align-items: center;
+            align-items: stretch;
             gap: 2.5rem !important;
         }
 
@@ -210,6 +209,9 @@
             gap: 4px;
             border-radius: 16px;
             overflow: hidden;
+            flex: 1;
+            min-height: 0;
+            max-height: 400px;
         }
 
         .rm-tile {
@@ -264,7 +266,7 @@
         /* 2 thumbnails: tall main left + 2 stacked right */
         .room-mosaic-2 {
             grid-template-columns: 2fr 1fr;
-            grid-template-rows: 170px 170px;
+            grid-template-rows: 1fr 1fr;
         }
 
         .room-mosaic-2 .rm-main {
@@ -285,7 +287,7 @@
         /* 1 thumbnail: wide main + tall side thumbnail */
         .room-mosaic-1 {
             grid-template-columns: 3fr 2fr;
-            grid-template-rows: 300px;
+            grid-template-rows: 1fr;
         }
 
         .room-mosaic-1 .rm-main {
@@ -412,14 +414,14 @@
                         Rooms</span></span></a>
             <div class="nav-links">
                 <a href="index.html" id="nav-home">Inicio</a>
+                <a href="ubicacion.html" id="nav-loc">Ubicación</a>
                 <div class="dropdown-container">
-                    <a href="ubicacion.html" id="nav-loc">Ubicación ▾</a>
+                    <a href="habitaciones.html" class="active" id="nav-rooms">Habitaciones ▾</a>
                     <div class="dropdown-menu">
-                        <a href="ubicacion.html" class="dropdown-item">📍 Plaza Xúquer</a>
+                        <a href="habitaciones.html" class="dropdown-item">🛏️ Habitaciones</a>
                         <a href="zonas-comunes.html" class="dropdown-item">🛋️ Zonas Comunes</a>
                     </div>
                 </div>
-                <a href="habitaciones.html" class="active" id="nav-rooms">Habitaciones</a>
                 <a href="verano.html" id="nav-summer">Estancias de Verano</a>
                 <a href="vivir-valencia.html" id="nav-life">Vivir en Valencia</a>
                 <a href="faqs.html" id="nav-faqs">FAQs</a>
@@ -437,9 +439,9 @@
     <!-- Room 1 -->
     <section class="room-section" id="room-1">
         <div class="container">
-            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem; align-items: flex-start;">
-                <div>
-                    <div class="room-mosaic room-mosaic-3">
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <div style="display: flex; flex-direction: column;">
+                    <div class="room-mosaic room-mosaic-2">
                         <div class="rm-tile rm-main">
                             <img src="h1%20principal.png" alt="Habitación 1 con terraza privada Valencia"
                                 onclick="openGallery(1, 0)">
@@ -449,16 +451,14 @@
                                 onclick="openGallery(1, 1)"></div>
                         <div class="rm-tile rm-t2"><img src="h1%20s2.png" alt="Escritorio estudio"
                                 onclick="openGallery(1, 2)"></div>
-                        <div class="rm-tile rm-t3"><img src="h1%20s3.png" alt="Detalle habitación"
-                                onclick="openGallery(1, 3)"></div>
                     </div>
-                    <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0;">
+                    <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0.75rem;">
                         <h3>550€/mes</h3>
                         <p>TODO INCLUIDO: gastos de suministros (luz, agua, gas), gastos comunitarios e impuestos</p>
                     </div>
                 </div>
 
-                <div class="card" style="padding: 2.5rem; border-color: var(--accent);">
+                <div class="card" style="padding: 2.5rem; border-color: var(--accent); overflow-y: auto;">
                     <h2 id="room-1-title" style="font-size: 1.6rem; text-align: center;">Habitación 1 – Terraza privada
                         y vistas arboladas
                     </h2>
@@ -486,8 +486,8 @@
     <!-- Room 2 -->
     <section class="room-section" id="room-2">
         <div class="container">
-            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem; align-items: flex-start;">
-                <div>
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <div style="display: flex; flex-direction: column;">
                     <div class="room-mosaic room-mosaic-2">
                         <div class="rm-tile rm-main">
                             <img src="h2%20principal.png" alt="Habitación 2 exterior luminosa"
@@ -499,13 +499,13 @@
                         <div class="rm-tile rm-t2"><img src="h2%20s2.png" alt="Detalle 2" onclick="openGallery(2, 2)">
                         </div>
                     </div>
-                    <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0;">
+                    <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0.75rem;">
                         <h3>500€/mes</h3>
                         <p>TODO INCLUIDO: gastos de suministros (luz, agua, gas), gastos comunitarios e impuestos</p>
                     </div>
                 </div>
 
-                <div class="card" style="padding: 2.5rem; border-color: var(--accent);">
+                <div class="card" style="padding: 2.5rem; border-color: var(--accent); overflow-y: auto;">
                     <h2 id="room-2-title" style="font-size: 1.6rem; text-align: center;">Habitación 2 – Exterior
                         luminosa y funcional</h2>
                     <p style="font-size: 0.95rem;">Habitación exterior con entrada de luz natural y vistas arboladas.
@@ -532,9 +532,9 @@
     <!-- Room 3 -->
     <section class="room-section" id="room-3">
         <div class="container">
-            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem; align-items: flex-start;">
-                <div>
-                    <div class="room-mosaic room-mosaic-3">
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <div style="display: flex; flex-direction: column;">
+                    <div class="room-mosaic room-mosaic-2">
                         <div class="rm-tile rm-main">
                             <img src="h3%20principal.png" alt="Habitación 3 amplia Valencia"
                                 onclick="openGallery(3, 0)">
@@ -544,16 +544,14 @@
                         </div>
                         <div class="rm-tile rm-t2"><img src="h3%20s2.png" alt="Detalle 2" onclick="openGallery(3, 2)">
                         </div>
-                        <div class="rm-tile rm-t3"><img src="h3%20s4.png" alt="Detalle 3" onclick="openGallery(3, 3)">
-                        </div>
                     </div>
-                    <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0;">
+                    <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0.75rem;">
                         <h3>625€/mes</h3>
                         <p>TODO INCLUIDO: gastos de suministros (luz, agua, gas), gastos comunitarios e impuestos</p>
                     </div>
                 </div>
 
-                <div class="card" style="padding: 2.5rem; border-color: var(--accent);">
+                <div class="card" style="padding: 2.5rem; border-color: var(--accent); overflow-y: auto;">
                     <h2 id="room-3-title" style="font-size: 1.6rem; text-align: center;">Habitación 3 – Amplitud y zona
                         de descanso</h2>
                     <p style="font-size: 0.95rem;">Dispone de más superficie útil, creando una auténtica sensación de
@@ -579,9 +577,9 @@
     <!-- Room 4 -->
     <section class="room-section" id="room-4">
         <div class="container">
-            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem; align-items: flex-start;">
-                <div>
-                    <div class="room-mosaic room-mosaic-3">
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <div style="display: flex; flex-direction: column;">
+                    <div class="room-mosaic room-mosaic-2">
                         <div class="rm-tile rm-main">
                             <img src="h4%20principal.png" alt="Habitación 4 interior silenciosa"
                                 onclick="openGallery(4, 0)">
@@ -591,16 +589,14 @@
                         </div>
                         <div class="rm-tile rm-t2"><img src="h4%20s2.png" alt="Detalle 2" onclick="openGallery(4, 2)">
                         </div>
-                        <div class="rm-tile rm-t3"><img src="h4%20s3.png" alt="Detalle 3" onclick="openGallery(4, 3)">
-                        </div>
                     </div>
-                    <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0;">
+                    <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0.75rem;">
                         <h3>450€/mes</h3>
                         <p>TODO INCLUIDO: gastos de suministros (luz, agua, gas), gastos comunitarios e impuestos</p>
                     </div>
                 </div>
 
-                <div class="card" style="padding: 2.5rem; border-color: var(--accent);">
+                <div class="card" style="padding: 2.5rem; border-color: var(--accent); overflow-y: auto;">
                     <h2 id="room-4-title" style="font-size: 1.6rem; text-align: center;">Habitación 4 – Silencio
                         interior, concentración
                         absoluta</h2>
@@ -628,8 +624,8 @@
     <!-- Room 5 -->
     <section class="room-section" id="room-5">
         <div class="container">
-            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem; align-items: flex-start;">
-                <div>
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <div style="display: flex; flex-direction: column;">
                     <div class="room-mosaic room-mosaic-1">
                         <div class="rm-tile rm-main">
                             <img src="h5%20principal.png" alt="Habitación 5 luminosa" onclick="openGallery(5, 0)">
@@ -638,13 +634,13 @@
                         <div class="rm-tile rm-t1"><img src="h5%20s1.png" alt="Detalle habitación 5"
                                 onclick="openGallery(5, 1)"></div>
                     </div>
-                    <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0;">
+                    <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0.75rem;">
                         <h3>500€/mes</h3>
                         <p>TODO INCLUIDO: gastos de suministros (luz, agua, gas), gastos comunitarios e impuestos</p>
                     </div>
                 </div>
 
-                <div class="card" style="padding: 2.5rem; border-color: var(--accent);">
+                <div class="card" style="padding: 2.5rem; border-color: var(--accent); overflow-y: auto;">
                     <h2 id="room-5-title" style="font-size: 1.6rem; text-align: center;">Habitación 5 – Máxima
                         luminosidad y tranquilidad</h2>
                     <p style="font-size: 0.95rem;">Habitación exterior a amplio patio de manzana, lo que garantiza un
@@ -671,8 +667,8 @@
     <!-- Room 6 -->
     <section class="room-section" id="room-6">
         <div class="container">
-            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem; align-items: flex-start;">
-                <div>
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <div style="display: flex; flex-direction: column;">
                     <div class="room-mosaic room-mosaic-1">
                         <div class="rm-tile rm-main">
                             <img src="h6%20principal.png" alt="Habitación 6 luminosa y serena"
@@ -682,13 +678,13 @@
                         <div class="rm-tile rm-t1"><img src="h6%20s1.png" alt="Detalle habitación 6"
                                 onclick="openGallery(6, 1)"></div>
                     </div>
-                    <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0;">
+                    <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0.75rem;">
                         <h3>480€/mes</h3>
                         <p>TODO INCLUIDO: gastos de suministros (luz, agua, gas), gastos comunitarios e impuestos</p>
                     </div>
                 </div>
 
-                <div class="card" style="padding: 2.5rem; border-color: var(--accent);">
+                <div class="card" style="padding: 2.5rem; border-color: var(--accent); overflow-y: auto;">
                     <h2 id="room-6-title" style="font-size: 1.6rem; text-align: center;">Habitación 6 – Máxima
                         luminosidad y tranquilidad</h2>
                     <p style="font-size: 0.95rem;">Habitación exterior a patio interior amplio, muy luminosa y
@@ -714,8 +710,8 @@
     <!-- Room 7 -->
     <section class="room-section" id="room-7">
         <div class="container">
-            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem; align-items: flex-start;">
-                <div>
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <div style="display: flex; flex-direction: column;">
                     <div class="room-mosaic room-mosaic-2">
                         <div class="rm-tile rm-main">
                             <img src="h7%20s1.png" alt="Habitación 7 confort adicional" onclick="openGallery(7, 0)">
@@ -726,13 +722,13 @@
                         <div class="rm-tile rm-t2"><img src="h7%20s3.png" alt="Detalle 2" onclick="openGallery(7, 2)">
                         </div>
                     </div>
-                    <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0;">
+                    <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0.75rem;">
                         <h3>500€/mes</h3>
                         <p>TODO INCLUIDO: gastos de suministros (luz, agua, gas), gastos comunitarios e impuestos</p>
                     </div>
                 </div>
 
-                <div class="card" style="padding: 2.5rem; border-color: var(--accent);">
+                <div class="card" style="padding: 2.5rem; border-color: var(--accent); overflow-y: auto;">
                     <h2 id="room-7-title" style="font-size: 1.6rem; text-align: center;">Habitación 7 – Luminosidad y
                         confort adicional</h2>
                     <p style="font-size: 0.95rem;">Habitación exterior con excelente entrada de luz natural y entorno
