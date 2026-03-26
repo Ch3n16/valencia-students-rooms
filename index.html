@@ -76,7 +76,8 @@
                     También para estudiantes Erasmus e internacionales.
                 </p>
 
-                <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 0.75rem 0 1.25rem; padding: 0.65rem 0; border-top: 1.5px solid #ececec; border-bottom: 1.5px solid #ececec;">
+                <div
+                    style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 0.75rem 0 1.25rem; padding: 0.65rem 0; border-top: 1.5px solid #ececec; border-bottom: 1.5px solid #ececec;">
                     <div class="badge" id="hero-rooms">🏠 7 habitaciones premium</div>
                     <div class="badge" id="hero-all">✨ Todo incluido</div>
                     <div class="badge" id="hero-safe">🛡️ Zona segura</div>
@@ -90,9 +91,9 @@
             </div>
 
             <!-- Hero Image -->
-            <div class="room-img-container" style="height: 520px; transform: rotate(2deg);">
-                <img src="cocina.png" alt="Cocina Estudiantes Valencia"
-                    style="height: 100%; object-fit: cover;">
+            <div class="room-img-container hero-plaza-img" style="height: 520px;">
+                <img src="plaza xuquer.png" alt="Plaza Xúquer Valencia – Alquiler habitaciones estudiantes" style="width: 100%; height: 100%; object-fit: cover; object-position: center 25%;">
+                <div class="hero-plaza-badge">📍 Plaza Xúquer · Valencia</div>
             </div>
 
         </div>
@@ -105,8 +106,12 @@
                 <div class="conv-text">
                     <div class="badge conv-badge">🛡️ Modelo de Convivencia</div>
                     <h2 class="conv-heading">Un espacio exclusivo para <span>chicas universitarias</span></h2>
-                    <p class="conv-desc">La vivienda está orientada exclusivamente a estudiantes universitarias, con el objetivo de mantener una convivencia segura, organizada y tranquila durante toda la estancia académica.</p>
-                    <p class="conv-desc" style="margin-bottom:0;">Nuestro modelo favorece la estabilidad y el respeto mutuo — aspectos especialmente valorados por las familias cuando sus hijas se desplazan para estudiar.</p>
+                    <p class="conv-desc">La vivienda está orientada exclusivamente a estudiantes universitarias, con el
+                        objetivo de mantener una convivencia segura, organizada y tranquila durante toda la estancia
+                        académica.</p>
+                    <p class="conv-desc" style="margin-bottom:0;">Nuestro modelo favorece la estabilidad y el respeto
+                        mutuo — aspectos especialmente valorados por las familias cuando sus hijas se desplazan para
+                        estudiar.</p>
                 </div>
                 <div class="conv-features">
                     <div class="card conv-feat-card">
@@ -140,7 +145,8 @@
             <div class="card grid"
                 style="grid-template-columns: 0.6fr 1.4fr; gap: 2.5rem; align-items: flex-start; background: white; padding: 1.75rem;">
                 <div class="room-img-container" id="ubicacion-img" style="aspect-ratio: 2/3; height: auto;">
-                    <img src="Ubicacion.png" alt="Valencia estudiantes" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="Ubicacion.png" alt="Valencia estudiantes"
+                        style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <div>
                     <h2 style="font-size: clamp(1.6rem, 3vw, 2.1rem); margin-bottom: 0.5rem;" id="teaser-title">Todo
@@ -224,7 +230,7 @@
             padding-top: 5rem;
         }
 
-        header.section > .container {
+        header.section>.container {
             width: 100%;
         }
 
@@ -235,8 +241,8 @@
         /* ── Convivencia Section ───────────────────────── */
         .conv-section {
             background: white;
-            border-top: 1px solid rgba(0,0,0,0.05);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .conv-layout {
@@ -250,8 +256,8 @@
             margin-bottom: 1.25rem;
             font-size: 0.85rem;
             font-weight: 600;
-            background: rgba(255,102,0,0.08) !important;
-            border: 1px solid rgba(255,102,0,0.2) !important;
+            background: rgba(255, 102, 0, 0.08) !important;
+            border: 1px solid rgba(255, 102, 0, 0.2) !important;
             color: var(--accent) !important;
         }
 
@@ -261,7 +267,9 @@
             line-height: 1.2;
         }
 
-        .conv-heading span { color: var(--accent); }
+        .conv-heading span {
+            color: var(--accent);
+        }
 
         .conv-desc {
             font-size: 0.95rem;
@@ -299,10 +307,44 @@
             display: block;
         }
 
-        .conv-feat-card > span {
+        .conv-feat-card>span {
             font-size: 0.8rem;
             color: var(--text-light);
             line-height: 1.4;
+        }
+
+        /* ── Hero Plaza Image ──────────────────────────────── */
+        .hero-plaza-img {
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+        }
+
+        .hero-plaza-img::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                transparent 55%,
+                rgba(0, 0, 0, 0.22) 100%
+            );
+            border-radius: inherit;
+            pointer-events: none;
+        }
+
+        .hero-plaza-badge {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            color: #1a1a2e;
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+            letter-spacing: 0.01em;
         }
 
         /* Scroll Down Arrow */
@@ -315,32 +357,51 @@
             width: 46px;
             height: 46px;
             background: white;
-            border: 2px solid rgba(255,102,0,0.3);
+            border: 2px solid rgba(255, 102, 0, 0.3);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
             transition: all 0.3s ease;
             animation: bounce 2s infinite;
         }
+
         .scroll-arrow:hover {
             background: #FF6600;
             border-color: #FF6600;
             transform: translateX(-50%) scale(1.1);
         }
-        .scroll-arrow:hover svg { fill: white; }
+
+        .scroll-arrow:hover svg {
+            fill: white;
+        }
+
         .scroll-arrow svg {
             width: 20px;
             height: 20px;
             fill: #FF6600;
             transition: fill 0.2s;
         }
+
         @keyframes bounce {
-            0%,20%,50%,80%,100% { transform: translateX(-50%) translateY(0); }
-            40% { transform: translateX(-50%) translateY(-7px); }
-            60% { transform: translateX(-50%) translateY(-3px); }
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            40% {
+                transform: translateX(-50%) translateY(-7px);
+            }
+
+            60% {
+                transform: translateX(-50%) translateY(-3px);
+            }
         }
     </style>
 
