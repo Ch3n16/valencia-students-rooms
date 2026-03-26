@@ -22,22 +22,140 @@
         }
 
         .room-section {
-            min-height: 100vh;
+            height: 100vh;
+            box-sizing: border-box;
             scroll-snap-align: start;
             scroll-snap-stop: always;
             display: flex;
-            align-items: center;
+            align-items: stretch;
             padding: 6rem 0 2rem;
         }
 
         .room-section:first-of-type {
-            padding-top: 7rem;
-            align-items: flex-start;
+            padding-top: 4rem;
+        }
+
+        .room-section > .container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .room-section .grid {
-            align-items: stretch;
+            align-items: start;
             gap: 2.5rem !important;
+            height: 100%;
+        }
+
+        .room-section .grid > div {
+            height: clamp(400px, 74vh, 640px);
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .room-section .card {
+            flex: 1;
+            min-height: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+            padding: 2rem !important;
+            border: 1px solid rgba(255,102,0,0.2) !important;
+            overflow-y: auto;
+        }
+
+        .room-price-card {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            background: white;
+            border: 1px solid rgba(255,102,0,0.2);
+            border-radius: 16px;
+            padding: 1rem 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .room-price-card .room-price-num {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 700;
+            color: #FF6600;
+            line-height: 1;
+        }
+
+        .room-price-card .room-price-sub {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            line-height: 1.4;
+            margin-top: 0.15rem;
+        }
+
+        .room-price-card .btn {
+            margin-left: auto;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        /* Badge de número de habitación */
+        .room-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.3rem 0.85rem;
+            background: rgba(255,102,0,0.08);
+            border: 1px solid rgba(255,102,0,0.22);
+            border-radius: 50px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #FF6600;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+            width: fit-content;
+        }
+
+        .room-title-sub {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #263bb6;
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        .room-desc {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        .room-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .room-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.32rem 0.7rem;
+            background: white;
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: 50px;
+            font-size: 0.76rem;
+            color: var(--text-color);
+            font-weight: 500;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            transition: all 0.2s;
+        }
+
+        .room-chip:hover {
+            border-color: rgba(255,102,0,0.3);
+            background: rgba(255,102,0,0.04);
         }
 
         /* Gallery Thumbnails */
@@ -72,7 +190,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.95);
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
             z-index: 10000;
             align-items: center;
             justify-content: center;
@@ -84,16 +204,16 @@
 
         .gallery-modal-content {
             position: relative;
-            max-width: 90%;
-            max-height: 90vh;
+            max-width: 92vw;
+            max-height: 95vh;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
         .gallery-modal img {
-            max-width: 100%;
-            max-height: 70vh;
+            max-width: 90vw;
+            max-height: 88vh;
             object-fit: contain;
             border-radius: 12px;
         }
@@ -209,9 +329,7 @@
             gap: 4px;
             border-radius: 16px;
             overflow: hidden;
-            flex: 1;
-            min-height: 0;
-            max-height: 400px;
+            height: clamp(400px, 74vh, 640px);
         }
 
         .rm-tile {
@@ -298,31 +416,6 @@
             grid-column: 2;
         }
 
-        .room-features li {
-            padding: 0.3rem 0;
-            font-size: 0.95rem;
-        }
-
-        .price-box {
-            background: #fff5f0;
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin: 1.5rem 0;
-            text-align: center;
-            border: 2px solid var(--accent);
-        }
-
-        .price-box h3 {
-            margin: 0;
-            color: var(--accent);
-            font-size: 2rem;
-        }
-
-        .price-box p {
-            margin: 0.5rem 0 0 0;
-            font-size: 0.85rem;
-            color: var(--text-light);
-        }
 
         .scroll-arrow-up {
             position: fixed;
@@ -384,16 +477,6 @@
                 grid-row: 1 !important;
             }
 
-            /* Price box: reducir h3 de 2rem a 1.5rem */
-            .price-box h3 {
-                font-size: 1.5rem;
-            }
-
-            /* Features list: mejor espaciado */
-            .room-features li {
-                font-size: 1rem;
-                padding: 0.45rem 0;
-            }
         }
     </style>
 </head>
@@ -439,45 +522,38 @@
     <!-- Room 1 -->
     <section class="room-section" id="room-1">
         <div class="container">
-            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
-                <div style="display: flex; flex-direction: column;">
+            <div class="grid" style="grid-template-columns: 1.3fr 1fr; gap: 2.5rem;">
+                <div>
                     <div class="room-mosaic room-mosaic-2">
                         <div class="rm-tile rm-main">
-                            <img src="h1%20principal.png" alt="Habitación 1 con terraza privada Valencia"
-                                onclick="openGallery(1, 0)">
+                            <img src="h1%20principal.png" alt="Habitación 1 con terraza privada Valencia" onclick="openGallery(1, 0)">
                             <div class="tag-overlay" style="background: var(--accent); color: white;">Habitación 1</div>
                         </div>
-                        <div class="rm-tile rm-t1"><img src="h1%20s1.png" alt="Terraza privada"
-                                onclick="openGallery(1, 1)"></div>
-                        <div class="rm-tile rm-t2"><img src="h1%20s2.png" alt="Escritorio estudio"
-                                onclick="openGallery(1, 2)"></div>
-                    </div>
-                    <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0.75rem;">
-                        <h3>550€/mes</h3>
-                        <p>TODO INCLUIDO: gastos de suministros (luz, agua, gas), gastos comunitarios e impuestos</p>
+                        <div class="rm-tile rm-t1"><img src="h1%20s1.png" alt="Terraza privada" onclick="openGallery(1, 1)"></div>
+                        <div class="rm-tile rm-t2"><img src="h1%20s2.png" alt="Escritorio estudio" onclick="openGallery(1, 2)"></div>
                     </div>
                 </div>
-
-                <div class="card" style="padding: 2.5rem; border-color: var(--accent); overflow-y: auto;">
-                    <h2 id="room-1-title" style="font-size: 1.6rem; text-align: center;">Habitación 1 – Terraza privada
-                        y vistas arboladas
-                    </h2>
-                    <p style="font-size: 0.95rem;">Habitación exterior con terraza privada, luz natural agradable,
-                        ventilación natural constante y fresca durante el verano. Un plus de privacidad y bienestar que
-                        permite disponer de espacio propio al aire libre durante todo el curso.</p>
-
-                    <ul class="room-features"
-                        style="display: grid; grid-template-columns: 1fr; gap: 0.5rem; margin-top: 0.75rem;">
-                        <li>🌿 Terraza con mesa y 2 sillas</li>
-                        <li>🛏️ Cama XL de 135cm</li>
-                        <li>👕 Armario ropero + estanterías para almacenaje</li>
-                        <li>📚 Escritorio, silla y lámpara de estudio junto balcón</li>
-                        <li>🔥 Calefacción + ventilador de techo con mando a distancia</li>
-                        <li>🛋️ Sofá de 2 plazas</li>
-                    </ul>
-
-                    <a href="contacto.html?room=1" class="btn btn-primary" style="width: 100%;">Consultar
-                        Disponibilidad</a>
+                <div>
+                    <div class="card">
+                        <span class="room-badge">🏠 Habitación 1</span>
+                        <h2 class="room-title-sub" id="room-1-title">Terraza privada y vistas arboladas</h2>
+                        <p class="room-desc">La única habitación del piso con terraza privada, un espacio exterior propio con mesa y sillas ideal para descansar o estudiar al aire libre. Orientada al exterior, recibe luz natural generosa y ventilación cruzada que mantiene el ambiente fresco en verano. Cuenta además con sofá de 2 plazas para el descanso y un escritorio junto al balcón pensado para aprovechar la luz natural en cada sesión de estudio.</p>
+                        <div class="room-chips">
+                            <span class="room-chip">🌿 Terraza con mesa y 2 sillas</span>
+                            <span class="room-chip">🛏️ Cama XL 135cm</span>
+                            <span class="room-chip">👕 Armario + estanterías</span>
+                            <span class="room-chip">📚 Escritorio y lámpara</span>
+                            <span class="room-chip">🔥 Calefacción + ventilador</span>
+                            <span class="room-chip">🛋️ Sofá 2 plazas</span>
+                        </div>
+                    </div>
+                    <div class="room-price-card">
+                        <div>
+                            <div class="room-price-num">550€<span style="font-size:0.9rem;font-weight:500;color:var(--text-light);">/mes</span></div>
+                            <div class="room-price-sub">Todo incluido · luz, agua, gas, comunidad e impuestos</div>
+                        </div>
+                        <a href="contacto.html?room=1" class="btn btn-primary">Consultar Disponibilidad</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -486,44 +562,38 @@
     <!-- Room 2 -->
     <section class="room-section" id="room-2">
         <div class="container">
-            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
-                <div style="display: flex; flex-direction: column;">
+            <div class="grid" style="grid-template-columns: 1.3fr 1fr; gap: 2.5rem;">
+                <div>
                     <div class="room-mosaic room-mosaic-2">
                         <div class="rm-tile rm-main">
-                            <img src="h2%20principal.png" alt="Habitación 2 exterior luminosa"
-                                onclick="openGallery(2, 0)">
+                            <img src="h2%20principal.png" alt="Habitación 2 exterior luminosa" onclick="openGallery(2, 0)">
                             <div class="tag-overlay" style="background: var(--accent); color: white;">Habitación 2</div>
                         </div>
-                        <div class="rm-tile rm-t1"><img src="h2%20s1.png" alt="Detalle 1" onclick="openGallery(2, 1)">
-                        </div>
-                        <div class="rm-tile rm-t2"><img src="h2%20s2.png" alt="Detalle 2" onclick="openGallery(2, 2)">
-                        </div>
-                    </div>
-                    <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0.75rem;">
-                        <h3>500€/mes</h3>
-                        <p>TODO INCLUIDO: gastos de suministros (luz, agua, gas), gastos comunitarios e impuestos</p>
+                        <div class="rm-tile rm-t1"><img src="h2%20s1.png" alt="Detalle 1" onclick="openGallery(2, 1)"></div>
+                        <div class="rm-tile rm-t2"><img src="h2%20s2.png" alt="Detalle 2" onclick="openGallery(2, 2)"></div>
                     </div>
                 </div>
-
-                <div class="card" style="padding: 2.5rem; border-color: var(--accent); overflow-y: auto;">
-                    <h2 id="room-2-title" style="font-size: 1.6rem; text-align: center;">Habitación 2 – Exterior
-                        luminosa y funcional</h2>
-                    <p style="font-size: 0.95rem;">Habitación exterior con entrada de luz natural y vistas arboladas.
-                        Diseñada para ofrecer un entorno fresco en verano, comodidad y concentración durante todo el año
-                        académico.</p>
-
-                    <ul class="room-features"
-                        style="display: grid; grid-template-columns: 1fr; gap: 0.5rem; margin-top: 0.75rem;">
-                        <li>🌳 Vistas a la calle y arboleda</li>
-                        <li>🛏️ Cama individual de 135cm</li>
-                        <li>👕 Armario ropero</li>
-                        <li>🛋️ Sofá de 2 plazas</li>
-                        <li>📚 Escritorio, silla y lámpara de estudio</li>
-                        <li>🔥 Calefacción + ventilador de techo con mando a distancia</li>
-                    </ul>
-
-                    <a href="contacto.html?room=2" class="btn btn-primary" style="width: 100%;">Consultar
-                        Disponibilidad</a>
+                <div>
+                    <div class="card">
+                        <span class="room-badge">🏠 Habitación 2</span>
+                        <h2 class="room-title-sub" id="room-2-title">Exterior luminosa y funcional</h2>
+                        <p class="room-desc">Habitación exterior con vistas directas a la arboleda de la plaza, lo que aporta luz natural generosa y un entorno verde muy agradable durante todo el año. Su distribución funcional combina zona de descanso con sofá, escritorio para el estudio y amplio armario ropero en un espacio bien aprovechado. La ventilación cruzada garantiza frescor en verano, y el ventilador de techo con calefacción aseguran el confort en cualquier época del año.</p>
+                        <div class="room-chips">
+                            <span class="room-chip">🌳 Vistas a la arboleda</span>
+                            <span class="room-chip">🛏️ Cama 135cm</span>
+                            <span class="room-chip">👕 Armario ropero</span>
+                            <span class="room-chip">🛋️ Sofá 2 plazas</span>
+                            <span class="room-chip">📚 Escritorio y lámpara</span>
+                            <span class="room-chip">🔥 Calefacción + ventilador</span>
+                        </div>
+                    </div>
+                    <div class="room-price-card">
+                        <div>
+                            <div class="room-price-num">500€<span style="font-size:0.9rem;font-weight:500;color:var(--text-light);">/mes</span></div>
+                            <div class="room-price-sub">Todo incluido · luz, agua, gas, comunidad e impuestos</div>
+                        </div>
+                        <a href="contacto.html?room=2" class="btn btn-primary">Consultar Disponibilidad</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -532,43 +602,39 @@
     <!-- Room 3 -->
     <section class="room-section" id="room-3">
         <div class="container">
-            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
-                <div style="display: flex; flex-direction: column;">
+            <div class="grid" style="grid-template-columns: 1.3fr 1fr; gap: 2.5rem;">
+                <div>
                     <div class="room-mosaic room-mosaic-2">
                         <div class="rm-tile rm-main">
-                            <img src="h3%20principal.png" alt="Habitación 3 amplia Valencia"
-                                onclick="openGallery(3, 0)">
+                            <img src="h3%20principal.png" alt="Habitación 3 amplia Valencia" onclick="openGallery(3, 0)">
                             <div class="tag-overlay" style="background: var(--accent); color: white;">Habitación 3</div>
                         </div>
-                        <div class="rm-tile rm-t1"><img src="h3%20s1.png" alt="Detalle 1" onclick="openGallery(3, 1)">
-                        </div>
-                        <div class="rm-tile rm-t2"><img src="h3%20s2.png" alt="Detalle 2" onclick="openGallery(3, 2)">
-                        </div>
-                    </div>
-                    <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0.75rem;">
-                        <h3>625€/mes</h3>
-                        <p>TODO INCLUIDO: gastos de suministros (luz, agua, gas), gastos comunitarios e impuestos</p>
+                        <div class="rm-tile rm-t1"><img src="h3%20s1.png" alt="Detalle 1" onclick="openGallery(3, 1)"></div>
+                        <div class="rm-tile rm-t2"><img src="h3%20s2.png" alt="Detalle 2" onclick="openGallery(3, 2)"></div>
                     </div>
                 </div>
-
-                <div class="card" style="padding: 2.5rem; border-color: var(--accent); overflow-y: auto;">
-                    <h2 id="room-3-title" style="font-size: 1.6rem; text-align: center;">Habitación 3 – Amplitud y zona
-                        de descanso</h2>
-                    <p style="font-size: 0.95rem;">Dispone de más superficie útil, creando una auténtica sensación de
-                        hogar durante todo el curso.</p>
-
-                    <ul class="room-features"
-                        style="display: grid; grid-template-columns: 1fr; gap: 0.5rem; margin-top: 0.75rem;">
-                        <li>🌳 Vistas a la calle y arboleda</li>
-                        <li>🛏️ Cama individual XL</li>
-                        <li>👕 Armarios empotrados + estanterías de almacenaje en pladur</li>
-                        <li>📚 Amplio escritorio, silla y lámpara de estudio con vistas</li>
-                        <li>🔥 Calefacción + ventilador de techo con mando a distancia</li>
-                        <li>📺 Smart TV + 🛋️ Sofá 3 plazas</li>
-                    </ul>
-
-                    <a href="contacto.html?room=3" class="btn btn-primary" style="width: 100%;">Consultar
-                        Disponibilidad</a>
+                <div>
+                    <div class="card">
+                        <span class="room-badge">🏠 Habitación 3</span>
+                        <h2 class="room-title-sub" id="room-3-title">Amplitud y zona de descanso</h2>
+                        <p class="room-desc">La habitación más grande del piso, con una superficie que permite combinar cómodamente zona de estudio, zona de descanso y almacenaje sin sensación de agobio. Los armarios empotrados con estanterías en pladur ofrecen una capacidad de almacenaje excepcional, mientras el amplio escritorio con vistas convierte el estudio en una experiencia más agradable. El sofá de 3 plazas y la Smart TV completan un espacio que va más allá de una habitación de estudiante estándar, con una auténtica sensación de hogar.</p>
+                        <div class="room-chips">
+                            <span class="room-chip">🌳 Vistas arbolada</span>
+                            <span class="room-chip">🛏️ Cama XL</span>
+                            <span class="room-chip">👕 Armarios empotrados</span>
+                            <span class="room-chip">📚 Escritorio amplio con vistas</span>
+                            <span class="room-chip">🔥 Calefacción + ventilador</span>
+                            <span class="room-chip">📺 Smart TV</span>
+                            <span class="room-chip">🛋️ Sofá 3 plazas</span>
+                        </div>
+                    </div>
+                    <div class="room-price-card">
+                        <div>
+                            <div class="room-price-num">625€<span style="font-size:0.9rem;font-weight:500;color:var(--text-light);">/mes</span></div>
+                            <div class="room-price-sub">Todo incluido · luz, agua, gas, comunidad e impuestos</div>
+                        </div>
+                        <a href="contacto.html?room=3" class="btn btn-primary">Consultar Disponibilidad</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -577,45 +643,36 @@
     <!-- Room 4 -->
     <section class="room-section" id="room-4">
         <div class="container">
-            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
-                <div style="display: flex; flex-direction: column;">
+            <div class="grid" style="grid-template-columns: 1.3fr 1fr; gap: 2.5rem;">
+                <div>
                     <div class="room-mosaic room-mosaic-2">
                         <div class="rm-tile rm-main">
-                            <img src="h4%20principal.png" alt="Habitación 4 interior silenciosa"
-                                onclick="openGallery(4, 0)">
+                            <img src="h4%20principal.png" alt="Habitación 4 interior silenciosa" onclick="openGallery(4, 0)">
                             <div class="tag-overlay" style="background: var(--accent); color: white;">Habitación 4</div>
                         </div>
-                        <div class="rm-tile rm-t1"><img src="h4%20s1.png" alt="Detalle 1" onclick="openGallery(4, 1)">
-                        </div>
-                        <div class="rm-tile rm-t2"><img src="h4%20s2.png" alt="Detalle 2" onclick="openGallery(4, 2)">
-                        </div>
-                    </div>
-                    <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0.75rem;">
-                        <h3>450€/mes</h3>
-                        <p>TODO INCLUIDO: gastos de suministros (luz, agua, gas), gastos comunitarios e impuestos</p>
+                        <div class="rm-tile rm-t1"><img src="h4%20s1.png" alt="Detalle 1" onclick="openGallery(4, 1)"></div>
+                        <div class="rm-tile rm-t2"><img src="h4%20s2.png" alt="Detalle 2" onclick="openGallery(4, 2)"></div>
                     </div>
                 </div>
-
-                <div class="card" style="padding: 2.5rem; border-color: var(--accent); overflow-y: auto;">
-                    <h2 id="room-4-title" style="font-size: 1.6rem; text-align: center;">Habitación 4 – Silencio
-                        interior, concentración
-                        absoluta</h2>
-                    <p style="font-size: 0.95rem;">Habitación interior especialmente silenciosa, ideal para estudiantes
-                        que priorizan la concentración y el rendimiento académico durante todo el curso.</p>
-                    <p style="font-size: 0.9rem; color: var(--text-light);">Su orientación interior reduce distracciones
-                        y favorece un entorno estable de estudio, manteniendo el mismo estándar de calidad y
-                        equipamiento del resto de la vivienda.</p>
-
-                    <ul class="room-features"
-                        style="display: grid; grid-template-columns: 1fr; gap: 0.5rem; margin-top: 0.75rem;">
-                        <li>🛏️ Cama de 150cm</li>
-                        <li>👕 Armario ropero empotrado</li>
-                        <li>📚 Escritorio, silla y lámpara de estudio</li>
-                        <li>🔥 Calefacción + ventilador de techo con mando a distancia</li>
-                    </ul>
-
-                    <a href="contacto.html?room=4" class="btn btn-primary" style="width: 100%;">Consultar
-                        Disponibilidad</a>
+                <div>
+                    <div class="card">
+                        <span class="room-badge">🏠 Habitación 4</span>
+                        <h2 class="room-title-sub" id="room-4-title">Silencio interior y concentración</h2>
+                        <p class="room-desc">Habitación interior especialmente silenciosa gracias a su orientación alejada de la calle, ideal para quienes priorizan la concentración y el rendimiento académico por encima de todo. La ausencia de ruido exterior favorece un ambiente de estudio profundo y un descanso de mayor calidad durante todo el curso. Mantiene exactamente el mismo estándar de equipamiento que el resto de habitaciones: cama amplia de 150 cm, armario empotrado y zona de estudio completa con escritorio, silla y lámpara.</p>
+                        <div class="room-chips">
+                            <span class="room-chip">🛏️ Cama 150cm</span>
+                            <span class="room-chip">👕 Armario empotrado</span>
+                            <span class="room-chip">📚 Escritorio, silla y lámpara</span>
+                            <span class="room-chip">🔥 Calefacción + ventilador</span>
+                        </div>
+                    </div>
+                    <div class="room-price-card">
+                        <div>
+                            <div class="room-price-num">450€<span style="font-size:0.9rem;font-weight:500;color:var(--text-light);">/mes</span></div>
+                            <div class="room-price-sub">Todo incluido · luz, agua, gas, comunidad e impuestos</div>
+                        </div>
+                        <a href="contacto.html?room=4" class="btn btn-primary">Consultar Disponibilidad</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -624,41 +681,35 @@
     <!-- Room 5 -->
     <section class="room-section" id="room-5">
         <div class="container">
-            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
-                <div style="display: flex; flex-direction: column;">
+            <div class="grid" style="grid-template-columns: 1.3fr 1fr; gap: 2.5rem;">
+                <div>
                     <div class="room-mosaic room-mosaic-1">
                         <div class="rm-tile rm-main">
                             <img src="h5%20principal.png" alt="Habitación 5 luminosa" onclick="openGallery(5, 0)">
                             <div class="tag-overlay" style="background: var(--accent); color: white;">Habitación 5</div>
                         </div>
-                        <div class="rm-tile rm-t1"><img src="h5%20s1.png" alt="Detalle habitación 5"
-                                onclick="openGallery(5, 1)"></div>
-                    </div>
-                    <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0.75rem;">
-                        <h3>500€/mes</h3>
-                        <p>TODO INCLUIDO: gastos de suministros (luz, agua, gas), gastos comunitarios e impuestos</p>
+                        <div class="rm-tile rm-t1"><img src="h5%20s1.png" alt="Detalle habitación 5" onclick="openGallery(5, 1)"></div>
                     </div>
                 </div>
-
-                <div class="card" style="padding: 2.5rem; border-color: var(--accent); overflow-y: auto;">
-                    <h2 id="room-5-title" style="font-size: 1.6rem; text-align: center;">Habitación 5 – Máxima
-                        luminosidad y tranquilidad</h2>
-                    <p style="font-size: 0.95rem;">Habitación exterior a amplio patio de manzana, lo que garantiza un
-                        ambiente especialmente silencioso y una entrada constante de luz natural durante todo el día.
-                    </p>
-                    <p style="font-size: 0.9rem; color: var(--text-light);">Su distribución funcional y equipamiento
-                        completo permiten disfrutar de una estancia cómoda y estable durante el curso académico.</p>
-
-                    <ul class="room-features"
-                        style="display: grid; grid-template-columns: 1fr; gap: 0.5rem; margin-top: 0.75rem;">
-                        <li>🛏️ Cama grande 135cm</li>
-                        <li>👕 Armario ropero</li>
-                        <li>📚 Escritorio, silla y lámpara de estudio</li>
-                        <li>🔥 Calefacción + ventilador de techo con mando a distancia</li>
-                    </ul>
-
-                    <a href="contacto.html?room=5" class="btn btn-primary" style="width: 100%;">Consultar
-                        Disponibilidad</a>
+                <div>
+                    <div class="card">
+                        <span class="room-badge">🏠 Habitación 5</span>
+                        <h2 class="room-title-sub" id="room-5-title">Máxima luminosidad y tranquilidad</h2>
+                        <p class="room-desc">Habitación exterior orientada a un amplio patio de manzana, que combina la tranquilidad de no dar a la calle con una entrada de luz natural generosa desde primera hora de la mañana. Este entorno garantiza silencio y luminosidad al mismo tiempo, una combinación poco habitual en el centro de Valencia. Su distribución funcional y equipamiento completo hacen de esta habitación un espacio cómodo, bien iluminado y estable para desarrollar el curso académico sin distracciones.</p>
+                        <div class="room-chips">
+                            <span class="room-chip">🛏️ Cama 135cm</span>
+                            <span class="room-chip">👕 Armario ropero</span>
+                            <span class="room-chip">📚 Escritorio, silla y lámpara</span>
+                            <span class="room-chip">🔥 Calefacción + ventilador</span>
+                        </div>
+                    </div>
+                    <div class="room-price-card">
+                        <div>
+                            <div class="room-price-num">500€<span style="font-size:0.9rem;font-weight:500;color:var(--text-light);">/mes</span></div>
+                            <div class="room-price-sub">Todo incluido · luz, agua, gas, comunidad e impuestos</div>
+                        </div>
+                        <a href="contacto.html?room=5" class="btn btn-primary">Consultar Disponibilidad</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -667,41 +718,36 @@
     <!-- Room 6 -->
     <section class="room-section" id="room-6">
         <div class="container">
-            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
-                <div style="display: flex; flex-direction: column;">
+            <div class="grid" style="grid-template-columns: 1.3fr 1fr; gap: 2.5rem;">
+                <div>
                     <div class="room-mosaic room-mosaic-1">
                         <div class="rm-tile rm-main">
-                            <img src="h6%20principal.png" alt="Habitación 6 luminosa y serena"
-                                onclick="openGallery(6, 0)">
+                            <img src="h6%20principal.png" alt="Habitación 6 luminosa y serena" onclick="openGallery(6, 0)">
                             <div class="tag-overlay" style="background: var(--accent); color: white;">Habitación 6</div>
                         </div>
-                        <div class="rm-tile rm-t1"><img src="h6%20s1.png" alt="Detalle habitación 6"
-                                onclick="openGallery(6, 1)"></div>
-                    </div>
-                    <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0.75rem;">
-                        <h3>480€/mes</h3>
-                        <p>TODO INCLUIDO: gastos de suministros (luz, agua, gas), gastos comunitarios e impuestos</p>
+                        <div class="rm-tile rm-t1"><img src="h6%20s1.png" alt="Detalle habitación 6" onclick="openGallery(6, 1)"></div>
                     </div>
                 </div>
-
-                <div class="card" style="padding: 2.5rem; border-color: var(--accent); overflow-y: auto;">
-                    <h2 id="room-6-title" style="font-size: 1.6rem; text-align: center;">Habitación 6 – Máxima
-                        luminosidad y tranquilidad</h2>
-                    <p style="font-size: 0.95rem;">Habitación exterior a patio interior amplio, muy luminosa y
-                        especialmente silenciosa. Ideal para estudiantes que buscan concentración y estabilidad durante
-                        todo el año académico.</p>
-
-                    <ul class="room-features"
-                        style="display: grid; grid-template-columns: 1fr; gap: 0.5rem; margin-top: 0.75rem;">
-                        <li>🛏️ Cama XL</li>
-                        <li>👕 Armario ropero</li>
-                        <li>📚 Zona de estudio con escritorio, silla y lámpara de estudio</li>
-                        <li>🔥 Calefacción + ventilador de techo con mando a distancia</li>
-                        <li>👗 Tendedero grande y privado para secar tu ropa</li>
-                    </ul>
-
-                    <a href="contacto.html?room=6" class="btn btn-primary" style="width: 100%;">Consultar
-                        Disponibilidad</a>
+                <div>
+                    <div class="card">
+                        <span class="room-badge">🏠 Habitación 6</span>
+                        <h2 class="room-title-sub" id="room-6-title">Luminosa y serena</h2>
+                        <p class="room-desc">Habitación exterior con vistas a un patio interior amplio, que ofrece luminosidad destacada y un silencio poco habitual para una vivienda tan bien ubicada en el centro de la ciudad. Su orientación la hace especialmente agradable durante todo el año, con buena entrada de luz sin exposición al ruido de la calle. Dispone de cama XL, armario ropero, zona de estudio completa y tendedero privado, todo lo necesario para una estancia autónoma, cómoda y bien organizada a lo largo del año académico.</p>
+                        <div class="room-chips">
+                            <span class="room-chip">🛏️ Cama XL</span>
+                            <span class="room-chip">👕 Armario ropero</span>
+                            <span class="room-chip">📚 Escritorio, silla y lámpara</span>
+                            <span class="room-chip">🔥 Calefacción + ventilador</span>
+                            <span class="room-chip">👗 Tendedero privado</span>
+                        </div>
+                    </div>
+                    <div class="room-price-card">
+                        <div>
+                            <div class="room-price-num">480€<span style="font-size:0.9rem;font-weight:500;color:var(--text-light);">/mes</span></div>
+                            <div class="room-price-sub">Todo incluido · luz, agua, gas, comunidad e impuestos</div>
+                        </div>
+                        <a href="contacto.html?room=6" class="btn btn-primary">Consultar Disponibilidad</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -710,43 +756,38 @@
     <!-- Room 7 -->
     <section class="room-section" id="room-7">
         <div class="container">
-            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
-                <div style="display: flex; flex-direction: column;">
+            <div class="grid" style="grid-template-columns: 1.3fr 1fr; gap: 2.5rem;">
+                <div>
                     <div class="room-mosaic room-mosaic-2">
                         <div class="rm-tile rm-main">
                             <img src="h7%20s1.png" alt="Habitación 7 confort adicional" onclick="openGallery(7, 0)">
                             <div class="tag-overlay" style="background: var(--accent); color: white;">Habitación 7</div>
                         </div>
-                        <div class="rm-tile rm-t1"><img src="h7%20s2.png" alt="Detalle 1" onclick="openGallery(7, 1)">
-                        </div>
-                        <div class="rm-tile rm-t2"><img src="h7%20s3.png" alt="Detalle 2" onclick="openGallery(7, 2)">
-                        </div>
-                    </div>
-                    <div class="price-box" style="margin-top: 0.75rem; margin-bottom: 0.75rem;">
-                        <h3>500€/mes</h3>
-                        <p>TODO INCLUIDO: gastos de suministros (luz, agua, gas), gastos comunitarios e impuestos</p>
+                        <div class="rm-tile rm-t1"><img src="h7%20s2.png" alt="Detalle 1" onclick="openGallery(7, 1)"></div>
+                        <div class="rm-tile rm-t2"><img src="h7%20s3.png" alt="Detalle 2" onclick="openGallery(7, 2)"></div>
                     </div>
                 </div>
-
-                <div class="card" style="padding: 2.5rem; border-color: var(--accent); overflow-y: auto;">
-                    <h2 id="room-7-title" style="font-size: 1.6rem; text-align: center;">Habitación 7 – Luminosidad y
-                        confort adicional</h2>
-                    <p style="font-size: 0.95rem;">Habitación exterior con excelente entrada de luz natural y entorno
-                        silencioso. Su equipamiento adicional aporta mayor comodidad durante el curso académico
-                        completo.</p>
-
-                    <ul class="room-features"
-                        style="display: grid; grid-template-columns: 1fr; gap: 0.5rem; margin-top: 0.75rem;">
-                        <li>🛏️ Cama individual de gran formato</li>
-                        <li>👕 Armario ropero</li>
-                        <li>📚 Zona de estudio totalmente equipada</li>
-                        <li>🔥 Calefacción + ventilador de techo con mando a distancia</li>
-                        <li>📺 Mueble y Smart TV</li>
-                        <li>👗 Tendedero privado para secar tu ropa</li>
-                    </ul>
-
-                    <a href="contacto.html?room=7" class="btn btn-primary" style="width: 100%;">Consultar
-                        Disponibilidad</a>
+                <div>
+                    <div class="card">
+                        <span class="room-badge">🏠 Habitación 7</span>
+                        <h2 class="room-title-sub" id="room-7-title">Luminosidad y confort adicional</h2>
+                        <p class="room-desc">Habitación exterior luminosa con equipamiento adicional que la distingue del resto y la convierte en una de las más completas del piso. La cama de gran formato, el mueble con Smart TV y el tendedero privado añaden un nivel de confort extra pensado para estancias largas y exigentes. La zona de estudio completamente equipada y el sistema de climatización completan un espacio diseñado para rendir académicamente sin renunciar al bienestar del día a día durante todo el curso.</p>
+                        <div class="room-chips">
+                            <span class="room-chip">🛏️ Cama gran formato</span>
+                            <span class="room-chip">👕 Armario ropero</span>
+                            <span class="room-chip">📚 Zona de estudio equipada</span>
+                            <span class="room-chip">🔥 Calefacción + ventilador</span>
+                            <span class="room-chip">📺 Mueble y Smart TV</span>
+                            <span class="room-chip">👗 Tendedero privado</span>
+                        </div>
+                    </div>
+                    <div class="room-price-card">
+                        <div>
+                            <div class="room-price-num">500€<span style="font-size:0.9rem;font-weight:500;color:var(--text-light);">/mes</span></div>
+                            <div class="room-price-sub">Todo incluido · luz, agua, gas, comunidad e impuestos</div>
+                        </div>
+                        <a href="contacto.html?room=7" class="btn btn-primary">Consultar Disponibilidad</a>
+                    </div>
                 </div>
             </div>
         </div>

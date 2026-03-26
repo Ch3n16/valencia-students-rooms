@@ -237,7 +237,7 @@ p {
 
 .logo-text-tagline {
     font-family: var(--font-heading);
-    font-weight: 500;
+    font-weight: 700;
     font-size: 0.68rem;
     color: var(--accent);
     letter-spacing: 0.09em;

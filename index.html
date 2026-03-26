@@ -98,6 +98,42 @@
         </div>
     </header>
 
+    <!-- Convivencia Section -->
+    <section class="section conv-section">
+        <div class="container">
+            <div class="conv-layout">
+                <div class="conv-text">
+                    <div class="badge conv-badge">🛡️ Modelo de Convivencia</div>
+                    <h2 class="conv-heading">Un espacio exclusivo para <span>chicas universitarias</span></h2>
+                    <p class="conv-desc">La vivienda está orientada exclusivamente a estudiantes universitarias, con el objetivo de mantener una convivencia segura, organizada y tranquila durante toda la estancia académica.</p>
+                    <p class="conv-desc" style="margin-bottom:0;">Nuestro modelo favorece la estabilidad y el respeto mutuo — aspectos especialmente valorados por las familias cuando sus hijas se desplazan para estudiar.</p>
+                </div>
+                <div class="conv-features">
+                    <div class="card conv-feat-card">
+                        <span class="conv-feat-icon">👩‍🎓</span>
+                        <strong>Solo universitarias</strong>
+                        <span>Exclusivo para chicas estudiantes</span>
+                    </div>
+                    <div class="card conv-feat-card">
+                        <span class="conv-feat-icon">🏡</span>
+                        <strong>Ambiente tranquilo</strong>
+                        <span>Estabilidad durante todo el curso</span>
+                    </div>
+                    <div class="card conv-feat-card">
+                        <span class="conv-feat-icon">🌍</span>
+                        <strong>Erasmus bienvenidas</strong>
+                        <span>Nacionales e internacionales</span>
+                    </div>
+                    <div class="card conv-feat-card">
+                        <span class="conv-feat-icon">🤝</span>
+                        <strong>Respeto mutuo</strong>
+                        <span>Convivencia segura y homogénea</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Todo Incluido Section -->
     <section class="section" style="padding-top: 5rem; padding-bottom: 1rem;">
         <div class="container">
@@ -160,13 +196,113 @@
     </div>
 
     <style>
-        /* Scroll Snap */
         html {
             scroll-behavior: smooth;
         }
 
+        body {
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
+        }
+
+        /* Cada sección ocupa exactamente un viewport */
+        header.section,
+        section.section {
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            min-height: 100vh;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* El hero arranca desde arriba en lugar de centrar */
+        header.section {
+            justify-content: flex-start;
+            padding-top: 5rem;
+        }
+
+        header.section > .container {
+            width: 100%;
+        }
+
         #ubicacion-img:hover {
             transform: none;
+        }
+
+        /* ── Convivencia Section ───────────────────────── */
+        .conv-section {
+            background: white;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .conv-layout {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .conv-badge {
+            margin-bottom: 1.25rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            background: rgba(255,102,0,0.08) !important;
+            border: 1px solid rgba(255,102,0,0.2) !important;
+            color: var(--accent) !important;
+        }
+
+        .conv-heading {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            margin-bottom: 1.25rem;
+            line-height: 1.2;
+        }
+
+        .conv-heading span { color: var(--accent); }
+
+        .conv-desc {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--text-light);
+            margin-bottom: 0.75rem;
+        }
+
+        .conv-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .conv-feat-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 1.5rem 1.25rem;
+            text-align: center;
+            cursor: default;
+        }
+
+        .conv-feat-icon {
+            font-size: 1.9rem;
+            line-height: 1;
+            margin-bottom: 0.4rem;
+        }
+
+        .conv-feat-card strong {
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            color: #263bb6;
+            display: block;
+        }
+
+        .conv-feat-card > span {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            line-height: 1.4;
         }
 
         /* Scroll Down Arrow */
