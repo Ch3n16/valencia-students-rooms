@@ -1,0 +1,292 @@
+================================================================================
+  PRD — PRODUCT REQUIREMENTS DOCUMENT
+  Valencia Students Rooms · Plaza Xúquer
+  Versión 1.0 · Marzo 2026
+================================================================================
+
+
+1. RESUMEN EJECUTIVO
+────────────────────────────────────────────────────────────────────────────────
+Valencia Students Rooms es un sitio web de marketing estático para el alquiler
+de habitaciones para estudiantes ubicado en la Plaza Xúquer de Valencia.
+El producto es una vivienda compartida exclusiva para chicas universitarias
+con 7 habitaciones premium, todo incluido y sin comisiones de agencia.
+
+El sitio tiene como objetivo principal convertir visitantes en solicitudes
+de reserva mediante un formulario de contacto y canales directos (WhatsApp
+y email), eliminando la intermediación de agencias inmobiliarias.
+
+
+2. OBJETIVOS DE NEGOCIO
+────────────────────────────────────────────────────────────────────────────────
+- Captar solicitudes de reserva para las 7 habitaciones en temporada académica
+  (septiembre – junio) y en verano (julio – agosto).
+- Comunicar la propuesta de valor diferencial: exclusividad para chicas,
+  todo incluido y sin comisiones.
+- Generar confianza en familias y estudiantes internacionales (Erasmus).
+- Posicionar el inmueble en búsquedas SEO relacionadas con alquiler de
+  habitaciones para estudiantes en Valencia.
+
+
+3. PÚBLICO OBJETIVO
+────────────────────────────────────────────────────────────────────────────────
+Primario:
+  - Estudiantes universitarias (mujeres), 18–30 años
+  - Matriculadas en UPV, UV o ESIC
+  - Estudiantes Erasmus e internacionales
+  - Búsqueda de alquiler mensual por meses o por semestre
+
+Secundario:
+  - Padres de estudiantes que buscan seguridad y tranquilidad para sus hijas
+  - Estudiantes en prácticas o cursos intensivos de verano
+  - Jóvenes profesionales en estancias cortas
+
+Idiomas objetivo: Español e Inglés (internacionalización completa ES/EN)
+
+
+4. PROPUESTA DE VALOR
+────────────────────────────────────────────────────────────────────────────────
+- EXCLUSIVO PARA CHICAS: convivencia segura, organizada y respetuosa.
+- UBICACIÓN: 5 minutos andando de los campus de UPV, UV y ESIC.
+  Dirección: Plaza Xúquer, Valencia.
+- TODO INCLUIDO en el alquiler mensual:
+    · WiFi fibra 1 Gbps
+    · Luz, agua y gas
+    · Limpieza semanal de zonas comunes
+    · Mantenimiento incluido
+    · Gastos comunitarios e impuestos
+    · Seguro del hogar
+- SIN COMISIONES: trato directo, sin agencias. Ahorro de 1 mes de alquiler.
+- 7 HABITACIONES PREMIUM con diferentes características y orientaciones.
+
+
+5. ESTRUCTURA DEL SITIO (SITEMAP)
+────────────────────────────────────────────────────────────────────────────────
+El sitio está compuesto por 8 páginas HTML estáticas sin framework ni sistema
+de build. Comparten un único archivo styles.css y script.js.
+
+  /index.html          → Inicio y presentación general
+  /habitaciones.html   → Galería y detalle de las 7 habitaciones
+  /ubicacion.html      → Mapa interactivo y descripción de la zona
+  /zonas-comunes.html  → Fotos y servicios de áreas comunes
+  /contacto.html       → Formulario de reserva
+  /verano.html         → Oferta de estancias de verano (julio–agosto)
+  /vivir-valencia.html → Guía de vida y ocio en Valencia
+  /faqs.html           → Preguntas frecuentes (acordeón Bootstrap 5)
+
+
+6. REQUISITOS FUNCIONALES POR PÁGINA
+────────────────────────────────────────────────────────────────────────────────
+
+6.1 INDEX.HTML — Inicio
+  - Scroll snap vertical (full viewport por sección)
+  - Sección Hero: titular H1, badges de características, CTAs principales
+    ("Ver Habitaciones" → habitaciones.html, "Consultar" → contacto.html)
+  - Imagen hero: Plaza Xúquer con badge de ubicación y overlay glassmorphic
+  - Sección Convivencia: 4 feature cards (solo universitarias, ambiente
+    tranquilo, Erasmus bienvenidas, respeto mutuo)
+  - Sección Todo Incluido: imagen + lista de servicios incluidos + CTA
+    ("Descubre Ubicación" → ubicacion.html)
+  - Flecha de scroll animada con auto-hide en última sección
+  - Top bar informativo sobre disponibilidad de verano
+
+6.2 HABITACIONES.HTML — Habitaciones
+  - 7 secciones de scroll snap, una por habitación
+  - Cada habitación: mosaico de fotos (2–5 imágenes), título descriptivo,
+    características, chips de features y CTA de reserva
+  - Galería modal: navegación con flechas (← →) y teclado, contador de
+    imágenes, cierre con ESC o clic en fondo
+  - Array de imágenes configurable por habitación en roomGalleries{}
+
+  Habitaciones disponibles:
+    Hab. 1 – Terraza privada y vistas arboladas
+    Hab. 2 – Exterior luminosa y funcional
+    Hab. 3 – Amplitud y zona de descanso (la más grande)
+    Hab. 4 – Silencio interior y concentración
+    Hab. 5 – Máxima luminosidad (patio de manzana)
+    Hab. 6 – Luminosa y serena (patio interior)
+    Hab. 7 – Luminosidad y confort adicional
+
+6.3 UBICACION.HTML — Ubicación
+  - Diseño full-screen sin scroll snap
+  - Mapa embebido Google Maps centrado en Plaza Xúquer
+  - Panel lateral con leyenda de distancias (Xuquer / UPV / UV)
+  - Descripción de la zona y servicios del barrio
+  - Dependencia: Google Maps Embed API
+
+6.4 ZONAS-COMUNES.HTML — Zonas Comunes
+  - 3 secciones de scroll snap:
+    1. Mosaico full-bleed (5 fotos, tarjeta glassmorphic izquierda)
+    2. Segundo mosaico full-bleed (cocina como hero derecha, tarjeta derecha)
+    3. Lista de servicios incluidos en grid 3 columnas
+  - Hover effects: zoom en fotos, tags visibles
+  - Servicios listados: 2 baños, cocina completa, 2 frigoríficos combi,
+    lavadora 8kg, climatización completa, ambiente de estudio
+
+6.5 CONTACTO.HTML — Formulario de Reserva
+  - Panel izquierdo: logo, WhatsApp, email, horario de atención
+  - Panel derecho: formulario con campos:
+      Nombre*, Apellidos*, Teléfono* (selector país), Email*, Edad*,
+      Género*, País/Nacionalidad*, Universidad/Estudios*,
+      Período de estancia* (radio: 5 opciones), Comentarios
+  - Períodos disponibles:
+      · Curso Completo: Sep 2025 – Jun 2026
+      · Curso Extendido: Sep 2025 – Jul 2026
+      · Primer Semestre: Sep 2025 – Ene 2026
+      · Segundo Semestre: Feb 2026 – Jun 2026
+      · Verano: Jul – Ago 2026
+  - Validación cliente: campos obligatorios, scroll a error, highlight rojo
+  - Google reCAPTCHA v2 (pendiente configurar site key real)
+  - Checkbox aceptación LOPD/RGPD obligatorio
+  - Submit genera mailto: a reservas@estudentsrooms.com con datos formateados
+  - Horario de atención: Lunes–Domingo, 09:00–20:00
+
+6.6 VERANO.HTML — Estancias de Verano
+  - Hero con imagen y badge "Julio & Agosto"
+  - Descripción de perfil: cursos intensivos, prácticas, Erasmus de verano
+  - Card de alta demanda con gradiente naranja
+  - CTA directo a contacto con parámetro ?period=Verano26
+
+6.7 VIVIR-VALENCIA.HTML — Vivir en Valencia
+  - Grid 3 columnas con 9 cards temáticas
+  - Temas: ciudad, playa, noche, zonas de interés, shopping, gastronomía
+    y fiestas, transporte, teléfonos de interés
+  - Cards con enlace a recursos externos (visitvalencia.com, etc.)
+
+6.8 FAQS.HTML — Preguntas Frecuentes
+  - Acordeón Bootstrap 5 con 2 secciones y ~15 preguntas
+  - Sección 1 — Proceso de Reserva (preguntas Q1–Q11):
+      Exclusividad para chicas, seguridad zona, perfil de inquilinas,
+      Erasmus, cómo pre-reservar, documentos, confirmación,
+      contrato, firma, cuándo entrar, importe fianza
+  - Sección 2 — Pagos y Gastos (Q12–Q15):
+      Fianza (2 meses), devolución, qué incluye el alquiler, sin comisiones
+  - Única página que carga Bootstrap 5 CDN (css + js bundle)
+
+
+7. REQUISITOS NO FUNCIONALES
+────────────────────────────────────────────────────────────────────────────────
+- STACK: HTML/CSS/JS estático. Sin framework, sin build system, sin npm.
+- COMPATIBILIDAD: Chrome, Firefox, Safari, Edge (últimas 2 versiones).
+- RESPONSIVE: breakpoint principal en 1024px. Mobile-first en componentes
+  críticos (hero, habitaciones, formulario).
+- RENDIMIENTO: imágenes PNG/JPEG de alta resolución sin lazy loading
+  (área de mejora pendiente).
+- ACCESIBILIDAD: uso de alt en imágenes, aria-label en nav logo, semántica
+  HTML con header/nav/section/footer.
+- SEO: meta title y description únicos por página, H1 relevante en cada
+  página con palabras clave de alquiler estudiantes Valencia.
+- SEGURIDAD DEL FORMULARIO: reCAPTCHA v2, validación client-side,
+  checkbox privacidad obligatorio.
+
+
+8. INTERNACIONALIZACIÓN (i18n)
+────────────────────────────────────────────────────────────────────────────────
+- Idiomas: Español (por defecto) e Inglés
+- Implementación: objeto `translations` en script.js (líneas 1–294)
+- Mapeo: id HTML en kebab-case → clave JS en camelCase
+  Ejemplo: id="hero-title" → translations.es.heroTitle
+- Persistencia: localStorage ('preferred-language')
+- Función: changeLanguage(lang) actualiza ~80+ elementos del DOM
+- Toggle: componente .lang-toggle en navbar (ES / EN) presente en las 8 páginas
+
+
+9. COMPONENTES COMPARTIDOS
+────────────────────────────────────────────────────────────────────────────────
+- TOP BAR: banner informativo de verano, presente en todas las páginas
+- NAVBAR: logo + links + dropdown Habitaciones + toggle idioma + botón Reservar
+  Comportamiento mobile: hamburger ☰ con menú desplegable
+- BOTÓN WHATSAPP FLOTANTE: presente en las 8 páginas
+  · Posicionado dinámicamente bajo el navbar (IIFE en script.js)
+  · En contacto.html: animación con IntersectionObserver hacia #wa-phone-wrapper
+  · Número: wa.me/34000000000 (placeholder — pendiente número real)
+- SCROLL ARROW: flecha fija abajo-centro con bounce animation, auto-hide
+  en última sección (presente en index, habitaciones, zonas-comunes, faqs)
+- BLOB BACKGROUNDS: 2 divs decorativos SVG en esquinas (blob-1, blob-2)
+- FOOTER: copyright Xuquer Living
+
+
+10. DISEÑO Y SISTEMA VISUAL
+────────────────────────────────────────────────────────────────────────────────
+Paleta de colores:
+  --accent:       #FF6600  (naranja Valencia, color principal de marca)
+  --blue:         #263bb6  (azul profundo, headings secundarios)
+  --text-light:   (gris claro para textos secundarios)
+  --background:   blanco/gris muy claro
+
+Tipografía:
+  Headings:  Space Grotesk (Google Fonts)
+  Body:      Inter (Google Fonts)
+
+Espaciado y formas:
+  --radius:  24px (tarjetas principales)
+  --radius-sm: 12px (badges, chips)
+
+Efectos:
+  - Glassmorphism: backdrop-filter blur(20px) + rgba(255,255,255,0.82)
+  - Hover en imágenes: scale(1.02–1.05) con transition cubic-bezier
+  - Vignette overlay: gradiente linear en esquinas de fotos
+  - Box shadows en 2 niveles (--shadow-md, --shadow-lg)
+
+
+11. ARQUITECTURA TÉCNICA
+────────────────────────────────────────────────────────────────────────────────
+Archivos principales:
+  styles.css   → Hoja de estilos monolítica compartida por las 8 páginas
+  script.js    → JavaScript compartido (traducciones, nav, CAPTCHA, galería,
+                 WhatsApp float, galería habitaciones)
+
+Dependencias externas (CDN):
+  · Google Fonts (Space Grotesk, Inter)
+  · Google Maps Embed API (ubicacion.html)
+  · Google reCAPTCHA v2 (contacto.html) — site key pendiente configurar
+  · Bootstrap 5.3.3 CSS + JS Bundle (solo faqs.html)
+
+No existe sistema de build, bundler, ni gestión de dependencias (npm/yarn).
+Servicio local: python3 -m http.server 8000
+
+
+12. FLUJO DE RESERVA
+────────────────────────────────────────────────────────────────────────────────
+1. Visitante rellena formulario en contacto.html
+2. Validación client-side + reCAPTCHA
+3. Submit genera email a reservas@estudentsrooms.com con datos formateados
+4. Equipo confirma disponibilidad y envía Pre-Contrato
+5. Inquilina paga fianza (2 meses) por transferencia bancaria
+6. Se bloquea la habitación (pre-reserva)
+7. Inquilina aporta documentos: DNI/Pasaporte + confirmación matrícula
+8. Firma del contrato de arrendamiento
+9. Pago de primera mensualidad
+10. Entrega de llaves (1 día antes del inicio de la estancia)
+
+
+13. INFORMACIÓN COMERCIAL
+────────────────────────────────────────────────────────────────────────────────
+- Precios: no publicados en el sitio (se gestionan por consulta directa)
+- Fianza: 2 meses de alquiler (reembolsable)
+- Período mínimo: mensual (curso completo, semestre o verano)
+- Comisiones de agencia: ninguna (trato directo)
+- Contacto:
+    WhatsApp: +34 000 000 000 (placeholder — pendiente número real)
+    Email:    reservas@estudentsrooms.com
+    Horario:  Lunes–Domingo, 09:00–20:00
+
+
+14. PENDIENTES Y ÁREAS DE MEJORA
+────────────────────────────────────────────────────────────────────────────────
+- [ ] Configurar número de WhatsApp real (reemplazar wa.me/34000000000)
+- [ ] Configurar Google reCAPTCHA site key real (reemplazar TU_SITE_KEY_AQUI)
+- [ ] Implementar lazy loading en imágenes (rendimiento)
+- [ ] Publicar precios en el sitio o añadir rango orientativo
+- [ ] Añadir Google Analytics o herramienta de analítica
+- [ ] Validar accesibilidad WCAG 2.1 AA
+- [ ] Configurar envío real del formulario (backend o servicio como Formspree)
+- [ ] Añadir Open Graph y Twitter Card meta tags para redes sociales
+- [ ] Revisar y completar traducciones EN (algunos textos nuevos pueden estar
+      solo en español)
+
+
+================================================================================
+  FIN DEL DOCUMENTO
+  Valencia Students Rooms · PRD v1.0 · Marzo 2026
+================================================================================
