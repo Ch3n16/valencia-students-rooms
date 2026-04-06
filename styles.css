@@ -917,57 +917,7 @@ label {
         margin-top: 0.25rem !important;
     }
 
-    /* ── 5. Zonas comunes: secciones snap con mosaic ────────
-       Los mosaicos usan position:absolute;inset:0 → el padre
-       DEBE tener una altura definida para que se vean          */
-    .zc-snap {
-        scroll-snap-align: none !important;
-        scroll-snap-stop: normal !important;
-    }
-
-    .zc-snap.zc-photos {
-        height: 56vw !important;
-        min-height: 220px !important;
-        max-height: 320px !important;
-        overflow: hidden !important;
-    }
-
-    .zc-snap.zc-text {
-        height: auto !important;
-        padding: 3.5rem 5% 2rem !important;
-    }
-
-    /* Tarjeta glass: reposicionar al fondo del mosaico */
-    .zc-glass-card {
-        top: auto !important;
-        bottom: 0.75rem !important;
-        left: 0.75rem !important;
-        right: auto !important;
-        transform: none !important;
-        padding: 0.75rem 1rem !important;
-        max-width: calc(100% - 1.5rem) !important;
-        border-radius: 14px !important;
-    }
-
-    .zc-glass-title {
-        font-size: 1.1rem !important;
-        margin-bottom: 0.35rem !important;
-    }
-
-    .zc-glass-sub {
-        font-size: 0.72rem !important;
-    }
-
-    /* Lista de servicios: 2 columnas en lugar de 3 */
-    .zc-services-list {
-        grid-template-columns: 1fr 1fr !important;
-    }
-
-    .zc-services {
-        padding: 1.25rem !important;
-    }
-
-    /* ── 6. Ubicación: overflow hidden en body + loc-grid ─── */
+    /* ── 5. Ubicación: overflow hidden en body + loc-grid ─── */
     .loc-main {
         padding: 1rem !important;
         flex: none !important;
