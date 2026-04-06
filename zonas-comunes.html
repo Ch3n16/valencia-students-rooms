@@ -192,19 +192,6 @@
             </div>
         </div>
 
-        <!-- Lightbox modal -->
-        <div id="zc-lightbox" aria-modal="true" role="dialog" aria-label="Visor de fotos">
-            <button class="zc-lb-close" id="zc-lb-close" aria-label="Cerrar">✕</button>
-            <div class="zc-lb-img-wrap">
-                <img id="zc-lb-img" src="" alt="">
-            </div>
-            <div class="zc-lb-footer">
-                <button class="zc-lb-nav zc-lb-prev" id="zc-lb-prev" aria-label="Anterior">‹</button>
-                <span class="zc-lb-counter" id="zc-lb-counter">1 / 6</span>
-                <button class="zc-lb-nav zc-lb-next" id="zc-lb-next" aria-label="Siguiente">›</button>
-            </div>
-        </div>
-
         <!-- Servicios incluidos -->
         <div class="zc-m-services">
             <div class="zc-m-serv-header">
@@ -252,6 +239,19 @@
         </div>
 
     </section>
+
+    <!-- Lightbox — visible en escritorio y móvil -->
+    <div id="zc-lightbox" aria-modal="true" role="dialog" aria-label="Visor de fotos">
+        <button class="zc-lb-close" id="zc-lb-close" aria-label="Cerrar">✕</button>
+        <div class="zc-lb-img-wrap">
+            <img id="zc-lb-img" src="" alt="">
+        </div>
+        <div class="zc-lb-footer">
+            <button class="zc-lb-nav zc-lb-prev" id="zc-lb-prev" aria-label="Anterior">‹</button>
+            <span class="zc-lb-counter" id="zc-lb-counter">1 / 6</span>
+            <button class="zc-lb-nav zc-lb-next" id="zc-lb-next" aria-label="Siguiente">›</button>
+        </div>
+    </div>
 
     <!-- Scroll Arrow -->
     <div class="scroll-arrow" id="scrollArrow" onclick="scrollToNext()">
@@ -618,6 +618,130 @@
         }
 
         /* ════════════════════════════════════════════════════
+           LIGHTBOX — funciona en escritorio y móvil
+           ════════════════════════════════════════════════════ */
+
+        /* Tiles de escritorio: cursor pointer */
+        .zc-tile {
+            cursor: pointer;
+        }
+
+        #zc-lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 0, 0, 0.96);
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #zc-lightbox.zc-lb-open {
+            display: flex;
+        }
+
+        .zc-lb-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.12);
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.15rem;
+            line-height: 1;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: background 0.2s;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .zc-lb-close:hover {
+            background: rgba(255, 255, 255, 0.24);
+        }
+
+        .zc-lb-img-wrap {
+            flex: 1;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3.5rem 1rem 0;
+            overflow: hidden;
+        }
+
+        #zc-lb-img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            display: block;
+            transition: opacity 0.18s ease;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        #zc-lb-img.zc-lb-fade {
+            opacity: 0;
+        }
+
+        .zc-lb-footer {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.5rem 2rem;
+            flex-shrink: 0;
+        }
+
+        .zc-lb-nav {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: white;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            font-size: 1.9rem;
+            line-height: 1;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s, border-color 0.2s;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .zc-lb-nav:hover {
+            background: rgba(255, 102, 0, 0.35);
+            border-color: #FF6600;
+        }
+
+        .zc-lb-nav:active {
+            background: rgba(255, 102, 0, 0.5);
+        }
+
+        .zc-lb-nav:disabled {
+            opacity: 0.25;
+            cursor: default;
+        }
+
+        .zc-lb-counter {
+            font-family: var(--font-heading);
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.55);
+            letter-spacing: 0.06em;
+        }
+
+        /* ════════════════════════════════════════════════════
            VERSIÓN MÓVIL — oculta en escritorio
            ════════════════════════════════════════════════════ */
         .zc-mobile {
@@ -835,119 +959,6 @@
             .zc-m-photo {
                 cursor: pointer;
             }
-
-            /* ── Lightbox ────────────────────────────────── */
-            #zc-lightbox {
-                display: none;
-                position: fixed;
-                inset: 0;
-                z-index: 9999;
-                background: rgba(0, 0, 0, 0.96);
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                padding: 0;
-                touch-action: pan-y pinch-zoom;
-            }
-
-            #zc-lightbox.zc-lb-open {
-                display: flex;
-            }
-
-            .zc-lb-close {
-                position: absolute;
-                top: 1rem;
-                right: 1rem;
-                background: rgba(255, 255, 255, 0.12);
-                border: none;
-                color: white;
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
-                font-size: 1.2rem;
-                line-height: 1;
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                z-index: 10;
-                transition: background 0.2s;
-            }
-
-            .zc-lb-close:active {
-                background: rgba(255, 255, 255, 0.25);
-            }
-
-            .zc-lb-img-wrap {
-                flex: 1;
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 3.5rem 0 0;
-                overflow: hidden;
-            }
-
-            #zc-lb-img {
-                max-width: 100%;
-                max-height: 100%;
-                width: auto;
-                height: auto;
-                object-fit: contain;
-                border-radius: 8px;
-                display: block;
-                transition: opacity 0.18s ease;
-                user-select: none;
-                -webkit-user-drag: none;
-            }
-
-            #zc-lb-img.zc-lb-fade {
-                opacity: 0;
-            }
-
-            .zc-lb-footer {
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 1rem 1.25rem 2rem;
-                flex-shrink: 0;
-            }
-
-            .zc-lb-nav {
-                background: rgba(255, 255, 255, 0.1);
-                border: 1px solid rgba(255, 255, 255, 0.18);
-                color: white;
-                width: 48px;
-                height: 48px;
-                border-radius: 50%;
-                font-size: 1.8rem;
-                line-height: 1;
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transition: background 0.2s;
-                -webkit-tap-highlight-color: transparent;
-            }
-
-            .zc-lb-nav:active {
-                background: rgba(255, 102, 0, 0.4);
-                border-color: var(--accent);
-            }
-
-            .zc-lb-nav:disabled {
-                opacity: 0.25;
-                cursor: default;
-            }
-
-            .zc-lb-counter {
-                font-family: var(--font-heading);
-                font-size: 0.85rem;
-                font-weight: 600;
-                color: rgba(255, 255, 255, 0.6);
-                letter-spacing: 0.06em;
-            }
         }
     </style>
 
@@ -971,27 +982,17 @@
 
     <script>
         (function () {
-            // Solo activar en móvil
-            if (window.innerWidth > 767) return;
-
-            var photos = document.querySelectorAll('.zc-m-photo');
-            var lb = document.getElementById('zc-lightbox');
-            var lbImg = document.getElementById('zc-lb-img');
-            var lbCounter = document.getElementById('zc-lb-counter');
-            var lbPrev = document.getElementById('zc-lb-prev');
-            var lbNext = document.getElementById('zc-lb-next');
+            var lb      = document.getElementById('zc-lightbox');
+            var lbImg   = document.getElementById('zc-lb-img');
+            var lbCnt   = document.getElementById('zc-lb-counter');
+            var lbPrev  = document.getElementById('zc-lb-prev');
+            var lbNext  = document.getElementById('zc-lb-next');
             var lbClose = document.getElementById('zc-lb-close');
+
+            var images = [];
             var currentIndex = 0;
-            var total = photos.length;
 
-            // Construir array de imágenes a partir de las fotos de la galería
-            var images = Array.from(photos).map(function (p) {
-                return {
-                    src: p.querySelector('img').src,
-                    alt: p.querySelector('img').alt
-                };
-            });
-
+            /* ── Mostrar foto con fade ──────────────────── */
             function showPhoto(index) {
                 currentIndex = index;
                 lbImg.classList.add('zc-lb-fade');
@@ -1000,12 +1001,14 @@
                     lbImg.alt = images[currentIndex].alt;
                     lbImg.classList.remove('zc-lb-fade');
                 }, 160);
-                lbCounter.textContent = (currentIndex + 1) + ' / ' + total;
+                lbCnt.textContent = (currentIndex + 1) + ' / ' + images.length;
                 lbPrev.disabled = currentIndex === 0;
-                lbNext.disabled = currentIndex === total - 1;
+                lbNext.disabled = currentIndex === images.length - 1;
             }
 
-            function openLightbox(index) {
+            /* ── Abrir con un array de imágenes ────────── */
+            function openLightbox(imgArray, index) {
+                images = imgArray;
                 showPhoto(index);
                 lb.classList.add('zc-lb-open');
                 document.body.style.overflow = 'hidden';
@@ -1016,23 +1019,40 @@
                 document.body.style.overflow = '';
             }
 
-            // Click en cada foto
-            photos.forEach(function (photo) {
-                photo.addEventListener('click', function () {
-                    openLightbox(parseInt(this.dataset.index));
-                });
+            /* ── Tiles de escritorio (mosaicos) ─────────
+               Recoge TODOS los .zc-tile en orden DOM       */
+            var tiles = document.querySelectorAll('.zc-tile');
+            var tileImages = Array.from(tiles).map(function (t) {
+                return { src: t.querySelector('img').src, alt: t.querySelector('img').alt };
+            });
+            tiles.forEach(function (tile, i) {
+                tile.addEventListener('click', function () { openLightbox(tileImages, i); });
             });
 
-            lbClose.addEventListener('click', closeLightbox);
-            lbPrev.addEventListener('click', function () { if (currentIndex > 0) showPhoto(currentIndex - 1); });
-            lbNext.addEventListener('click', function () { if (currentIndex < total - 1) showPhoto(currentIndex + 1); });
+            /* ── Fotos de galería móvil ──────────────────
+               Recoge todos los .zc-m-photo en orden DOM    */
+            var mPhotos = document.querySelectorAll('.zc-m-photo');
+            var mImages = Array.from(mPhotos).map(function (p) {
+                return { src: p.querySelector('img').src, alt: p.querySelector('img').alt };
+            });
+            mPhotos.forEach(function (photo, i) {
+                photo.addEventListener('click', function () { openLightbox(mImages, i); });
+            });
 
-            // Cerrar al tocar el fondo (fuera de la imagen)
+            /* ── Controles ──────────────────────────────── */
+            lbClose.addEventListener('click', closeLightbox);
+            lbPrev.addEventListener('click', function () {
+                if (currentIndex > 0) showPhoto(currentIndex - 1);
+            });
+            lbNext.addEventListener('click', function () {
+                if (currentIndex < images.length - 1) showPhoto(currentIndex + 1);
+            });
+
             lb.addEventListener('click', function (e) {
                 if (e.target === lb) closeLightbox();
             });
 
-            // Swipe táctil
+            /* ── Swipe táctil ───────────────────────────── */
             var touchStartX = 0;
             lb.addEventListener('touchstart', function (e) {
                 touchStartX = e.changedTouches[0].clientX;
@@ -1040,16 +1060,16 @@
             lb.addEventListener('touchend', function (e) {
                 var dx = e.changedTouches[0].clientX - touchStartX;
                 if (Math.abs(dx) < 40) return;
-                if (dx < 0 && currentIndex < total - 1) showPhoto(currentIndex + 1);
+                if (dx < 0 && currentIndex < images.length - 1) showPhoto(currentIndex + 1);
                 if (dx > 0 && currentIndex > 0) showPhoto(currentIndex - 1);
             }, { passive: true });
 
-            // Tecla Escape (si tienen teclado conectado)
+            /* ── Teclado ────────────────────────────────── */
             document.addEventListener('keydown', function (e) {
                 if (!lb.classList.contains('zc-lb-open')) return;
                 if (e.key === 'Escape') closeLightbox();
                 if (e.key === 'ArrowLeft' && currentIndex > 0) showPhoto(currentIndex - 1);
-                if (e.key === 'ArrowRight' && currentIndex < total - 1) showPhoto(currentIndex + 1);
+                if (e.key === 'ArrowRight' && currentIndex < images.length - 1) showPhoto(currentIndex + 1);
             });
         })();
     </script>
