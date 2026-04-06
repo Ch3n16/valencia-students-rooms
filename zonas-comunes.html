@@ -166,29 +166,42 @@
 
         <!-- Galería de fotos en rejilla 2 columnas -->
         <div class="zc-m-gallery">
-            <div class="zc-m-photo zc-m-wide">
+            <div class="zc-m-photo zc-m-wide" data-index="0">
                 <img src="zonas%201.png" alt="Salón con mesa y espejo">
                 <span class="zc-m-tag">🛋 Salón</span>
             </div>
-            <div class="zc-m-photo">
+            <div class="zc-m-photo" data-index="1">
                 <img src="ba%C3%B1o%201.png" alt="Baño completo">
                 <span class="zc-m-tag">🚿 Baño</span>
             </div>
-            <div class="zc-m-photo">
+            <div class="zc-m-photo" data-index="2">
                 <img src="cocina.png" alt="Cocina equipada">
                 <span class="zc-m-tag">🍳 Cocina</span>
             </div>
-            <div class="zc-m-photo">
+            <div class="zc-m-photo" data-index="3">
                 <img src="zonas%204.png" alt="Zona común">
                 <span class="zc-m-tag">🏡 Zonas</span>
             </div>
-            <div class="zc-m-photo">
+            <div class="zc-m-photo" data-index="4">
                 <img src="ba%C3%B1o%202.png" alt="Ducha">
                 <span class="zc-m-tag">✨ Ducha</span>
             </div>
-            <div class="zc-m-photo zc-m-wide">
+            <div class="zc-m-photo zc-m-wide" data-index="5">
                 <img src="zonas%205.png" alt="Lavadora">
                 <span class="zc-m-tag">🧺 Lavadora</span>
+            </div>
+        </div>
+
+        <!-- Lightbox modal -->
+        <div id="zc-lightbox" aria-modal="true" role="dialog" aria-label="Visor de fotos">
+            <button class="zc-lb-close" id="zc-lb-close" aria-label="Cerrar">✕</button>
+            <div class="zc-lb-img-wrap">
+                <img id="zc-lb-img" src="" alt="">
+            </div>
+            <div class="zc-lb-footer">
+                <button class="zc-lb-nav zc-lb-prev" id="zc-lb-prev" aria-label="Anterior">‹</button>
+                <span class="zc-lb-counter" id="zc-lb-counter">1 / 6</span>
+                <button class="zc-lb-nav zc-lb-next" id="zc-lb-next" aria-label="Siguiente">›</button>
             </div>
         </div>
 
@@ -817,6 +830,124 @@
                 width: 100%;
                 justify-content: center;
             }
+
+            /* ── Cursor pointer en fotos de galería ──────── */
+            .zc-m-photo {
+                cursor: pointer;
+            }
+
+            /* ── Lightbox ────────────────────────────────── */
+            #zc-lightbox {
+                display: none;
+                position: fixed;
+                inset: 0;
+                z-index: 9999;
+                background: rgba(0, 0, 0, 0.96);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                touch-action: pan-y pinch-zoom;
+            }
+
+            #zc-lightbox.zc-lb-open {
+                display: flex;
+            }
+
+            .zc-lb-close {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                background: rgba(255, 255, 255, 0.12);
+                border: none;
+                color: white;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                font-size: 1.2rem;
+                line-height: 1;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 10;
+                transition: background 0.2s;
+            }
+
+            .zc-lb-close:active {
+                background: rgba(255, 255, 255, 0.25);
+            }
+
+            .zc-lb-img-wrap {
+                flex: 1;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 3.5rem 0 0;
+                overflow: hidden;
+            }
+
+            #zc-lb-img {
+                max-width: 100%;
+                max-height: 100%;
+                width: auto;
+                height: auto;
+                object-fit: contain;
+                border-radius: 8px;
+                display: block;
+                transition: opacity 0.18s ease;
+                user-select: none;
+                -webkit-user-drag: none;
+            }
+
+            #zc-lb-img.zc-lb-fade {
+                opacity: 0;
+            }
+
+            .zc-lb-footer {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1rem 1.25rem 2rem;
+                flex-shrink: 0;
+            }
+
+            .zc-lb-nav {
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.18);
+                color: white;
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                font-size: 1.8rem;
+                line-height: 1;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.2s;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            .zc-lb-nav:active {
+                background: rgba(255, 102, 0, 0.4);
+                border-color: var(--accent);
+            }
+
+            .zc-lb-nav:disabled {
+                opacity: 0.25;
+                cursor: default;
+            }
+
+            .zc-lb-counter {
+                font-family: var(--font-heading);
+                font-size: 0.85rem;
+                font-weight: 600;
+                color: rgba(255, 255, 255, 0.6);
+                letter-spacing: 0.06em;
+            }
         }
     </style>
 
@@ -836,6 +967,91 @@
             const arrow = document.getElementById('scrollArrow');
             arrow.style.display = (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 80) ? 'none' : 'flex';
         });
+    </script>
+
+    <script>
+        (function () {
+            // Solo activar en móvil
+            if (window.innerWidth > 767) return;
+
+            var photos = document.querySelectorAll('.zc-m-photo');
+            var lb = document.getElementById('zc-lightbox');
+            var lbImg = document.getElementById('zc-lb-img');
+            var lbCounter = document.getElementById('zc-lb-counter');
+            var lbPrev = document.getElementById('zc-lb-prev');
+            var lbNext = document.getElementById('zc-lb-next');
+            var lbClose = document.getElementById('zc-lb-close');
+            var currentIndex = 0;
+            var total = photos.length;
+
+            // Construir array de imágenes a partir de las fotos de la galería
+            var images = Array.from(photos).map(function (p) {
+                return {
+                    src: p.querySelector('img').src,
+                    alt: p.querySelector('img').alt
+                };
+            });
+
+            function showPhoto(index) {
+                currentIndex = index;
+                lbImg.classList.add('zc-lb-fade');
+                setTimeout(function () {
+                    lbImg.src = images[currentIndex].src;
+                    lbImg.alt = images[currentIndex].alt;
+                    lbImg.classList.remove('zc-lb-fade');
+                }, 160);
+                lbCounter.textContent = (currentIndex + 1) + ' / ' + total;
+                lbPrev.disabled = currentIndex === 0;
+                lbNext.disabled = currentIndex === total - 1;
+            }
+
+            function openLightbox(index) {
+                showPhoto(index);
+                lb.classList.add('zc-lb-open');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                lb.classList.remove('zc-lb-open');
+                document.body.style.overflow = '';
+            }
+
+            // Click en cada foto
+            photos.forEach(function (photo) {
+                photo.addEventListener('click', function () {
+                    openLightbox(parseInt(this.dataset.index));
+                });
+            });
+
+            lbClose.addEventListener('click', closeLightbox);
+            lbPrev.addEventListener('click', function () { if (currentIndex > 0) showPhoto(currentIndex - 1); });
+            lbNext.addEventListener('click', function () { if (currentIndex < total - 1) showPhoto(currentIndex + 1); });
+
+            // Cerrar al tocar el fondo (fuera de la imagen)
+            lb.addEventListener('click', function (e) {
+                if (e.target === lb) closeLightbox();
+            });
+
+            // Swipe táctil
+            var touchStartX = 0;
+            lb.addEventListener('touchstart', function (e) {
+                touchStartX = e.changedTouches[0].clientX;
+            }, { passive: true });
+            lb.addEventListener('touchend', function (e) {
+                var dx = e.changedTouches[0].clientX - touchStartX;
+                if (Math.abs(dx) < 40) return;
+                if (dx < 0 && currentIndex < total - 1) showPhoto(currentIndex + 1);
+                if (dx > 0 && currentIndex > 0) showPhoto(currentIndex - 1);
+            }, { passive: true });
+
+            // Tecla Escape (si tienen teclado conectado)
+            document.addEventListener('keydown', function (e) {
+                if (!lb.classList.contains('zc-lb-open')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft' && currentIndex > 0) showPhoto(currentIndex - 1);
+                if (e.key === 'ArrowRight' && currentIndex < total - 1) showPhoto(currentIndex + 1);
+            });
+        })();
     </script>
 
     <a id="wa-float-btn" href="https://wa.me/34000000000" target="_blank" class="wa-float-btn">
