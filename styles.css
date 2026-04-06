@@ -833,3 +833,178 @@ label {
 @media (max-width: 1024px) {
     .vivir-hero { height: 280px; }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   MOBILE ENHANCED — fixes visuales para ≤ 767px
+   Solo afecta móvil. Escritorio no cambia.
+   ══════════════════════════════════════════════════════════════ */
+@media (max-width: 767px) {
+
+    /* ── 1. Scroll snap y overflow: deshabilitar en móvil ── */
+    html,
+    body {
+        scroll-snap-type: none !important;
+        height: auto !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+    }
+
+    /* ── 2. Secciones con min-height/height 100vh forzados ── */
+    header.section,
+    section.section,
+    main.section {
+        scroll-snap-align: none !important;
+        scroll-snap-stop: normal !important;
+        min-height: auto !important;
+        height: auto !important;
+    }
+
+    header.section {
+        padding-top: 2rem !important;
+    }
+
+    /* ── 3. Index: convivencia layout 2 columnas ─────────── */
+    .conv-layout {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    .conv-feat-card {
+        padding: 1rem 0.85rem !important;
+    }
+
+    /* ── 4. Habitaciones: room-sections con height fija ───── */
+    .room-section {
+        height: auto !important;
+        min-height: auto !important;
+        scroll-snap-align: none !important;
+        scroll-snap-stop: normal !important;
+        padding: 5rem 0 2rem !important;
+        display: block !important;
+    }
+
+    .room-section > .container {
+        height: auto !important;
+    }
+
+    .room-section .grid {
+        height: auto !important;
+    }
+
+    .room-section .grid > div {
+        height: auto !important;
+        min-height: auto !important;
+    }
+
+    .room-section .card {
+        overflow-y: visible !important;
+    }
+
+    /* Mosaico de fotos: altura compacta en móvil */
+    .room-mosaic {
+        height: 230px !important;
+    }
+
+    /* Botón de reserva dentro de tarjeta de precio */
+    .room-price-card {
+        flex-wrap: wrap !important;
+        gap: 0.75rem !important;
+    }
+
+    .room-price-card .btn {
+        margin-left: 0 !important;
+        width: 100% !important;
+        margin-top: 0.25rem !important;
+    }
+
+    /* ── 5. Zonas comunes: secciones snap con mosaic ────────
+       Los mosaicos usan position:absolute;inset:0 → el padre
+       DEBE tener una altura definida para que se vean          */
+    .zc-snap {
+        scroll-snap-align: none !important;
+        scroll-snap-stop: normal !important;
+    }
+
+    .zc-snap.zc-photos {
+        height: 56vw !important;
+        min-height: 220px !important;
+        max-height: 320px !important;
+        overflow: hidden !important;
+    }
+
+    .zc-snap.zc-text {
+        height: auto !important;
+        padding: 3.5rem 5% 2rem !important;
+    }
+
+    /* Tarjeta glass: reposicionar al fondo del mosaico */
+    .zc-glass-card {
+        top: auto !important;
+        bottom: 0.75rem !important;
+        left: 0.75rem !important;
+        right: auto !important;
+        transform: none !important;
+        padding: 0.75rem 1rem !important;
+        max-width: calc(100% - 1.5rem) !important;
+        border-radius: 14px !important;
+    }
+
+    .zc-glass-title {
+        font-size: 1.1rem !important;
+        margin-bottom: 0.35rem !important;
+    }
+
+    .zc-glass-sub {
+        font-size: 0.72rem !important;
+    }
+
+    /* Lista de servicios: 2 columnas en lugar de 3 */
+    .zc-services-list {
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+    .zc-services {
+        padding: 1.25rem !important;
+    }
+
+    /* ── 6. Ubicación: overflow hidden en body + loc-grid ─── */
+    .loc-main {
+        padding: 1rem !important;
+        flex: none !important;
+        overflow-y: auto !important;
+    }
+
+    .loc-grid {
+        grid-template-columns: 1fr !important;
+        height: auto !important;
+        gap: 1.5rem !important;
+    }
+
+    .loc-map-wrap {
+        height: 260px !important;
+        min-height: 220px !important;
+    }
+
+    .loc-info {
+        overflow-y: visible !important;
+        padding-bottom: 2rem !important;
+    }
+
+    /* ── 7. Contacto: subtítulo con font-size 1.8rem inline ─ */
+    #contact-subtitle {
+        font-size: 1rem !important;
+        letter-spacing: 0.025em !important;
+        line-height: 1.5 !important;
+        margin-top: 0.5rem !important;
+    }
+
+    /* ── 8. Scroll arrow: subir para no tapar WhatsApp ──────── */
+    .scroll-arrow {
+        bottom: 5rem !important;
+    }
+
+    /* ── 9. Vivir en Valencia hero ───────────────────────────── */
+    .vivir-hero {
+        height: 200px !important;
+    }
+}
