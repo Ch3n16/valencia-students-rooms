@@ -222,26 +222,27 @@ p {
 
 .logo-text {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3em;
     line-height: 1.1;
-    gap: 1px;
 }
 
 .logo-text-name {
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1.05rem;
-    color: #263bb6;
+    color: var(--accent);
     letter-spacing: -0.02em;
 }
 
 .logo-text-tagline {
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 0.68rem;
+    font-size: 1.05rem;
     color: var(--accent);
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    text-transform: none;
 }
 
 .nav-links {
