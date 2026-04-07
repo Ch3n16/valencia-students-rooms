@@ -636,6 +636,19 @@ label {
         margin: 0;
         text-align: center;
     }
+
+    .nav-links a.btn-primary,
+    .nav-links a.btn-primary.active {
+        background: #263bb6 !important;
+        color: white !important;
+        border-radius: 100px;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .nav-links a.btn-primary:hover,
+    .nav-links a.btn-primary.active:hover {
+        background: var(--accent) !important;
+    }
 }
 
 /* ══════════════════════════════════════════════════════════════
