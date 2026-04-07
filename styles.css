@@ -795,7 +795,7 @@ label {
     font-family: var(--font-heading);
     font-weight: 600;
     font-size: 1.05rem;
-    color: var(--text-color);
+    color: #263bb6;
     background: white;
 }
 .accordion-button:not(.collapsed) {
