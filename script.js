@@ -59,12 +59,30 @@ const translations = {
         overlayTitle: 'Sin Comisiones',
         overlayDesc: 'Trato directo con la propiedad. Ahorra gastos de gestión.',
 
+        // Convivencia (sección 2)
+        convBadge: '🛡️ Modelo de Convivencia',
+        convHeading: 'Un espacio exclusivo para <span>chicas universitarias</span>',
+        convDesc1: 'La vivienda está orientada exclusivamente a estudiantes universitarias, con el objetivo de mantener una convivencia segura, organizada y tranquila durante toda la estancia académica.',
+        convDesc2: 'Nuestro modelo favorece la estabilidad y el respeto mutuo — aspectos especialmente valorados por las familias cuando sus hijas se desplazan para estudiar.',
+        convFeat1Title: 'Solo universitarias',
+        convFeat1Sub: 'Exclusivo para chicas estudiantes',
+        convFeat2Title: 'Ambiente tranquilo',
+        convFeat2Sub: 'Estabilidad durante todo el curso',
+        convFeat3Title: 'Erasmus bienvenidas',
+        convFeat3Sub: 'Nacionales e internacionales',
+        convFeat4Title: 'Respeto mutuo',
+        convFeat4Sub: 'Convivencia segura y homogénea',
+
         // Teaser
         teaserTitle: 'Todo incluido. Sin facturas, sin sorpresas y sin preocupaciones',
         teaserDesc: 'Alquiler mensual para estudiantes en Valencia con todos los gastos incluidos y sin comisiones de agencia.',
+        teaserExtra: 'Olvídate de contratos de suministros, reparaciones o gestiones complicadas. Aquí todo está preparado para que tu única preocupación sea estudiar y disfrutar de tu experiencia universitaria en Valencia.',
         featClean: '<strong>Limpieza semanal</strong> de zonas comunes',
         featWifi: '<strong>Wifi fibra 1 Gbps</strong>',
         featFridge: '<strong>Espacios individuales</strong> en cocina y nevera',
+        featMaint: '<strong>Mantenimiento incluido</strong>',
+        teaserRoomsDesc: 'Todas las habitaciones están pensadas para estudiantes que buscan alquiler por meses en Valencia con altos estándares de seguridad, confort y estabilidad académica.',
+        teaserRoomsDesc2: 'Cada espacio ha sido equipado para facilitar el estudio, el descanso y la organización durante el curso completo.',
         btnLoc: 'Descubre Ubicación →',
 
         // Location
@@ -135,17 +153,51 @@ const translations = {
         faqA15: 'Al contratar directamente con la propiedad, sin intermediarios, NO tienes que pagar comisiones de agencia, ahorrándote el equivalente al importe de un mes de alquiler de tu habitación.',
 
         // Summer page
-        summerTitle: 'Estancias de Verano',
-        summerSubtitle: 'Julio y Agosto en Valencia',
+        summerTitle: 'Alquiler de habitaciones en verano en Valencia para estudiantes y profesionales',
+        summerSubtitle: 'Disponible también como alojamiento de verano para estudiantes internacionales, cursos intensivos, prácticas universitarias o por motivos profesionales durante los meses de julio y agosto.',
 
         // Rooms page titles
-        room1Title: 'Habitación 1 – Terraza privada y vistas arboladas',
-        room2Title: 'Habitación 2 – Exterior luminosa y funcional',
-        room3Title: 'Habitación 3 – Amplitud y zona de descanso',
-        room4Title: 'Habitación 4 – Silencio interior, concentración absoluta',
-        room5Title: 'Habitación 5 – Máxima luminosidad y tranquilidad',
-        room6Title: 'Habitación 6 – Máxima luminosidad y tranquilidad',
-        room7Title: 'Habitación 7 – Luminosidad y confort adicional',
+        room1Title: 'Terraza privada y vistas arboladas',
+        room2Title: 'Exterior luminosa y funcional',
+        room3Title: 'Amplitud y zona de descanso',
+        room4Title: 'Silencio interior y concentración',
+        room5Title: 'Máxima luminosidad y tranquilidad',
+        room6Title: 'Luminosa y serena',
+        room7Title: 'Luminosidad y confort adicional',
+
+        // Room descriptions
+        room1Desc: 'La única habitación del piso con terraza privada, un espacio exterior propio con mesa y sillas ideal para descansar o estudiar al aire libre. Orientada al exterior, recibe luz natural generosa y ventilación cruzada que mantiene el ambiente fresco en verano. Cuenta además con sofá de 2 plazas para el descanso y un escritorio junto al balcón pensado para aprovechar la luz natural en cada sesión de estudio.',
+        room2Desc: 'Habitación exterior con vistas directas a la arboleda de la plaza, lo que aporta luz natural generosa y un entorno verde muy agradable durante todo el año. Su distribución funcional combina zona de descanso con sofá, escritorio para el estudio y amplio armario ropero en un espacio bien aprovechado. La ventilación cruzada garantiza frescor en verano, y el ventilador de techo con calefacción aseguran el confort en cualquier época del año.',
+        room3Desc: 'La habitación más grande del piso, con una superficie que permite combinar cómodamente zona de estudio, zona de descanso y almacenaje sin sensación de agobio. Los armarios empotrados con estanterías en pladur ofrecen una capacidad de almacenaje excepcional, mientras el amplio escritorio con vistas convierte el estudio en una experiencia más agradable. El sofá de 3 plazas y la Smart TV completan un espacio que va más allá de una habitación de estudiante estándar, con una auténtica sensación de hogar.',
+        room4Desc: 'Habitación interior especialmente silenciosa gracias a su orientación alejada de la calle, ideal para quienes priorizan la concentración y el rendimiento académico por encima de todo. La ausencia de ruido exterior favorece un ambiente de estudio profundo y un descanso de mayor calidad durante todo el curso. Mantiene exactamente el mismo estándar de equipamiento que el resto de habitaciones: cama amplia de 150 cm, armario empotrado y zona de estudio completa con escritorio, silla y lámpara.',
+        room5Desc: 'Habitación exterior orientada a un amplio patio de manzana, que combina la tranquilidad de no dar a la calle con una entrada de luz natural generosa desde primera hora de la mañana. Este entorno garantiza silencio y luminosidad al mismo tiempo, una combinación poco habitual en el centro de Valencia. Su distribución funcional y equipamiento completo hacen de esta habitación un espacio cómodo, bien iluminado y estable para desarrollar el curso académico sin distracciones.',
+        room6Desc: 'Habitación exterior con vistas a un patio interior amplio, que ofrece luminosidad destacada y un silencio poco habitual para una vivienda tan bien ubicada en el centro de la ciudad. Su orientación la hace especialmente agradable durante todo el año, con buena entrada de luz sin exposición al ruido de la calle. Dispone de cama XL, armario ropero, zona de estudio completa y tendedero privado, todo lo necesario para una estancia autónoma, cómoda y bien organizada a lo largo del año académico.',
+        room7Desc: 'Habitación exterior luminosa con equipamiento adicional que la distingue del resto y la convierte en una de las más completas del piso. La cama de gran formato, el mueble con Smart TV y el tendedero privado añaden un nivel de confort extra pensado para estancias largas y exigentes. La zona de estudio completamente equipada y el sistema de climatización completan un espacio diseñado para rendir académicamente sin renunciar al bienestar del día a día durante todo el curso.',
+
+        // Shared room elements
+        roomPriceSub: 'Todo incluido · luz, agua, gas, comunidad e impuestos',
+        roomCtaBtn: 'Consultar Disponibilidad',
+
+        // Privacy
+        lblPrivacy: 'He leído y acepto recibir la información solicitada sobre habitaciones disponibles. Tus datos serán tratados conforme a la <strong>Ley Orgánica de Protección de Datos (LOPD)</strong> y el <strong>RGPD</strong>, exclusivamente para gestionar tu solicitud de reserva. No se cederán a terceros.',
+
+        // New FAQs
+        faqSec3: 'Preguntas generales sobre Valencia',
+        faqQ16: '¿Es Valencia una buena ciudad para estudiantes?',
+        faqA16: 'Sí. Valencia es una de las mejores ciudades universitarias de España por su calidad de vida, coste asequible y oferta académica.',
+        faqQ17: '¿Dónde vivir si eres estudiante en Valencia?',
+        faqA17: 'Plaza Xúquer es una de las mejores zonas, muy cerca de la UPV y la Universidad de Valencia.',
+        faqQ18: '¿Es seguro vivir como estudiante en Valencia?',
+        faqA18: 'Sí. Zonas como Plaza Xúquer son seguras y están consolidadas como entorno universitario.',
+        faqQ19: '¿Cuánto cuesta una habitación de estudiante en Valencia?',
+        faqA19: 'Entre 400€ y 650€ al mes, dependiendo de ubicación y servicios.',
+        faqQ20: '¿Qué incluye el alquiler para estudiantes?',
+        faqA20: 'Normalmente incluye alquiler, wifi, suministros, mantenimiento y limpieza de zonas comunes.',
+        faqQ21: '¿Es Valencia una buena ciudad para estudiantes Erasmus?',
+        faqA21: 'Sí. Valencia es uno de los destinos Erasmus más demandados por su clima, estilo de vida, coste asequible y oferta académica.',
+        faqQ22: '¿Cuándo puedo visitar el piso y la habitación que me gusta?',
+        faqA22: 'Las habitaciones están actualmente ocupadas por estudiantes universitarias durante el curso académico. Las fotografías publicadas reflejan fielmente el estado, distribución y equipamiento real de cada habitación.',
+        faqA22b: 'No obstante, si nos contactas con antelación, podemos organizar una visita presencial o virtual con la actual residente, para que puedas ver la habitación y conocer el piso con total transparencia. Las visitas son limitadas por la ocupación — se recomienda consultar con antelación.',
     },
     en: {
         topBar: '☀️ Summer: <strong>July & August Available</strong>. Book now!',
@@ -159,7 +211,7 @@ const translations = {
 
         // Form
         contactMainTitle: 'Contact Us',
-        contactSubtitle: 'DIRECT BOOKING · NO INTERMEDIARIES · NO COMMISSIONS',
+        contactSubtitle: 'DIRECT BOOKING · NO INTERMEDIARIES · NO AGENCY FEES',
         contactPhoneLabel: 'WhatsApp:',
         contactHoursLabel: 'Opening Hours:',
         contactDays: 'Monday to Sunday',
@@ -167,7 +219,7 @@ const translations = {
 
         lblName: 'Name *',
         lblSurname: 'Surnames *',
-        lblPhone: 'Phone (with prefix) *',
+        lblPhone: 'Phone (with country code) *',
         lblAge: 'Age *',
         lblGender: 'Gender *',
         lblCountry: 'Country / Nationality *',
@@ -175,55 +227,74 @@ const translations = {
         formAvailTitle: 'Availability',
         lblPeriod: 'Select your Stay Period *',
 
-        optCurso: '<strong>Full Year:</strong> Sep 2025 - June 2026',
+        optCurso: '<strong>Full Academic Year:</strong> Sep 2025 - June 2026',
         optCursoExt: '<strong>Extended Year:</strong> Sep 2025 - July 2026',
         optSem1: '<strong>First Semester:</strong> Sep 2025 - Jan 2026',
         optSem2: '<strong>Second Semester:</strong> Feb 2026 - June 2026',
         optSummer: '<strong>Summer:</strong> July 2026 - August 2026',
 
-        lblComments: 'Comments / Need help with something?',
+        lblComments: 'Comments / Do you need help with anything?',
         lblRobot: 'I am not a robot',
-        btnSubmit: 'Send Request',
+        btnSubmit: 'Send Booking Request',
         captchaInstr: 'Select all images with:',
         btnVerify: 'Verify',
+        lblPrivacy: 'I have read and agree to receive the requested information regarding available rooms. My personal data will be processed in full compliance with the Spanish Data Protection Act (LOPD) and the General Data Protection Regulation (GDPR), solely for the purpose of managing my reservation enquiry. Under no circumstances will my data be shared with third parties or used for any purposes unrelated to this request. Your privacy matters. We only use your data to help you secure your room in Valencia.',
 
         // Placeholders
         phName: 'Your name',
         phSurname: 'Your surnames',
-        phAge: 'Ex: 21',
+        phAge: 'E.g. 21',
         phCountry: 'Spanish, Italian...',
         phUni: 'UPV, UV, ESIC...',
         phComments: 'I would like to know if...',
 
         // Hero
         heroTitle: 'Student Room Rentals in <span style="color: var(--accent);">Valencia – Plaza Xúquer</span>',
-        heroDesc: 'Exclusive housing for <strong>female university students</strong>, 5 minutes walking from campus.',
+        heroDesc: 'Exclusive accommodation for <strong>female university students</strong>, just a 5-minute walk from campus.',
         heroRooms: '🏠 7 premium rooms',
-        heroAll: '✨ All inclusive',
+        heroAll: '✨ All-inclusive',
         heroSafe: '🛡️ Safe area',
-        heroNocomm: '🚫 No commissions',
+        heroNocomm: '🚫 No agency fees',
         btnContact: 'Check Availability',
         btnRooms: 'View Available Rooms',
         overlayTitle: 'No Agency Fees',
-        overlayDesc: 'Deal directly with the property owner. Save on management fees.',
+        overlayDesc: 'Direct booking with the property. Save on management fees.',
+
+        // Convivencia (section 2)
+        convBadge: '🛡️ Living Model',
+        convHeading: 'An exclusive space for <span>female university students</span>',
+        convDesc1: 'The property is exclusively designed for female university students, with the aim of ensuring a safe, well-organised and peaceful living environment throughout the academic year.',
+        convDesc2: 'Our living model promotes stability and mutual respect — key values particularly appreciated by families when their daughters move away from home to study.',
+        convFeat1Title: 'Female students only',
+        convFeat1Sub: 'Exclusively for female students',
+        convFeat2Title: 'Peaceful environment',
+        convFeat2Sub: 'Stability throughout the academic year',
+        convFeat3Title: 'Erasmus welcome',
+        convFeat3Sub: 'National and international students',
+        convFeat4Title: 'Mutual respect',
+        convFeat4Sub: 'Safe and harmonious living',
 
         // Teaser
-        teaserTitle: 'All inclusive. No bills, no surprises, no worries',
-        teaserDesc: 'Monthly student rental in Valencia with all expenses included and no agency fees.',
-        featClean: '<strong>Weekly cleaning</strong> of common areas',
-        featWifi: '<strong>1Gbps Fiber WiFi</strong>',
-        featFridge: '<strong>Individual spaces</strong> in kitchen and fridge',
-        btnLoc: 'Discover Location →',
+        teaserTitle: 'All-inclusive. No bills, no surprises, no hassle.',
+        teaserDesc: 'Monthly student accommodation in Valencia with all expenses included and no agency fees.',
+        teaserExtra: 'Forget about utility contracts, repairs or complicated arrangements. Everything is set up so your only focus is studying and enjoying your university experience in Valencia.',
+        featClean: '<strong>Weekly cleaning</strong> of shared areas',
+        featWifi: '<strong>1 Gbps fibre Wi-Fi</strong>',
+        featFridge: '<strong>Individual storage space</strong> in kitchen and fridge',
+        featMaint: '<strong>Maintenance included</strong>',
+        teaserRoomsDesc: 'All rooms are designed for students looking for monthly accommodation in Valencia with high standards of safety, comfort and academic stability.',
+        teaserRoomsDesc2: 'Each space has been carefully equipped to support study, rest and organisation throughout the academic year.',
+        btnLoc: 'Discover the Location →',
 
         // Location
-        locTitle: 'Strategic location near UPV and University of Valencia',
-        locDesc: 'Located in one of the most sought-after areas by national and international students, <strong>5 minutes walking</strong> from the Polytechnic University, University of Valencia (UV) and ESIC Marketing & Business School.',
+        locTitle: 'Prime location near UPV and the University of Valencia',
+        locDesc: 'Located in one of the most sought-after areas for both national and international students, just a <strong>5-minute walk</strong> from the Polytechnic University of Valencia (UPV), the University of Valencia (UV) and ESIC Business &amp; Marketing School.',
 
         // Common Areas
         commonTitle: 'Common Areas & Services',
-        commonListTitle: 'Shared Services',
-        commonGalleryTitle: 'Enjoy all comforts',
-        commonGallerySub: 'Hover (or tap) to zoom.',
+        commonListTitle: 'Everything you need in your day-to-day life',
+        commonGalleryTitle: 'Enjoy all the comforts',
+        commonGallerySub: 'Hover (or tap) to enlarge.',
 
         // Lifestyle
         lifeTitle: 'Living in Valencia',
@@ -242,11 +313,12 @@ const translations = {
         faqHeroCta: 'Book a room →',
         faqSec1: 'Room Booking Process',
         faqSec2: 'Payments & Expenses',
+        faqSec3: 'General Questions about Valencia',
 
         // FAQ Questions & Answers
-        faqQ1: 'Why is the housing exclusively for female students?',
-        faqA1: 'The project is designed as a female-only shared housing to provide a stable, respectful and safe living environment throughout the academic year.',
-        faqA1b: 'Many families prefer this model for the peace of mind it offers at university age, especially when students are away from their home cities or countries.',
+        faqQ1: 'Why is the accommodation exclusively for female students?',
+        faqA1: 'The property is exclusively designed for female university students, with the aim of ensuring a safe, well-organised and peaceful living environment throughout the academic year.',
+        faqA1b: 'Our living model promotes stability and mutual respect — key values particularly appreciated by families when their daughters move away from home to study.',
         faqQ2: 'Is it a safe area for my daughter?',
         faqA2: 'Yes. Plaza Xúquer is one of the most established and safest university areas in Valencia.',
         faqQ3: 'Who lives in the apartment?',
@@ -261,7 +333,7 @@ const translations = {
         faqA6: 'Your ID card/DNI or NIE (resident permit) if you have one, and passport.',
         faqA6b: 'Confirmation of university studies (academic year), Erasmus scholarship granted, or summer courses to be taken, and internship or work contract (if applicable).',
         faqQ7: 'How do I confirm the booking?',
-        faqA7: 'Once documentation has been reviewed and everything is in order, we will send you the Pre-Booking Pre-Contract for your signature. This will only be valid and signed by us once the deposit amount has been effectively received.',
+        faqA7: 'Once documentation has been reviewed and everything is in order, we will send you the Pre-Booking Contract for your signature. This will only be valid and signed by us once the deposit amount has been effectively received.',
         faqQ8: 'When will I know the contents of the temporary room rental agreement?',
         faqA8: 'Once the requested booking period is confirmed, we will provide the model Contract that will be signed upon confirmation of the Pre-booking, so you can review the conditions and terms in accordance with current legislation for this type of contract.',
         faqQ9: 'How and when is the temporary room rental agreement signed?',
@@ -272,28 +344,57 @@ const translations = {
         faqA10: 'Once we have received all signed contracts and corresponding payments, you can move in from the day before your stay begins, with handover of keys to the apartment and your room.',
         faqQ11: 'How much deposit do I need to pay?',
         faqA11: '2 full months\' rent is required as deposit for the room Pre-booking.',
-
         faqQ12: 'What deposit is required for the Pre-booking?',
         faqA12: 'The standard requirement is to pay 2 months\' deposit.',
         faqQ13: 'When is the deposit returned?',
         faqA13: 'If the room and common areas are in the same condition as you found them, the deposit will be returned in full as per the contract.',
         faqQ14: 'What expenses are included in the monthly rent?',
-        faqA14: 'Everything: Rent, WiFi, Electricity, Water, Gas, Common area cleaning, community fees, taxes and home insurance for any repairs.',
-        faqQ15: 'Are there agency commissions to pay?',
-        faqA15: 'By contracting directly with the property, without intermediaries, you do NOT have to pay agency commissions, saving you the equivalent of one month\'s room rent.',
+        faqA14: 'Everything: Rent, Wi-Fi, Electricity, Water, Gas, Common area cleaning, community fees, taxes and home insurance for any repairs.',
+        faqQ15: 'Are there agency fees to pay?',
+        faqA15: 'By booking directly with the property, without intermediaries, you do NOT pay any agency fees — saving you the equivalent of one month\'s rent.',
+
+        // New FAQs from PDF
+        faqQ16: 'Is Valencia a good city for students?',
+        faqA16: 'Yes. Valencia is one of the top student cities in Spain, offering affordable living, excellent universities (UPV and UV), and a safe, well-connected environment.',
+        faqQ17: 'Where should students live in Valencia?',
+        faqA17: 'Plaza Xúquer is one of the best areas for students, located within walking distance of UPV and the University of Valencia, with all services nearby.',
+        faqQ18: 'Is student accommodation in Valencia safe?',
+        faqA18: 'Yes. Areas like Plaza Xúquer are considered safe and well-established for students, especially in managed shared housing environments.',
+        faqQ19: 'How much does student accommodation cost in Valencia?',
+        faqA19: 'Student rooms in Valencia typically range from €400 to €650 per month, depending on size, location and included services.',
+        faqQ20: 'What is included in student accommodation in Valencia?',
+        faqA20: 'Most high-quality student accommodation includes rent, Wi-Fi, utilities, maintenance and shared area cleaning.',
+        faqQ21: 'Is Valencia good for Erasmus students?',
+        faqA21: 'Yes. Valencia is one of the most popular Erasmus destinations due to its climate, lifestyle, affordability and academic offer.',
+        faqQ22: 'When can I visit the flat and the room I\'m interested in?',
+        faqA22: 'The rooms are currently occupied by university students during the academic year. All photos shown accurately represent the real condition, layout and furnishings of each room.',
+        faqA22b: 'However, if you contact us in advance, we can arrange an in-person or virtual viewing with the current tenant, allowing you to see the room and get a clear and transparent understanding of the flat. Viewings are limited due to occupancy — early enquiry is recommended.',
 
         // Summer page
-        summerTitle: 'Summer Stays',
-        summerSubtitle: 'July and August in Valencia',
+        summerTitle: 'Summer Accommodation in Valencia for Students and Young Professionals',
+        summerSubtitle: 'Available for intensive courses, Erasmus programmes, internships or short-term work placements during July and August.',
 
         // Rooms page titles
-        room1Title: 'Room 1 – Private terrace with tree-lined views',
-        room2Title: 'Room 2 – Bright and functional exterior room',
-        room3Title: 'Room 3 – Space and rest area',
-        room4Title: 'Room 4 – Interior silence, absolute concentration',
-        room5Title: 'Room 5 – Maximum brightness and tranquility',
-        room6Title: 'Room 6 – Maximum brightness and tranquility',
-        room7Title: 'Room 7 – Brightness and additional comfort',
+        room1Title: 'Private terrace with leafy views',
+        room2Title: 'Bright, functional and outward-facing',
+        room3Title: 'Spacious, comfortable and truly homely',
+        room4Title: 'Quiet, focused and study-oriented',
+        room5Title: 'Bright and peaceful in perfect balance',
+        room6Title: 'Bright, quiet and practical',
+        room7Title: 'Enhanced comfort for longer stays',
+
+        // Room descriptions
+        room1Desc: 'The only room in the flat with its own private terrace — an outdoor space with table and chairs, perfect for relaxing or studying in the open air. Facing outside, it benefits from abundant natural light and cross ventilation, keeping the room cool during the summer. It also features a two-seater sofa for relaxation and a desk by the balcony, designed to make the most of natural light during study sessions.',
+        room2Desc: 'An exterior room with direct views over the tree-lined square, offering abundant natural light and a pleasant green outlook all year round. Its well-designed layout combines a comfortable relaxation area with sofa, a dedicated study space and a spacious wardrobe, making the most of every square metre. Cross ventilation keeps the room cool in summer, while ceiling fan and heating ensure year-round comfort.',
+        room3Desc: 'The largest room in the flat, designed to comfortably accommodate study, relaxation and storage areas without feeling crowded. It features built-in wardrobes with excellent storage capacity, a large desk with views, and a dedicated living area with a three-seater sofa and Smart TV — offering a genuine "home away from home" experience.',
+        room4Desc: 'A particularly quiet and inward-facing room, ideal for students who prioritise concentration and academic performance. Its position away from street noise ensures high-quality rest and a distraction-free study environment. It maintains the same equipment standard as all other rooms: a wide 150 cm bed, built-in wardrobe and a complete study area with desk, chair and lamp.',
+        room5Desc: 'An exterior room facing a large inner courtyard, combining quiet surroundings with excellent natural light. A rare combination in central Valencia: bright, calm and ideal for consistent study throughout the academic year.',
+        room6Desc: 'An exterior room overlooking a spacious inner courtyard, offering excellent natural light and a peaceful environment. Includes an XL bed, a fully equipped study area and a private drying space for a comfortable and well-organised stay.',
+        room7Desc: 'A bright exterior room with upgraded features, designed for longer and more demanding stays. Includes a large-format bed, Smart TV, fully equipped study area and private drying space.',
+
+        // Shared room elements
+        roomPriceSub: 'All-inclusive · electricity, water, gas, community charges and taxes',
+        roomCtaBtn: 'Check Availability',
     }
 };
 
@@ -385,8 +486,15 @@ function changeLanguage(lang) {
         'hero-title', 'hero-desc', 'hero-rooms', 'hero-all', 'hero-safe', 'hero-nocomm',
         'btn-contact', 'btn-rooms', 'overlay-title', 'overlay-desc',
 
+        // Convivencia (sección 2)
+        'conv-badge', 'conv-heading', 'conv-desc1', 'conv-desc2',
+        'conv-feat1-title', 'conv-feat1-sub', 'conv-feat2-title', 'conv-feat2-sub',
+        'conv-feat3-title', 'conv-feat3-sub', 'conv-feat4-title', 'conv-feat4-sub',
+
         // Teaser
-        'teaser-title', 'teaser-desc', 'feat-clean', 'feat-wifi', 'feat-fridge', 'btn-loc',
+        'teaser-title', 'teaser-desc', 'teaser-extra',
+        'feat-clean', 'feat-wifi', 'feat-fridge', 'feat-maint',
+        'teaser-rooms-desc', 'teaser-rooms-desc2', 'btn-loc',
 
         // Location
         'loc-title', 'loc-desc',
@@ -399,9 +507,9 @@ function changeLanguage(lang) {
         'life-shop-title', 'life-secret-title', 'life-move-title', 'life-phone-title',
 
         // FAQs
-        'faq-title', 'faq-hero-sub', 'faq-hero-cta', 'faq-sec-1', 'faq-sec-2',
+        'faq-title', 'faq-hero-sub', 'faq-hero-cta', 'faq-sec-1', 'faq-sec-2', 'faq-sec-3',
 
-        // FAQ Q&A (all 15 questions + answers)
+        // FAQ Q&A (all questions + answers)
         'faq-q1', 'faq-a1', 'faq-a1b',
         'faq-q2', 'faq-a2',
         'faq-q3', 'faq-a3',
@@ -417,13 +525,28 @@ function changeLanguage(lang) {
         'faq-q13', 'faq-a13',
         'faq-q14', 'faq-a14',
         'faq-q15', 'faq-a15',
+        'faq-q16', 'faq-a16',
+        'faq-q17', 'faq-a17',
+        'faq-q18', 'faq-a18',
+        'faq-q19', 'faq-a19',
+        'faq-q20', 'faq-a20',
+        'faq-q21', 'faq-a21',
+        'faq-q22', 'faq-a22', 'faq-a22b',
 
         // Summer page
         'summer-title', 'summer-subtitle',
 
-        // Rooms
-        'room-1-title', 'room-2-title', 'room-3-title', 'room-4-title',
-        'room-5-title', 'room-6-title', 'room-7-title'
+        // Rooms titles & descriptions
+        'room-1-title', 'room-1-desc',
+        'room-2-title', 'room-2-desc',
+        'room-3-title', 'room-3-desc',
+        'room-4-title', 'room-4-desc',
+        'room-5-title', 'room-5-desc',
+        'room-6-title', 'room-6-desc',
+        'room-7-title', 'room-7-desc',
+
+        // Privacy label
+        'lbl-privacy',
     ];
 
     ids.forEach(id => {
@@ -431,6 +554,12 @@ function changeLanguage(lang) {
         if (el && t[toCamel(id)]) {
             el.innerHTML = t[toCamel(id)];
         }
+    });
+
+    // Elements translated via data-tr attribute (shared keys, multiple elements)
+    document.querySelectorAll('[data-tr]').forEach(el => {
+        const key = el.dataset.tr;
+        if (t[key]) el.innerHTML = t[key];
     });
 
     // Placeholder Updates
