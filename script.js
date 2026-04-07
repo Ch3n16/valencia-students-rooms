@@ -181,6 +181,32 @@ const translations = {
         // Privacy
         lblPrivacy: 'He leído y acepto recibir la información solicitada sobre habitaciones disponibles. Tus datos serán tratados conforme a la <strong>Ley Orgánica de Protección de Datos (LOPD)</strong> y el <strong>RGPD</strong>, exclusivamente para gestionar tu solicitud de reserva. No se cederán a terceros.',
 
+        // LOPD desplegable
+        lopdToggleBtn: '📋 Ver texto completo — Ley Orgánica 3/2018, de 5 de diciembre (LOPDGDD)',
+        lopdPanelContent: `
+            <p style="font-weight:700;font-size:0.9rem;margin-bottom:0.75rem;color:#263bb6;">
+                Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD)<br>
+                <span style="font-weight:400;color:#555;">BOE núm. 294, de 6 de diciembre de 2018 · Referencia: BOE-A-2018-16673</span>
+            </p>
+            <p><strong>Artículo 1. Objeto.</strong> La presente ley orgánica tiene por objeto adaptar el ordenamiento jurídico español al Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de sus datos personales y a la libre circulación de estos datos (RGPD), y completar sus disposiciones.</p>
+            <p><strong>Artículo 5. Deber de confidencialidad.</strong> Los responsables y encargados del tratamiento de datos, así como todas las personas que intervengan en cualquier fase de este, están sujetos al deber de confidencialidad al que se refiere el artículo 5.1.f) del RGPD. La obligación de confidencialidad tiene carácter indefinido y subsistirá aun cuando finalice la relación del afectado con el responsable o encargado del tratamiento.</p>
+            <p><strong>Artículo 6. Tratamiento basado en el consentimiento del afectado.</strong> Se entiende por consentimiento toda manifestación de voluntad libre, específica, informada e inequívoca por la que el afectado acepta el tratamiento de datos personales que le conciernen. No podrá supeditarse la ejecución del contrato a que el afectado consienta el tratamiento de datos para finalidades que no guarden relación con el mantenimiento, desarrollo o control de la relación contractual.</p>
+            <p><strong>Artículo 7. Consentimiento de los menores de edad.</strong> El tratamiento de los datos personales de un menor de edad únicamente podrá fundarse en su consentimiento cuando sea mayor de catorce años. Se exceptúan los supuestos en que la ley exija la asistencia de los titulares de la patria potestad o tutela.</p>
+            <p><strong>Artículo 11. Transparencia e información al afectado.</strong> El responsable del tratamiento facilitará al afectado, como mínimo: (a) su identidad y datos de contacto; (b) la finalidad del tratamiento; (c) la posibilidad de ejercer los derechos establecidos en los artículos 15 a 22 del RGPD.</p>
+            <p><strong>Derechos del interesado (Arts. 12–18 LOPDGDD / Arts. 15–22 RGPD).</strong> El interesado tiene derecho a:</p>
+            <ul style="margin:0.4rem 0 0.4rem 1.2rem;line-height:1.8;">
+                <li><strong>Acceso</strong> — conocer si se tratan datos suyos y obtener copia (Art. 15 RGPD).</li>
+                <li><strong>Rectificación</strong> — corregir datos inexactos o incompletos (Art. 16 RGPD).</li>
+                <li><strong>Supresión</strong> ("derecho al olvido") — solicitar la eliminación de sus datos (Art. 17 RGPD).</li>
+                <li><strong>Limitación del tratamiento</strong> — restringir el uso de sus datos en determinadas circunstancias (Art. 18 RGPD).</li>
+                <li><strong>Portabilidad</strong> — recibir sus datos en formato estructurado y de uso común (Art. 20 RGPD).</li>
+                <li><strong>Oposición</strong> — oponerse al tratamiento cuando existan motivos relacionados con su situación particular (Art. 21 RGPD).</li>
+            </ul>
+            <p><strong>Responsable del tratamiento:</strong> Xuquer Living · <a href="mailto:reservas@estudentsrooms.com" style="color:#263bb6;">reservas@estudentsrooms.com</a><br>
+            Los datos recabados mediante este formulario se utilizarán exclusivamente para gestionar la solicitud de reserva. No se cederán a terceros.</p>
+            <p style="margin-top:0.5rem;"><a href="https://www.boe.es/eli/es/lo/2018/12/05/3" target="_blank" rel="noopener" style="color:#263bb6;font-weight:600;">🔗 Consultar texto íntegro en el BOE oficial</a></p>
+        `,
+
         // New FAQs
         faqSec3: 'Preguntas generales sobre Valencia',
         faqQ16: '¿Es Valencia una buena ciudad para estudiantes?',
@@ -333,6 +359,32 @@ const translations = {
         captchaInstr: 'Select all images with:',
         btnVerify: 'Verify',
         lblPrivacy: 'I have read and agree to receive the requested information regarding available rooms. My personal data will be processed in full compliance with the Spanish Data Protection Act (LOPD) and the General Data Protection Regulation (GDPR), solely for the purpose of managing my reservation enquiry. Under no circumstances will my data be shared with third parties or used for any purposes unrelated to this request. Your privacy matters. We only use your data to help you secure your room in Valencia.',
+
+        // LOPD dropdown
+        lopdToggleBtn: '📋 View full text — Spanish Data Protection Act, LO 3/2018 (LOPDGDD)',
+        lopdPanelContent: `
+            <p style="font-weight:700;font-size:0.9rem;margin-bottom:0.75rem;color:#263bb6;">
+                Ley Orgánica 3/2018 — Spanish Data Protection and Digital Rights Act (LOPDGDD)<br>
+                <span style="font-weight:400;color:#555;">Official State Gazette (BOE) No. 294, 6 December 2018 · Ref: BOE-A-2018-16673 · Spanish implementation of EU GDPR 2016/679</span>
+            </p>
+            <p><strong>Article 1. Purpose.</strong> This Organic Law adapts Spanish legislation to EU Regulation 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data (GDPR), and completes its provisions.</p>
+            <p><strong>Article 5. Duty of confidentiality.</strong> Data controllers, processors, and all persons involved in any phase of processing are subject to the duty of confidentiality under Article 5.1.f) GDPR. This obligation is indefinite and subsists even after the relationship with the controller ends.</p>
+            <p><strong>Article 6. Consent-based processing.</strong> Consent must be a freely given, specific, informed and unambiguous indication of agreement. Execution of a contract may not be made conditional on consent to processing of personal data for purposes unrelated to that contract.</p>
+            <p><strong>Article 7. Consent of minors.</strong> Processing of a minor's personal data may only be based on their consent if they are over fourteen years of age. Exceptions apply where the law requires parental or guardian assistance.</p>
+            <p><strong>Article 11. Transparency and information.</strong> The controller must provide the data subject with, at minimum: (a) identity and contact details of the controller; (b) the purposes of the processing; (c) the possibility of exercising the rights set out in Articles 15 to 22 GDPR.</p>
+            <p><strong>Data subject rights (Arts. 12–18 LOPDGDD / Arts. 15–22 GDPR).</strong> You have the right to:</p>
+            <ul style="margin:0.4rem 0 0.4rem 1.2rem;line-height:1.8;">
+                <li><strong>Access</strong> — know whether your data is being processed and obtain a copy (Art. 15 GDPR).</li>
+                <li><strong>Rectification</strong> — correct inaccurate or incomplete data (Art. 16 GDPR).</li>
+                <li><strong>Erasure</strong> ("right to be forgotten") — request deletion of your data (Art. 17 GDPR).</li>
+                <li><strong>Restriction</strong> — limit the processing of your data in certain circumstances (Art. 18 GDPR).</li>
+                <li><strong>Portability</strong> — receive your data in a structured, commonly used format (Art. 20 GDPR).</li>
+                <li><strong>Objection</strong> — object to processing on grounds relating to your particular situation (Art. 21 GDPR).</li>
+            </ul>
+            <p><strong>Data controller:</strong> Xuquer Living · <a href="mailto:reservas@estudentsrooms.com" style="color:#263bb6;">reservas@estudentsrooms.com</a><br>
+            Data collected via this form will be used solely to process your room booking request. It will not be shared with third parties.</p>
+            <p style="margin-top:0.5rem;"><a href="https://www.boe.es/eli/es/lo/2018/12/05/3" target="_blank" rel="noopener" style="color:#263bb6;font-weight:600;">🔗 View full official text in the BOE (Spanish)</a></p>
+        `,
 
         // Placeholders
         phName: 'Your name',
@@ -733,8 +785,8 @@ function changeLanguage(lang) {
         'room-6-title', 'room-6-desc',
         'room-7-title', 'room-7-desc',
 
-        // Privacy label
-        'lbl-privacy',
+        // Privacy label + LOPD dropdown
+        'lbl-privacy', 'lopd-toggle-btn', 'lopd-panel-content',
 
         // Room chips - unique
         'room-1-chip-1', 'room-1-chip-2', 'room-1-chip-3',
