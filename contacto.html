@@ -81,7 +81,7 @@
                                     <path
                                         d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.103 1.522 5.83L.057 23.882a.5.5 0 0 0 .61.637l6.264-1.643A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.944 9.944 0 0 1-5.17-1.448l-.37-.22-3.828 1.004 1.018-3.717-.242-.38A9.944 9.944 0 0 1 2 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z" />
                                 </svg>
-                                Contactar por WhatsApp
+                                <span id="contact-wa-btn">Contactar por WhatsApp</span>
                             </a>
                         </div>
                     </li>
@@ -92,7 +92,7 @@
                     <li>
                         <strong id="contact-hours-label">Horario Atención:</strong>
                         <div id="contact-days">Lunes a Domingo</div>
-                        <div>09:00h - 20:00h</div>
+                        <div id="contact-hours">09:00h - 20:00h</div>
                     </li>
                 </ul>
             </div>
@@ -152,13 +152,13 @@
                                     <option value="+212">🇲🇦 +212</option>
                                     <option value="+20">🇪🇬 +20</option>
                                     <option value="+27">🇿🇦 +27</option>
-                                    <option value="">Otro...</option>
+                                    <option value="" id="phone-other">Otro...</option>
                                 </select>
                                 <input type="tel" id="input-phone" placeholder="600...">
                             </div>
                         </div>
                         <div>
-                            <label>Email *</label>
+                            <label id="lbl-email">Email *</label>
                             <input type="email" id="input-email" placeholder="@email.com">
                         </div>
                     </div>
@@ -171,10 +171,10 @@
                         <div>
                             <label id="lbl-gender">Género *</label>
                             <select id="select-gender">
-                                <option value="">-- Seleccionar --</option>
-                                <option value="male">Masculino</option>
-                                <option value="female">Femenino</option>
-                                <option value="other">Otro</option>
+                                <option value="" id="gender-select">-- Seleccionar --</option>
+                                <option value="male" id="gender-male">Masculino</option>
+                                <option value="female" id="gender-female">Femenino</option>
+                                <option value="other" id="gender-other">Otro</option>
                             </select>
                         </div>
                     </div>
