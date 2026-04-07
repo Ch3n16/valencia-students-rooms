@@ -2,7 +2,7 @@ const translations = {
     es: {
         topBar: '☀️ Verano: <strong>Julio & Agosto Disponibles</strong>. ¡Reserva ahora!',
         navHome: 'Inicio',
-        navLoc: 'Ubicación ▾',
+        navLoc: 'Ubicación',
         navRooms: 'Habitaciones',
         navSummer: 'Estancias de Verano',
         navLife: 'Vivir en Valencia',
@@ -296,7 +296,7 @@ const translations = {
     en: {
         topBar: '☀️ Summer: <strong>July & August Available</strong>. Book now!',
         navHome: 'Home',
-        navLoc: 'Location ▾',
+        navLoc: 'Location',
         navRooms: 'Rooms',
         navSummer: 'Summer Stays',
         navLife: 'Living in Valencia',
