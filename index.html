@@ -118,26 +118,7 @@
                         estudiar.</p>
                 </div>
                 <div class="conv-features">
-                    <div class="card conv-feat-card">
-                        <span class="conv-feat-icon">👩‍🎓</span>
-                        <strong id="conv-feat1-title">Solo universitarias</strong>
-                        <span id="conv-feat1-sub">Exclusivo para chicas estudiantes</span>
-                    </div>
-                    <div class="card conv-feat-card">
-                        <span class="conv-feat-icon">🏡</span>
-                        <strong id="conv-feat2-title">Ambiente tranquilo</strong>
-                        <span id="conv-feat2-sub">Estabilidad durante todo el curso</span>
-                    </div>
-                    <div class="card conv-feat-card">
-                        <span class="conv-feat-icon">🌍</span>
-                        <strong id="conv-feat3-title">Erasmus bienvenidas</strong>
-                        <span id="conv-feat3-sub">Nacionales e internacionales</span>
-                    </div>
-                    <div class="card conv-feat-card">
-                        <span class="conv-feat-icon">🤝</span>
-                        <strong id="conv-feat4-title">Respeto mutuo</strong>
-                        <span id="conv-feat4-sub">Convivencia segura y homogénea</span>
-                    </div>
+                    <img src="foto slide 2.png.jpeg" alt="Convivencia Valencia Student Rooms">
                 </div>
             </div>
         </div>
@@ -285,9 +266,15 @@
         }
 
         .conv-features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
+            display: block;
+        }
+
+        .conv-features img {
+            width: 100%;
+            border-radius: 16px;
+            object-fit: cover;
+            display: block;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.13);
         }
 
         .conv-feat-card {
