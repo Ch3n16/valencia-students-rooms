@@ -396,7 +396,7 @@ const translations = {
 
         // Hero
         heroTitle: 'Student Room Rentals in <span style="color: var(--accent);">Valencia – Plaza Xúquer</span>',
-        heroDesc: 'Exclusive accommodation for <strong>female university students</strong>, just a 5-minute walk from campus.',
+        heroDesc: 'Monthly rooms rentals in exclusive accommodation for <strong>female university students</strong>, just a 5-minute walk from University Campus.',
         heroRooms: '🏠 7 premium rooms',
         heroAll: '✨ All-inclusive',
         heroSafe: '🛡️ Safe area',
@@ -517,7 +517,7 @@ const translations = {
         faqA22b: 'However, if you contact us in advance, we can arrange an in-person or virtual viewing with the current tenant, allowing you to see the room and get a clear and transparent understanding of the flat. Viewings are limited due to occupancy — early enquiry is recommended.',
 
         // Summer page
-        summerTitle: 'Summer Accommodation in Valencia for Students and Young Professionals',
+        summerTitle: 'Summer accommodation in Valencia for students and young professionals',
         summerSubtitle: 'Available for intensive courses, Erasmus programmes, internships or short-term work placements during July and August.',
 
         // Rooms page titles
@@ -607,7 +607,7 @@ const translations = {
         summerBadge: '☀️ July & August',
         summerPara: 'Located at Plaza Xúquer, a 5-minute walk from UPV and the University of Valencia, this flat offers a safe, well-equipped and ideally situated option for combining studies or work with summer in Valencia.',
         summerInfoTitle: 'Ideal for intensive courses, international programmes and summer work placements.',
-        summerInfoPara: 'Monthly or fortnightly rental, with all utilities included and no agency fees.',
+        summerInfoPara: 'Monthly or fortnightly stays · all-inclusive · no agency fees',
         summerLi1: '🎓 Intensive language and university courses',
         summerLi2: '💼 Internships and work placements in Valencia',
         summerLi3: '🌍 Summer Erasmus programmes',
@@ -637,6 +637,86 @@ const translations = {
         lifePhoneLink2: 'Emergency Numbers',
     }
 };
+
+// IDs de todos los elementos traducibles — compartido entre snapshot y changeLanguage
+const TRANSLATABLE_IDS = [
+    'top-bar-text', 'nav-home', 'nav-loc', 'nav-rooms', 'nav-summer', 'nav-life', 'nav-faqs', 'nav-book',
+    'contact-main-title', 'contact-subtitle', 'contact-phone-label', 'contact-hours-label', 'contact-days',
+    'form-title', 'lbl-name', 'lbl-surname', 'lbl-phone', 'lbl-age', 'lbl-gender', 'lbl-country', 'lbl-uni', 'form-avail-title', 'lbl-period',
+    'opt-curso', 'opt-curso-ext', 'opt-sem1', 'opt-sem2', 'opt-summer',
+    'lbl-comments', 'lbl-robot', 'btn-submit',
+    'captcha-instr', 'btn-verify',
+    'hero-title', 'hero-desc', 'hero-rooms', 'hero-all', 'hero-safe', 'hero-nocomm',
+    'btn-contact', 'btn-rooms', 'overlay-title', 'overlay-desc',
+    'conv-badge', 'conv-heading', 'conv-desc1', 'conv-desc2',
+    'conv-feat1-title', 'conv-feat1-sub', 'conv-feat2-title', 'conv-feat2-sub',
+    'conv-feat3-title', 'conv-feat3-sub', 'conv-feat4-title', 'conv-feat4-sub',
+    'teaser-title', 'teaser-desc', 'teaser-extra',
+    'feat-clean', 'feat-wifi', 'feat-fridge', 'feat-maint',
+    'teaser-rooms-desc', 'teaser-rooms-desc2', 'btn-loc',
+    'loc-title', 'loc-desc',
+    'common-title', 'common-list-title', 'common-gallery-title', 'common-gallery-sub',
+    'life-title', 'life-city-title', 'life-beach-title', 'life-night-title', 'life-poi-title',
+    'life-shop-title', 'life-secret-title', 'life-move-title', 'life-phone-title',
+    'faq-title', 'faq-hero-sub', 'faq-hero-cta', 'faq-sec-1', 'faq-sec-2', 'faq-sec-3',
+    'faq-q1', 'faq-a1', 'faq-a1b',
+    'faq-q2', 'faq-a2',
+    'faq-q3', 'faq-a3',
+    'faq-q4', 'faq-a4',
+    'faq-q5', 'faq-a5', 'faq-a5b',
+    'faq-q6', 'faq-a6', 'faq-a6b',
+    'faq-q7', 'faq-a7',
+    'faq-q8', 'faq-a8',
+    'faq-q9', 'faq-a9', 'faq-a9b', 'faq-a9c',
+    'faq-q10', 'faq-a10',
+    'faq-q11', 'faq-a11',
+    'faq-q12', 'faq-a12',
+    'faq-q13', 'faq-a13',
+    'faq-q14', 'faq-a14',
+    'faq-q15', 'faq-a15',
+    'faq-q16', 'faq-a16',
+    'faq-q17', 'faq-a17',
+    'faq-q18', 'faq-a18',
+    'faq-q19', 'faq-a19',
+    'faq-q20', 'faq-a20',
+    'faq-q21', 'faq-a21',
+    'faq-q22', 'faq-a22', 'faq-a22b',
+    'summer-title', 'summer-subtitle',
+    'room-1-title', 'room-1-desc',
+    'room-2-title', 'room-2-desc',
+    'room-3-title', 'room-3-desc',
+    'room-4-title', 'room-4-desc',
+    'room-5-title', 'room-5-desc',
+    'room-6-title', 'room-6-desc',
+    'room-7-title', 'room-7-desc',
+    'lbl-privacy', 'lopd-toggle-btn', 'lopd-panel-content',
+    'room-1-chip-1', 'room-1-chip-2', 'room-1-chip-3',
+    'room-2-chip-1',
+    'room-3-chip-1', 'room-3-chip-3', 'room-3-chip-4', 'room-3-chip-6', 'room-3-chip-7',
+    'room-4-chip-1', 'room-4-chip-2',
+    'room-7-chip-1', 'room-7-chip-3', 'room-7-chip-5',
+    'lbl-email', 'gender-select', 'gender-male', 'gender-female', 'gender-other',
+    'phone-other', 'contact-wa-btn', 'contact-hours',
+    'zc-glass-title-1', 'zc-glass-sub-1', 'zc-glass-label-2', 'zc-glass-title-2', 'zc-glass-sub-2',
+    'zc-srv-eyebrow', 'zc-srv-1-title', 'zc-srv-1-sub', 'zc-srv-2-title', 'zc-srv-2-sub',
+    'zc-srv-3-title', 'zc-srv-3-sub', 'zc-srv-4-title', 'zc-srv-4-sub',
+    'zc-srv-5-title', 'zc-srv-5-sub', 'zc-srv-6-title', 'zc-srv-6-sub',
+    'zc-srv-cta', 'zc-mobile-sub', 'zc-cta-book', 'zc-cta-rooms',
+    'summer-badge', 'summer-para', 'summer-info-title', 'summer-info-para',
+    'summer-li-1', 'summer-li-2', 'summer-li-3', 'summer-li-4',
+    'summer-demand-title', 'summer-demand-para', 'summer-demand-note', 'summer-demand-cta',
+    'life-city-link-1', 'life-city-link-2',
+    'life-beach-link-1',
+    'life-night-link-1', 'life-night-link-2',
+    'life-poi-link-1',
+    'life-shop-link-1',
+    'life-secret-link-1', 'life-secret-link-3', 'life-secret-link-4',
+    'life-move-link-1', 'life-move-link-2', 'life-move-link-3', 'life-move-link-4', 'life-move-link-5',
+    'life-phone-link-1', 'life-phone-link-2',
+];
+
+// Snapshot del HTML español original (se rellena en DOMContentLoaded antes de cualquier cambio)
+let _snapshotES = null;
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -685,6 +765,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Capturar HTML español original antes de cualquier cambio de idioma
+    _snapshotES = { ids: {}, dataTr: [], placeholders: {} };
+    TRANSLATABLE_IDS.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) _snapshotES.ids[id] = el.innerHTML;
+    });
+    document.querySelectorAll('[data-tr]').forEach(el => {
+        _snapshotES.dataTr.push({ el, html: el.innerHTML });
+    });
+    ['input-name', 'input-surname', 'input-age', 'input-country', 'input-uni', 'input-comments'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) _snapshotES.placeholders[id] = el.placeholder;
+    });
+
     // Apply translations immediately
     if (savedLang !== 'es') {
         changeLanguage(savedLang);
@@ -705,124 +799,24 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function changeLanguage(lang) {
+    // Restaurar español original desde el snapshot (nunca retrotraducir)
+    if (lang === 'es' && _snapshotES) {
+        TRANSLATABLE_IDS.forEach(id => {
+            const el = document.getElementById(id);
+            if (el && _snapshotES.ids[id] !== undefined) el.innerHTML = _snapshotES.ids[id];
+        });
+        _snapshotES.dataTr.forEach(({ el, html }) => { el.innerHTML = html; });
+        Object.entries(_snapshotES.placeholders).forEach(([id, txt]) => updatePlaceholder(id, txt));
+        return;
+    }
+
     const t = translations[lang];
     if (!t) return;
 
     // Helper to convert kebab-case ID to camelCase translation key
     const toCamel = (s) => s.replace(/-([a-z0-9])/g, (g) => g[1].toUpperCase());
 
-    // All IDs to translate via innerHTML
-    const ids = [
-        'top-bar-text', 'nav-home', 'nav-loc', 'nav-rooms', 'nav-summer', 'nav-life', 'nav-faqs', 'nav-book',
-        'contact-main-title', 'contact-subtitle', 'contact-phone-label', 'contact-hours-label', 'contact-days',
-        'form-title', 'lbl-name', 'lbl-surname', 'lbl-phone', 'lbl-age', 'lbl-gender', 'lbl-country', 'lbl-uni', 'form-avail-title', 'lbl-period',
-        'opt-curso', 'opt-curso-ext', 'opt-sem1', 'opt-sem2', 'opt-summer',
-        'lbl-comments', 'lbl-robot', 'btn-submit',
-
-        // CAPTCHA
-        'captcha-instr', 'btn-verify',
-
-        // Hero
-        'hero-title', 'hero-desc', 'hero-rooms', 'hero-all', 'hero-safe', 'hero-nocomm',
-        'btn-contact', 'btn-rooms', 'overlay-title', 'overlay-desc',
-
-        // Convivencia (sección 2)
-        'conv-badge', 'conv-heading', 'conv-desc1', 'conv-desc2',
-        'conv-feat1-title', 'conv-feat1-sub', 'conv-feat2-title', 'conv-feat2-sub',
-        'conv-feat3-title', 'conv-feat3-sub', 'conv-feat4-title', 'conv-feat4-sub',
-
-        // Teaser
-        'teaser-title', 'teaser-desc', 'teaser-extra',
-        'feat-clean', 'feat-wifi', 'feat-fridge', 'feat-maint',
-        'teaser-rooms-desc', 'teaser-rooms-desc2', 'btn-loc',
-
-        // Location
-        'loc-title', 'loc-desc',
-
-        // Common areas
-        'common-title', 'common-list-title', 'common-gallery-title', 'common-gallery-sub',
-
-        // Lifestyle
-        'life-title', 'life-city-title', 'life-beach-title', 'life-night-title', 'life-poi-title',
-        'life-shop-title', 'life-secret-title', 'life-move-title', 'life-phone-title',
-
-        // FAQs
-        'faq-title', 'faq-hero-sub', 'faq-hero-cta', 'faq-sec-1', 'faq-sec-2', 'faq-sec-3',
-
-        // FAQ Q&A (all questions + answers)
-        'faq-q1', 'faq-a1', 'faq-a1b',
-        'faq-q2', 'faq-a2',
-        'faq-q3', 'faq-a3',
-        'faq-q4', 'faq-a4',
-        'faq-q5', 'faq-a5', 'faq-a5b',
-        'faq-q6', 'faq-a6', 'faq-a6b',
-        'faq-q7', 'faq-a7',
-        'faq-q8', 'faq-a8',
-        'faq-q9', 'faq-a9', 'faq-a9b', 'faq-a9c',
-        'faq-q10', 'faq-a10',
-        'faq-q11', 'faq-a11',
-        'faq-q12', 'faq-a12',
-        'faq-q13', 'faq-a13',
-        'faq-q14', 'faq-a14',
-        'faq-q15', 'faq-a15',
-        'faq-q16', 'faq-a16',
-        'faq-q17', 'faq-a17',
-        'faq-q18', 'faq-a18',
-        'faq-q19', 'faq-a19',
-        'faq-q20', 'faq-a20',
-        'faq-q21', 'faq-a21',
-        'faq-q22', 'faq-a22', 'faq-a22b',
-
-        // Summer page
-        'summer-title', 'summer-subtitle',
-
-        // Rooms titles & descriptions
-        'room-1-title', 'room-1-desc',
-        'room-2-title', 'room-2-desc',
-        'room-3-title', 'room-3-desc',
-        'room-4-title', 'room-4-desc',
-        'room-5-title', 'room-5-desc',
-        'room-6-title', 'room-6-desc',
-        'room-7-title', 'room-7-desc',
-
-        // Privacy label + LOPD dropdown
-        'lbl-privacy', 'lopd-toggle-btn', 'lopd-panel-content',
-
-        // Room chips - unique
-        'room-1-chip-1', 'room-1-chip-2', 'room-1-chip-3',
-        'room-2-chip-1',
-        'room-3-chip-1', 'room-3-chip-3', 'room-3-chip-4', 'room-3-chip-6', 'room-3-chip-7',
-        'room-4-chip-1', 'room-4-chip-2',
-        'room-7-chip-1', 'room-7-chip-3', 'room-7-chip-5',
-
-        // Contact extras
-        'lbl-email', 'gender-select', 'gender-male', 'gender-female', 'gender-other',
-        'phone-other', 'contact-wa-btn', 'contact-hours',
-
-        // Common areas extras
-        'zc-glass-title-1', 'zc-glass-sub-1', 'zc-glass-label-2', 'zc-glass-title-2', 'zc-glass-sub-2',
-        'zc-srv-eyebrow', 'zc-srv-1-title', 'zc-srv-1-sub', 'zc-srv-2-title', 'zc-srv-2-sub',
-        'zc-srv-3-title', 'zc-srv-3-sub', 'zc-srv-4-title', 'zc-srv-4-sub',
-        'zc-srv-5-title', 'zc-srv-5-sub', 'zc-srv-6-title', 'zc-srv-6-sub',
-        'zc-srv-cta', 'zc-mobile-sub', 'zc-cta-book', 'zc-cta-rooms',
-
-        // Summer extras
-        'summer-badge', 'summer-para', 'summer-info-title', 'summer-info-para',
-        'summer-li-1', 'summer-li-2', 'summer-li-3', 'summer-li-4',
-        'summer-demand-title', 'summer-demand-para', 'summer-demand-note', 'summer-demand-cta',
-
-        // Living in Valencia links
-        'life-city-link-1', 'life-city-link-2',
-        'life-beach-link-1',
-        'life-night-link-1', 'life-night-link-2',
-        'life-poi-link-1',
-        'life-shop-link-1',
-        'life-secret-link-1', 'life-secret-link-3', 'life-secret-link-4',
-        'life-move-link-1', 'life-move-link-2', 'life-move-link-3', 'life-move-link-4', 'life-move-link-5',
-        'life-phone-link-1', 'life-phone-link-2',
-    ];
-
-    ids.forEach(id => {
+    TRANSLATABLE_IDS.forEach(id => {
         const el = document.getElementById(id);
         if (el && t[toCamel(id)]) {
             el.innerHTML = t[toCamel(id)];
