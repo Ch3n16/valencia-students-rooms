@@ -319,12 +319,47 @@
     </a>
 
     <script>
-        // Pre-select logic if URL param exists (modified for radios)
+        // Pre-select logic + room availability filtering
         const params = new URLSearchParams(window.location.search);
         const period = params.get('period');
+        const room = params.get('room');
+
+        // ── CONFIG DE DISPONIBILIDAD POR HABITACIÓN ──────────────────────────
+        // Para marcar un periodo como RESERVADO, elimínalo del array de esa habitación.
+        // Valores posibles: 'Curso25-26' | 'CursoExt25-26' | 'Semestre1' | 'Semestre2' | 'Verano26'
+        const roomAvailability = {
+            '1': ['Curso25-26', 'CursoExt25-26', 'Semestre1', 'Semestre2', 'Verano26'],
+            '2': ['Curso25-26', 'CursoExt25-26', 'Semestre1', 'Semestre2', 'Verano26'],
+            '3': ['Curso25-26', 'CursoExt25-26', 'Semestre1', 'Semestre2', 'Verano26'],
+            '4': ['Curso25-26', 'CursoExt25-26', 'Semestre1', 'Semestre2', 'Verano26'],
+            '5': ['Curso25-26', 'CursoExt25-26', 'Semestre1', 'Semestre2', 'Verano26'],
+            '6': ['Curso25-26', 'CursoExt25-26', 'Semestre1', 'Semestre2', 'Verano26'],
+            '7': ['Curso25-26', 'CursoExt25-26', 'Semestre1', 'Semestre2', 'Verano26'],
+        };
+        // ─────────────────────────────────────────────────────────────────────
+
         if (period) {
             const radio = document.querySelector(`input[name="period"][value="${period}"]`);
             if (radio) radio.checked = true;
+        }
+
+        if (room && roomAvailability[room]) {
+            const available = roomAvailability[room];
+
+            // Mostrar banner de habitación seleccionada
+            const formTitle = document.getElementById('form-title');
+            const banner = document.createElement('div');
+            banner.id = 'room-banner';
+            banner.style.cssText = 'background:rgba(255,102,0,0.08);border:1px solid rgba(255,102,0,0.25);border-radius:12px;padding:0.65rem 1.1rem;margin-bottom:1.25rem;display:flex;align-items:center;gap:0.5rem;font-weight:600;color:#FF6600;font-size:0.95rem;';
+            banner.textContent = '🏠 Habitación ' + room;
+            formTitle.insertAdjacentElement('afterend', banner);
+
+            // Ocultar periodos no disponibles para esta habitación
+            document.querySelectorAll('input[name="period"]').forEach(function (radio) {
+                if (!available.includes(radio.value)) {
+                    radio.closest('label').style.display = 'none';
+                }
+            });
         }
     </script>
 
@@ -487,12 +522,12 @@
             const period = document.querySelector('input[name="period"]:checked')?.value || '';
             const comments = document.getElementById('input-comments').value;
 
-            const subject = encodeURIComponent(`Nueva solicitud de reserva – ${name} ${surname}`);
+            const roomLabel = room ? ` – Habitación ${room}` : '';
+            const subject = encodeURIComponent(`Nueva solicitud de reserva – ${name} ${surname}${roomLabel}`);
             const body = encodeURIComponent(
                 `NUEVA SOLICITUD DE RESERVA – XUQUER LIVING
 ==========================================
-
-DATOS PERSONALES:
+${room ? `HABITACIÓN SOLICITADA: ${room}\n\n` : ''}DATOS PERSONALES:
 • Nombre: ${name} ${surname}
 • Teléfono: ${phone}
 • Email: ${email}
