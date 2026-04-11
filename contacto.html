@@ -519,13 +519,6 @@
                 return;
             }
 
-            // Verificar reCAPTCHA
-            if (!grecaptcha.getResponse()) {
-                const recaptchaDiv = document.querySelector('.g-recaptcha');
-                if (recaptchaDiv) recaptchaDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                return;
-            }
-
             handleFormSubmit();
         });
 
