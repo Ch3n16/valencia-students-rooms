@@ -9,7 +9,8 @@
         content="Reserva tu habitación de estudiante en Valencia. Formulario de contacto directo sin intermediarios ni comisiones de agencia.">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>emailjs.init('8gRI1N7HiywAGcAsV');</script>
     <style>
         label { color: #263bb6; }
         strong { color: #263bb6; }
@@ -523,9 +524,9 @@
         });
 
         function handleFormSubmit() {
-            // Build email body
             const name = document.getElementById('input-name').value;
             const surname = document.getElementById('input-surname').value;
+            const phonePrefix = document.getElementById('input-phone').parentElement.querySelector('select').value;
             const phone = document.getElementById('input-phone').value;
             const email = document.getElementById('input-email').value;
             const age = document.getElementById('input-age').value;
@@ -535,30 +536,34 @@
             const period = document.querySelector('input[name="period"]:checked')?.value || '';
             const comments = document.getElementById('input-comments').value;
 
-            const roomLabel = room ? ` – Habitación ${room}` : '';
-            const subject = encodeURIComponent(`Nueva solicitud de reserva – ${name} ${surname}${roomLabel}`);
-            const body = encodeURIComponent(
-                `NUEVA SOLICITUD DE RESERVA – XUQUER LIVING
-==========================================
-${room ? `HABITACIÓN SOLICITADA: ${room}\n\n` : ''}DATOS PERSONALES:
-• Nombre: ${name} ${surname}
-• Teléfono: ${phone}
-• Email: ${email}
-• Edad: ${age}
-• Género: ${gender}
-• País / Nacionalidad: ${country}
-• Universidad / Estudios: ${uni}
+            const btn = document.getElementById('btn-submit');
+            btn.disabled = true;
+            btn.textContent = 'Enviando...';
 
-PERIODO SOLICITADO: ${period}
+            const templateParams = {
+                habitacion: room ? 'Habitación ' + room : 'General',
+                nombre: name + ' ' + surname,
+                telefono: phonePrefix + ' ' + phone,
+                email: email,
+                edad: age,
+                genero: gender,
+                pais: country,
+                universidad: uni,
+                periodo: period,
+                comentarios: comments || '(Sin comentarios)',
+            };
 
-COMENTARIOS:
-${comments || '(Sin comentarios)'}
-
-==========================================
-Enviado desde el formulario de reserva de valenciastudentsrooms.com`
-            );
-
-            window.location.href = `mailto:alejandrobouperis@gmail.com?subject=${subject}&body=${body}`;
+            emailjs.send('service_9ckmujl', 'template_lijz8op', templateParams)
+                .then(function () {
+                    btn.textContent = '✓ Enviado correctamente';
+                    btn.style.background = '#16a34a';
+                })
+                .catch(function (error) {
+                    console.error('EmailJS error:', error);
+                    btn.disabled = false;
+                    btn.textContent = 'Enviar Reserva';
+                    alert('Hubo un error al enviar. Por favor inténtalo de nuevo.');
+                });
         }
     </script>
 
