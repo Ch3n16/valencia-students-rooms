@@ -340,11 +340,11 @@
         // Para marcar un periodo como RESERVADO, elimínalo del array de esa habitación.
         // Valores posibles: 'Curso25-26' | 'CursoExt25-26' | 'Semestre1' | 'Semestre2' | 'Verano26'
         const roomAvailability = {
-            '1': ['Curso26-27', 'CursoExt26-27', 'Semestre1-26-27', 'Semestre2-26-27', 'Verano26-Jul', 'Verano26-Ago', 'Verano26'],
-            '2': ['Curso26-27', 'CursoExt26-27', 'Semestre1-26-27', 'Semestre2-26-27', 'Verano26-Jul', 'Verano26-Ago', 'Verano26'],
-            '3': ['Curso26-27', 'CursoExt26-27', 'Semestre1-26-27', 'Semestre2-26-27', 'Verano26-Jul', 'Verano26-Ago', 'Verano26'],
+            '1': ['Verano26-Jul', 'Verano26-Ago', 'Verano26'],
+            '2': ['Verano26-Jul', 'Verano26-Ago', 'Verano26'],
+            '3': ['Verano26-Jul', 'Verano26-Ago', 'Verano26'],
             '4': ['Curso26-27', 'CursoExt26-27', 'Semestre1-26-27', 'Semestre2-26-27', 'Verano26-Jul', 'Verano26-Ago', 'Verano26'],
-            '5': ['Curso26-27', 'CursoExt26-27', 'Semestre1-26-27', 'Semestre2-26-27', 'Verano26-Jul', 'Verano26-Ago', 'Verano26'],
+            '5': ['Verano26-Jul', 'Verano26-Ago', 'Verano26'],
             '6': ['Curso26-27', 'CursoExt26-27', 'Semestre1-26-27', 'Semestre2-26-27', 'Verano26-Jul', 'Verano26-Ago', 'Verano26'],
             '7': ['Curso26-27', 'CursoExt26-27', 'Semestre1-26-27', 'Semestre2-26-27', 'Verano26-Jul', 'Verano26-Ago', 'Verano26'],
         };
@@ -366,10 +366,18 @@
             banner.textContent = '🏠 Habitación ' + room;
             formTitle.insertAdjacentElement('afterend', banner);
 
-            // Ocultar periodos no disponibles para esta habitación
+            // Marcar periodos no disponibles como reservados (gris, no clicables)
             document.querySelectorAll('input[name="period"]').forEach(function (radio) {
                 if (!available.includes(radio.value)) {
-                    radio.closest('label').style.display = 'none';
+                    var label = radio.closest('label');
+                    radio.disabled = true;
+                    label.style.cursor = 'not-allowed';
+                    label.style.opacity = '0.45';
+                    label.style.color = '#9ca3af';
+                    var badge = document.createElement('span');
+                    badge.textContent = 'Reservado';
+                    badge.style.cssText = 'margin-left:auto;font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:#f3f4f6;color:#9ca3af;border:1px solid #d1d5db;border-radius:50px;padding:0.2rem 0.55rem;flex-shrink:0;';
+                    label.appendChild(badge);
                 }
             });
         }
