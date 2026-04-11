@@ -213,30 +213,42 @@
 
                             <label class="radio-period"
                                 style="display: flex; align-items: center; gap: 0.8rem; font-weight: 400; cursor: pointer; margin: 0;">
-                                <input type="radio" name="period" value="Curso25-26"
+                                <input type="radio" name="period" value="Curso26-27"
                                     style="width: auto; height: 1.2rem;">
-                                <span id="opt-curso"><strong>Curso Completo:</strong> Sep 2025 - Junio 2026</span>
+                                <span id="opt-curso"><strong>Curso Completo:</strong> Sep 2026 - Junio 2027</span>
                             </label>
 
                             <label class="radio-period"
                                 style="display: flex; align-items: center; gap: 0.8rem; font-weight: 400; cursor: pointer; margin: 0;">
-                                <input type="radio" name="period" value="CursoExt25-26"
+                                <input type="radio" name="period" value="CursoExt26-27"
                                     style="width: auto; height: 1.2rem;">
-                                <span id="opt-curso-ext"><strong>Curso Extendido:</strong> Sep 2025 - Julio 2026</span>
+                                <span id="opt-curso-ext"><strong>Curso Extendido:</strong> Sep 2026 - Julio 2027</span>
                             </label>
 
                             <label class="radio-period"
                                 style="display: flex; align-items: center; gap: 0.8rem; font-weight: 400; cursor: pointer; margin: 0;">
-                                <input type="radio" name="period" value="Semestre1"
+                                <input type="radio" name="period" value="Semestre1-26-27"
                                     style="width: auto; height: 1.2rem;">
-                                <span id="opt-sem1"><strong>Primer Semestre:</strong> Sep 2025 - Enero 2026</span>
+                                <span id="opt-sem1"><strong>Primer Semestre:</strong> Sep 2026 - Enero 2027</span>
                             </label>
 
                             <label class="radio-period"
                                 style="display: flex; align-items: center; gap: 0.8rem; font-weight: 400; cursor: pointer; margin: 0;">
-                                <input type="radio" name="period" value="Semestre2"
+                                <input type="radio" name="period" value="Semestre2-26-27"
                                     style="width: auto; height: 1.2rem;">
-                                <span id="opt-sem2"><strong>Segundo Semestre:</strong> Feb 2026 - Junio 2026</span>
+                                <span id="opt-sem2"><strong>Segundo Semestre:</strong> Feb 2027 - Junio 2027</span>
+                            </label>
+
+                            <label class="radio-period"
+                                style="display: flex; align-items: center; gap: 0.8rem; font-weight: 400; cursor: pointer; margin: 0;">
+                                <input type="radio" name="period" value="Verano26-Jul" style="width: auto; height: 1.2rem;">
+                                <span id="opt-summer-jul"><strong>Verano:</strong> Julio 2026</span>
+                            </label>
+
+                            <label class="radio-period"
+                                style="display: flex; align-items: center; gap: 0.8rem; font-weight: 400; cursor: pointer; margin: 0;">
+                                <input type="radio" name="period" value="Verano26-Ago" style="width: auto; height: 1.2rem;">
+                                <span id="opt-summer-ago"><strong>Verano:</strong> Agosto 2026</span>
                             </label>
 
                             <label class="radio-period"
@@ -328,13 +340,13 @@
         // Para marcar un periodo como RESERVADO, elimínalo del array de esa habitación.
         // Valores posibles: 'Curso25-26' | 'CursoExt25-26' | 'Semestre1' | 'Semestre2' | 'Verano26'
         const roomAvailability = {
-            '1': ['Curso25-26', 'CursoExt25-26', 'Semestre1', 'Semestre2', 'Verano26'],
-            '2': ['Curso25-26', 'CursoExt25-26', 'Semestre1', 'Semestre2', 'Verano26'],
-            '3': ['Curso25-26', 'CursoExt25-26', 'Semestre1', 'Semestre2', 'Verano26'],
-            '4': ['Curso25-26', 'CursoExt25-26', 'Semestre1', 'Semestre2', 'Verano26'],
-            '5': ['Curso25-26', 'CursoExt25-26', 'Semestre1', 'Semestre2', 'Verano26'],
-            '6': ['Curso25-26', 'CursoExt25-26', 'Semestre1', 'Semestre2', 'Verano26'],
-            '7': ['Curso25-26', 'CursoExt25-26', 'Semestre1', 'Semestre2', 'Verano26'],
+            '1': ['Curso26-27', 'CursoExt26-27', 'Semestre1-26-27', 'Semestre2-26-27', 'Verano26-Jul', 'Verano26-Ago', 'Verano26'],
+            '2': ['Curso26-27', 'CursoExt26-27', 'Semestre1-26-27', 'Semestre2-26-27', 'Verano26-Jul', 'Verano26-Ago', 'Verano26'],
+            '3': ['Curso26-27', 'CursoExt26-27', 'Semestre1-26-27', 'Semestre2-26-27', 'Verano26-Jul', 'Verano26-Ago', 'Verano26'],
+            '4': ['Curso26-27', 'CursoExt26-27', 'Semestre1-26-27', 'Semestre2-26-27', 'Verano26-Jul', 'Verano26-Ago', 'Verano26'],
+            '5': ['Curso26-27', 'CursoExt26-27', 'Semestre1-26-27', 'Semestre2-26-27', 'Verano26-Jul', 'Verano26-Ago', 'Verano26'],
+            '6': ['Curso26-27', 'CursoExt26-27', 'Semestre1-26-27', 'Semestre2-26-27', 'Verano26-Jul', 'Verano26-Ago', 'Verano26'],
+            '7': ['Curso26-27', 'CursoExt26-27', 'Semestre1-26-27', 'Semestre2-26-27', 'Verano26-Jul', 'Verano26-Ago', 'Verano26'],
         };
         // ─────────────────────────────────────────────────────────────────────
 
