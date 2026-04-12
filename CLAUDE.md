@@ -52,4 +52,4 @@ CSS custom properties defined at the top of `styles.css`:
 - The `fix_arrows.py` script is a one-off development utility, not part of the site
 - `faqs.html` carga Bootstrap 5 CDN (CSS en `<head>`, JS bundle antes de `</body>`); el resto de páginas no usan Bootstrap
 - Los overrides Bootstrap (acordeón con tema naranja) están al final de `styles.css`
-- El botón WhatsApp (`#wa-float-btn`, clase `.wa-float-btn`) está presente en los 8 HTML; el número de destino es `wa.me/34000000000` (placeholder)
+- El botón WhatsApp (`#wa-float-btn`, clase `.wa-float-btn`) está presente en los 8 HTML; el número de destino es `wa.me/34624550085` (+34 624 55 00 85)
