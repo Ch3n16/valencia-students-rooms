@@ -199,9 +199,26 @@
 
         @media (max-width: 767px) {
 
-            /* Hero: oculta la imagen en móvil, solo muestra texto */
+            /* Hero: grid pasa a columna única */
+            .section > .container > .grid {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+
+            /* Imagen: altura fija y bien recortada */
             .summer-hero-img {
-                display: none;
+                display: block;
+                height: 260px !important;
+                width: 100%;
+                border-radius: var(--radius);
+                overflow: hidden;
+            }
+
+            /* Overlay card: más pequeño y ajustado al ancho */
+            .summer-hero-img > div {
+                padding: 1rem 1.25rem !important;
+                left: 1rem !important;
+                bottom: 1rem !important;
             }
 
             /* Segunda sección: altura libre y padding ajustado */
