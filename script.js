@@ -50,6 +50,7 @@ const translations = {
         // Hero
         heroTitle: 'Alquiler de habitaciones para estudiantes en <span style="color: var(--accent);">Valencia – Plaza Xúquer</span>',
         heroDesc: 'Vivienda exclusiva para <strong>chicas universitarias</strong> a 5 minutos andando del campus universitario.',
+        heroStudentTypes: 'Vivienda ideal para estudiantes españolas, estudiantes de Erasmus e internacionales.',
         heroRooms: '🏠 7 habitaciones premium',
         heroAll: '✨ Todo incluido',
         heroSafe: '🛡️ Zona segura',
@@ -88,6 +89,9 @@ const translations = {
         // Location
         locTitle: 'Ubicación estratégica cerca de la UPV y Universidad de Valencia',
         locDesc: 'Ubicado en una de las zonas más demandadas por estudiantes nacionales e internacionales, a <strong>5 minutos andando</strong> de la Universidad Politécnica, Universidad de Valencia (UV) y ESIC Marketing & Business School.',
+        locZoneSafety: 'Zona consolidada, segura y con todos los servicios: supermercados, bibliotecas, transporte público, farmacias y zona de ocio.',
+        locRoomsDesc: 'Todas las habitaciones están pensadas para estudiantes que buscan alquiler por meses en Valencia con altos estándares de seguridad, confort y estabilidad académica.',
+        locRoomsDesc2: 'Cada espacio ha sido equipado para facilitar el estudio, el descanso y la organización durante la estancia.',
 
         // Common Areas
         commonTitle: 'Zonas comunes y servicios',
@@ -397,6 +401,7 @@ const translations = {
         // Hero
         heroTitle: 'Student Room Rentals in <span style="color: var(--accent);">Valencia – Plaza Xúquer</span>',
         heroDesc: 'Monthly rooms rentals in exclusive accommodation for <strong>female university students</strong>, just a 5-minute walk from University Campus.',
+        heroStudentTypes: 'Ideal for students from UPV-Universidad Politécnica de Valencia, UV- Universidad de Valencia and ESIC University.',
         heroRooms: '🏠 7 premium rooms',
         heroAll: '✨ All-inclusive',
         heroSafe: '🛡️ Safe area',
@@ -435,6 +440,9 @@ const translations = {
         // Location
         locTitle: 'Prime location near UPV and the University of Valencia',
         locDesc: 'Located in one of the most sought-after areas for both national and international students, just a <strong>5-minute walk</strong> from the Polytechnic University of Valencia (UPV), the University of Valencia (UV) and ESIC Business &amp; Marketing School.',
+        locZoneSafety: 'A well-established, safe neighbourhood with all amenities: supermarkets, libraries, public transport, pharmacies and leisure areas.',
+        locRoomsDesc: 'All rooms are designed for students seeking monthly accommodation in Valencia with high standards of safety, comfort and academic stability.',
+        locRoomsDesc2: 'Each space has been equipped to support study, rest and organisation throughout the stay.',
 
         // Common Areas
         commonTitle: 'Common Areas & Services',
