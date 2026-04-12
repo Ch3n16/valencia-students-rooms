@@ -92,7 +92,7 @@
 
             <!-- Hero Image -->
             <div class="room-img-container hero-plaza-img" style="height: 520px;">
-                <img src="plaza xuquer.png" alt="Plaza Xúquer Valencia – Alquiler habitaciones estudiantes"
+                <img src="foto plaza xuquer bien.png" alt="Plaza Xúquer Valencia – Alquiler habitaciones estudiantes"
                     style="width: 100%; height: 100%; object-fit: cover; object-position: center 25%;">
                 <div class="hero-plaza-badge">📍 Plaza Xúquer · Valencia</div>
             </div>
@@ -130,10 +130,11 @@
             <div class="card grid"
                 style="grid-template-columns: 0.6fr 1.4fr; gap: 2.5rem; align-items: flex-start; background: white; padding: 1.75rem;">
                 <div class="room-img-container" id="ubicacion-img" style="aspect-ratio: 2/3; height: auto;">
-                    <img src="Ubicacion.png" alt="Valencia estudiantes"
+                    <img src="fachada gorgos vertical.png" alt="Valencia estudiantes"
                         style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <div>
+                    <img src="fachada gorgos horizontal.png" alt="Fachada Valencia Students Rooms" class="mobile-fachada-h">
                     <h2 style="font-size: clamp(1.6rem, 3vw, 2.1rem); margin-bottom: 0.5rem;" id="teaser-title">Todo
                         incluido. Sin facturas, sin sorpresas y sin preocupaciones</h2>
                     <p style="margin-bottom: 0.4rem; font-size: 0.95rem;" id="teaser-desc">Alquiler mensual para
@@ -306,6 +307,11 @@
             line-height: 1.4;
         }
 
+        /* ── Fachada horizontal (solo móvil) ─────────────────── */
+        .mobile-fachada-h {
+            display: none;
+        }
+
         /* ── Hero Plaza Image ──────────────────────────────── */
         .hero-plaza-img {
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
@@ -392,6 +398,25 @@
 
             60% {
                 transform: translateX(-50%) translateY(-3px);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            /* Oculta la imagen vertical en la tercera slide */
+            #ubicacion-img {
+                display: none;
+            }
+
+            /* Muestra la foto horizontal encima del texto */
+            .mobile-fachada-h {
+                display: block;
+                width: 100%;
+                height: 220px;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 16px;
+                margin-bottom: 1.25rem;
+                box-shadow: 0 6px 24px rgba(0,0,0,0.12);
             }
         }
     </style>
