@@ -31,6 +31,8 @@ const translations = {
         optCursoExt: '<strong>Curso Extendido:</strong> Sep 2025 - Julio 2026',
         optSem1: '<strong>Primer Semestre:</strong> Sep 2025 - Enero 2026',
         optSem2: '<strong>Segundo Semestre:</strong> Feb 2026 - Junio 2026',
+        optSummerJul: '<strong>Verano:</strong> Julio 2026',
+        optSummerAgo: '<strong>Verano:</strong> Agosto 2026',
         optSummer: '<strong>Verano:</strong> Julio 2026 - Agosto 2026',
 
         lblComments: 'Comentarios / ¿Necesitas ayuda con algo?',
@@ -355,6 +357,8 @@ const translations = {
         optCursoExt: '<strong>Extended Year:</strong> Sep 2025 - July 2026',
         optSem1: '<strong>First Semester:</strong> Sep 2025 - Jan 2026',
         optSem2: '<strong>Second Semester:</strong> Feb 2026 - June 2026',
+        optSummerJul: '<strong>Summer:</strong> July 2026',
+        optSummerAgo: '<strong>Summer:</strong> August 2026',
         optSummer: '<strong>Summer:</strong> July 2026 - August 2026',
 
         lblComments: 'Comments / Do you need help with anything?',
@@ -651,7 +655,7 @@ const TRANSLATABLE_IDS = [
     'top-bar-text', 'nav-home', 'nav-loc', 'nav-rooms', 'nav-summer', 'nav-life', 'nav-faqs', 'nav-book',
     'contact-main-title', 'contact-subtitle', 'contact-phone-label', 'contact-hours-label', 'contact-days',
     'form-title', 'lbl-name', 'lbl-surname', 'lbl-phone', 'lbl-age', 'lbl-gender', 'lbl-country', 'lbl-uni', 'form-avail-title', 'lbl-period',
-    'opt-curso', 'opt-curso-ext', 'opt-sem1', 'opt-sem2', 'opt-summer',
+    'opt-curso', 'opt-curso-ext', 'opt-sem1', 'opt-sem2', 'opt-summer-jul', 'opt-summer-ago', 'opt-summer',
     'lbl-comments', 'lbl-robot', 'btn-submit',
     'captcha-instr', 'btn-verify',
     'hero-title', 'hero-desc', 'hero-rooms', 'hero-all', 'hero-safe', 'hero-nocomm',
