@@ -554,7 +554,7 @@
                         <div class="rm-tile rm-main">
                             <img src="h1%20chica.png" alt="Habitación 1 con terraza privada Valencia"
                                 onclick="openGallery(1, 0)">
-                            <div class="tag-overlay" style="background: var(--accent); color: white;">Habitación 1</div>
+                            <div id="room-1-overlay" class="tag-overlay" style="background: var(--accent); color: white;">Habitación 1</div>
                         </div>
                         <div class="rm-tile rm-t1"><img src="h1%20s1.png" alt="Terraza privada"
                                 onclick="openGallery(1, 1)"></div>
@@ -564,7 +564,7 @@
                 </div>
                 <div>
                     <div class="card">
-                        <span class="room-badge">🏠 Habitación 1</span>
+                        <span id="room-1-badge" class="room-badge">🏠 Habitación 1</span>
                         <h2 class="room-title-sub" id="room-1-title">Terraza privada y vistas arboladas</h2>
                         <p class="room-desc" id="room-1-desc">La única habitación del piso con terraza privada, un espacio exterior
                             propio con mesa y sillas ideal para descansar o estudiar al aire libre. Orientada al
@@ -602,7 +602,7 @@
                         <div class="rm-tile rm-main">
                             <img src="h2%20principal.png" alt="Habitación 2 exterior luminosa"
                                 onclick="openGallery(2, 0)">
-                            <div class="tag-overlay" style="background: var(--accent); color: white;">Habitación 2</div>
+                            <div id="room-2-overlay" class="tag-overlay" style="background: var(--accent); color: white;">Habitación 2</div>
                         </div>
                         <div class="rm-tile rm-t1"><img src="h2%20s1.png" alt="Detalle 1" onclick="openGallery(2, 1)">
                         </div>
@@ -612,7 +612,7 @@
                 </div>
                 <div>
                     <div class="card">
-                        <span class="room-badge">🏠 Habitación 2</span>
+                        <span id="room-2-badge" class="room-badge">🏠 Habitación 2</span>
                         <h2 class="room-title-sub" id="room-2-title">Exterior luminosa y funcional</h2>
                         <p class="room-desc" id="room-2-desc">Habitación exterior con vistas directas a la arboleda de la plaza, lo que
                             aporta luz natural generosa y un entorno verde muy agradable durante todo el año. Su
@@ -651,7 +651,7 @@
                         <div class="rm-tile rm-main">
                             <img src="h3%20principal.png" alt="Habitación 3 amplia Valencia"
                                 onclick="openGallery(3, 0)">
-                            <div class="tag-overlay" style="background: var(--accent); color: white;">Habitación 3</div>
+                            <div id="room-3-overlay" class="tag-overlay" style="background: var(--accent); color: white;">Habitación 3</div>
                         </div>
                         <div class="rm-tile rm-t1"><img src="h3%20s1.png" alt="Detalle 1" onclick="openGallery(3, 1)">
                         </div>
@@ -661,7 +661,7 @@
                 </div>
                 <div>
                     <div class="card">
-                        <span class="room-badge">🏠 Habitación 3</span>
+                        <span id="room-3-badge" class="room-badge">🏠 Habitación 3</span>
                         <h2 class="room-title-sub" id="room-3-title">Amplitud y zona de descanso</h2>
                         <p class="room-desc" id="room-3-desc">La habitación más grande del piso, con una superficie que permite combinar
                             cómodamente zona de estudio, zona de descanso y almacenaje sin sensación de agobio. Los
@@ -701,7 +701,7 @@
                         <div class="rm-tile rm-main">
                             <img src="h4%20principal.png" alt="Habitación 4 interior silenciosa"
                                 onclick="openGallery(4, 0)">
-                            <div class="tag-overlay" style="background: var(--accent); color: white;">Habitación 4</div>
+                            <div id="room-4-overlay" class="tag-overlay" style="background: var(--accent); color: white;">Habitación 4</div>
                         </div>
                         <div class="rm-tile rm-t1"><img src="h4%20s1.png" alt="Detalle 1" onclick="openGallery(4, 1)">
                         </div>
@@ -711,7 +711,7 @@
                 </div>
                 <div>
                     <div class="card">
-                        <span class="room-badge">🏠 Habitación 4</span>
+                        <span id="room-4-badge" class="room-badge">🏠 Habitación 4</span>
                         <h2 class="room-title-sub" id="room-4-title">Silencio interior y concentración</h2>
                         <p class="room-desc" id="room-4-desc">Habitación interior especialmente silenciosa gracias a su orientación
                             alejada de la calle, ideal para quienes priorizan la concentración y el rendimiento
@@ -747,7 +747,7 @@
                     <div class="room-mosaic room-mosaic-1">
                         <div class="rm-tile rm-main">
                             <img src="h5%20principal.png" alt="Habitación 5 luminosa" onclick="openGallery(5, 0)">
-                            <div class="tag-overlay" style="background: var(--accent); color: white;">Habitación 5</div>
+                            <div id="room-5-overlay" class="tag-overlay" style="background: var(--accent); color: white;">Habitación 5</div>
                         </div>
                         <div class="rm-tile rm-t1"><img src="h5%20s1.png" alt="Detalle habitación 5"
                                 onclick="openGallery(5, 1)"></div>
@@ -755,7 +755,7 @@
                 </div>
                 <div>
                     <div class="card">
-                        <span class="room-badge">🏠 Habitación 5</span>
+                        <span id="room-5-badge" class="room-badge">🏠 Habitación 5</span>
                         <h2 class="room-title-sub" id="room-5-title">Máxima luminosidad y tranquilidad</h2>
                         <p class="room-desc" id="room-5-desc">Habitación exterior orientada a un amplio patio de manzana, que combina la
                             tranquilidad de no dar a la calle con una entrada de luz natural generosa desde primera hora
@@ -792,7 +792,7 @@
                         <div class="rm-tile rm-main">
                             <img src="h6%20principal.png" alt="Habitación 6 luminosa y serena"
                                 onclick="openGallery(6, 0)">
-                            <div class="tag-overlay" style="background: var(--accent); color: white;">Habitación 6</div>
+                            <div id="room-6-overlay" class="tag-overlay" style="background: var(--accent); color: white;">Habitación 6</div>
                         </div>
                         <div class="rm-tile rm-t1"><img src="h6%20s1.png" alt="Detalle habitación 6"
                                 onclick="openGallery(6, 1)"></div>
@@ -800,7 +800,7 @@
                 </div>
                 <div>
                     <div class="card">
-                        <span class="room-badge">🏠 Habitación 6</span>
+                        <span id="room-6-badge" class="room-badge">🏠 Habitación 6</span>
                         <h2 class="room-title-sub" id="room-6-title">Luminosa y serena</h2>
                         <p class="room-desc" id="room-6-desc">Habitación exterior con vistas a un patio interior amplio, que ofrece
                             luminosidad destacada y un silencio poco habitual para una vivienda tan bien ubicada en el
@@ -837,7 +837,7 @@
                     <div class="room-mosaic room-mosaic-2">
                         <div class="rm-tile rm-main">
                             <img src="h7%20s1.png" alt="Habitación 7 confort adicional" onclick="openGallery(7, 0)">
-                            <div class="tag-overlay" style="background: var(--accent); color: white;">Habitación 7</div>
+                            <div id="room-7-overlay" class="tag-overlay" style="background: var(--accent); color: white;">Habitación 7</div>
                         </div>
                         <div class="rm-tile rm-t1"><img src="h7%20s2.png" alt="Detalle 1" onclick="openGallery(7, 1)">
                         </div>
@@ -847,7 +847,7 @@
                 </div>
                 <div>
                     <div class="card">
-                        <span class="room-badge">🏠 Habitación 7</span>
+                        <span id="room-7-badge" class="room-badge">🏠 Habitación 7</span>
                         <h2 class="room-title-sub" id="room-7-title">Luminosidad y confort adicional</h2>
                         <p class="room-desc" id="room-7-desc">Habitación exterior luminosa con equipamiento adicional que la distingue
                             del resto y la convierte en una de las más completas del piso. La cama de gran formato, el

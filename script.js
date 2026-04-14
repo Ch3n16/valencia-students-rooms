@@ -581,6 +581,22 @@ const translations = {
         room7Chip3: '📚 Fully equipped study area',
         room7Chip5: '📺 TV unit and Smart TV',
 
+        // Room overlays & badges
+        room1Overlay: 'Room 1',
+        room2Overlay: 'Room 2',
+        room3Overlay: 'Room 3',
+        room4Overlay: 'Room 4',
+        room5Overlay: 'Room 5',
+        room6Overlay: 'Room 6',
+        room7Overlay: 'Room 7',
+        room1Badge: '🏠 Room 1',
+        room2Badge: '🏠 Room 2',
+        room3Badge: '🏠 Room 3',
+        room4Badge: '🏠 Room 4',
+        room5Badge: '🏠 Room 5',
+        room6Badge: '🏠 Room 6',
+        room7Badge: '🏠 Room 7',
+
         // Contact extras
         lblEmail: 'Email *',
         genderSelect: '-- Select --',
@@ -707,6 +723,8 @@ const TRANSLATABLE_IDS = [
     'room-3-chip-1', 'room-3-chip-3', 'room-3-chip-4', 'room-3-chip-6', 'room-3-chip-7',
     'room-4-chip-1', 'room-4-chip-2',
     'room-7-chip-1', 'room-7-chip-3', 'room-7-chip-5',
+    'room-1-overlay', 'room-2-overlay', 'room-3-overlay', 'room-4-overlay', 'room-5-overlay', 'room-6-overlay', 'room-7-overlay',
+    'room-1-badge', 'room-2-badge', 'room-3-badge', 'room-4-badge', 'room-5-badge', 'room-6-badge', 'room-7-badge',
     'lbl-email', 'gender-select', 'gender-male', 'gender-female', 'gender-other',
     'phone-other', 'contact-wa-btn', 'contact-hours',
     'zc-glass-title-1', 'zc-glass-sub-1', 'zc-glass-label-2', 'zc-glass-title-2', 'zc-glass-sub-2',
