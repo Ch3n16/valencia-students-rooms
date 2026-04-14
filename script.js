@@ -869,6 +869,12 @@ function changeLanguage(lang) {
 
     // Explicit top bar (has HTML)
     setHtml('top-bar-text', t.topBar);
+
+    // Room banner (contacto.html — texto dinámico con número de habitación)
+    const roomBanner = document.getElementById('room-banner');
+    if (roomBanner && roomBanner.dataset.room) {
+        roomBanner.textContent = (lang === 'en' ? '🏠 Room ' : '🏠 Habitación ') + roomBanner.dataset.room;
+    }
 }
 
 function setHtml(id, html) {

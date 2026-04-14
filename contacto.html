@@ -363,6 +363,7 @@
             const formTitle = document.getElementById('form-title');
             const banner = document.createElement('div');
             banner.id = 'room-banner';
+            banner.dataset.room = room;
             banner.style.cssText = 'background:rgba(255,102,0,0.08);border:1px solid rgba(255,102,0,0.25);border-radius:12px;padding:0.65rem 1.1rem;margin-bottom:1.25rem;display:flex;align-items:center;gap:0.5rem;font-weight:600;color:#FF6600;font-size:0.95rem;';
             banner.textContent = localStorage.getItem('preferred-language') === 'en' ? '🏠 Room ' + room : '🏠 Habitación ' + room;
             formTitle.insertAdjacentElement('afterend', banner);
