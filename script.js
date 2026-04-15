@@ -111,6 +111,8 @@ const translations = {
         lifeSecretTitle: '🥘 Secretos & Fiestas',
         lifeMoveTitle: '🚲 Muévete',
         lifePhoneTitle: '📞 Teléfonos de Interés',
+        lifePhoneEmergency: 'Emergencias: 112',
+        lifePhonePolice: 'Policía: 091 / 092',
 
         // FAQs
         faqTitle: 'Preguntas Frecuentes',
@@ -469,6 +471,8 @@ const translations = {
         lifeSecretTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🥘</span>Secrets & Festivals',
         lifeMoveTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🚲</span>Get Around',
         lifePhoneTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">📞</span>Info Numbers',
+        lifePhoneEmergency: 'Emergencies: 112',
+        lifePhonePolice: 'Police: 091 / 092',
 
         // FAQs
         faqTitle: 'Frequently Asked Questions',
@@ -752,7 +756,7 @@ const TRANSLATABLE_IDS = [
     'life-shop-link-1',
     'life-secret-link-1', 'life-secret-link-3', 'life-secret-link-4',
     'life-move-link-1', 'life-move-link-2', 'life-move-link-3', 'life-move-link-4', 'life-move-link-5',
-    'life-phone-link-1', 'life-phone-link-2',
+    'life-phone-link-1', 'life-phone-link-2', 'life-phone-emergency', 'life-phone-police',
 ];
 
 // Snapshot del HTML español original (se rellena en DOMContentLoaded antes de cualquier cambio)
