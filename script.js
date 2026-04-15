@@ -89,8 +89,8 @@ const translations = {
         btnLoc: 'Descubre Ubicación →',
 
         // Location
-        locTitle: 'Ubicación estratégica cerca de la UPV y Universidad de Valencia',
-        locDesc: 'Ubicado en una de las zonas más demandadas por estudiantes nacionales e internacionales, a <strong>5 minutos andando</strong> de la Universidad Politécnica, Universidad de Valencia (UV) y ESIC Marketing & Business School.',
+        locTitle: 'Ubicación estratégica cerca de la UPV - Universidad Politécnica de Valencia y UV-Universidad de Valencia',
+        locDesc: 'Ubicado en una de las zonas más demandadas por estudiantes nacionales e internacionales, a <strong>5 minutos andando</strong> de la UPV - Universidad Politécnica de Valencia y UV-Universidad de Valencia y ESIC Marketing & Business School.',
         locZoneSafety: 'Zona consolidada, segura y con todos los servicios: supermercados, bibliotecas, transporte público, farmacias y zona de ocio.',
         locRoomsDesc: 'Todas las habitaciones están pensadas para estudiantes que buscan alquiler por meses en Valencia con altos estándares de seguridad, confort y estabilidad académica.',
         locRoomsDesc2: 'Cada espacio ha sido equipado para facilitar el estudio, el descanso y la organización durante la estancia.',
@@ -218,7 +218,7 @@ const translations = {
         faqQ16: '¿Es Valencia una buena ciudad para estudiantes?',
         faqA16: 'Sí. Valencia es una de las mejores ciudades universitarias de España por su calidad de vida, coste asequible y oferta académica.',
         faqQ17: '¿Dónde vivir si eres estudiante en Valencia?',
-        faqA17: 'Plaza Xúquer es una de las mejores zonas, muy cerca de la UPV y la Universidad de Valencia.',
+        faqA17: 'Plaza Xúquer es una de las mejores zonas, muy cerca de la UPV - Universidad Politécnica de Valencia y UV-Universidad de Valencia.',
         faqQ18: '¿Es seguro vivir como estudiante en Valencia?',
         faqA18: 'Sí. Zonas como Plaza Xúquer son seguras y están consolidadas como entorno universitario.',
         faqQ19: '¿Cuánto cuesta una habitación de estudiante en Valencia?',
