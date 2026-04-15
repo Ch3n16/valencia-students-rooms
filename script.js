@@ -468,7 +468,7 @@ const translations = {
         lifeShopTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🛍️</span>Shopping',
         lifeSecretTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🥘</span>Secrets & Festivals',
         lifeMoveTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🚲</span>Get Around',
-        lifePhoneTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">📞</span>Useful Phone Numbers',
+        lifePhoneTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">📞</span>Info Numbers',
 
         // FAQs
         faqTitle: 'Frequently Asked Questions',
