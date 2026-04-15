@@ -232,6 +232,8 @@ const translations = {
         faqQ22: '¿Cuándo puedo visitar el piso y la habitación que me gusta?',
         faqA22: 'Las habitaciones están actualmente ocupadas por estudiantes universitarias durante el curso académico. Las fotografías publicadas reflejan fielmente el estado, distribución y equipamiento real de cada habitación.',
         faqA22b: 'No obstante, si nos contactas con antelación, podemos organizar una visita presencial o virtual con la actual residente, para que puedas ver la habitación y conocer el piso con total transparencia. Las visitas son limitadas por la ocupación — se recomienda consultar con antelación.',
+        faqQ23: '¿Puedo continuar mi estancia los cursos académicos siguientes?',
+        faqA23: 'Si, puedes extender tu estancia para el próximo curso académico, mediante la firma de un nuevo contrato de pre-reserva de la habitación u otra disponible, con un mínimo de 3 meses de antelación a la finalización de tu periodo de estancia. También será necesario la firma de un nuevo contrato de alquiler habitacional de temporada, con la correspondiente documentación solicitada.',
 
         // Room chips - shared (data-tr)
         chipHeating: '🔥 Calefacción + ventilador',
@@ -536,6 +538,8 @@ const translations = {
         faqQ22: 'When can I visit the flat and the room I\'m interested in?',
         faqA22: 'The rooms are currently occupied by university students during the academic year. All photos shown accurately represent the real condition, layout and furnishings of each room.',
         faqA22b: 'However, if you contact us in advance, we can arrange an in-person or virtual viewing with the current tenant, allowing you to see the room and get a clear and transparent understanding of the flat. Viewings are limited due to occupancy — early enquiry is recommended.',
+        faqQ23: 'Can I extend my stay for future academic years?',
+        faqA23: 'Yes, you may extend your stay for the following academic year by signing a new pre-booking agreement for your current room or another available room at least 3 months before the end of your stay period. A new temporary accommodation rental agreement and the corresponding updated documentation will also be required.',
 
         // Summer page
         summerTitle: 'Summer accommodation in Valencia for students and young professionals',
@@ -723,6 +727,7 @@ const TRANSLATABLE_IDS = [
     'faq-q20', 'faq-a20',
     'faq-q21', 'faq-a21',
     'faq-q22', 'faq-a22', 'faq-a22b',
+    'faq-q23', 'faq-a23',
     'summer-title', 'summer-subtitle',
     'room-1-title', 'room-1-desc',
     'room-2-title', 'room-2-desc',
