@@ -294,13 +294,13 @@ const translations = {
 
         // Verano extras
         summerBadge: '☀️ Julio & Agosto',
-        summerPara: 'Ubicado en Plaza Xúquer, a 5 minutos andando de la UPV y la Universidad de Valencia, este piso ofrece una opción segura, equipada y bien situada para combinar estudio o trabajo y verano en Valencia.',
+        summerPara: 'Ubicado en Plaza Xúquer, a 5 minutos andando de la UPV - Universidad Politécnica de Valencia y UV-Universidad de Valencia, este piso ofrece una opción segura, equipada y bien situada para combinar estudio o trabajo y verano en Valencia.',
         summerInfoTitle: 'Ideal para cursos intensivos, programas internacionales y estancias por motivos laborales en verano.',
         summerInfoPara: 'Alquiler mensual o quincenal, con todos los suministros incluidos y sin comisiones de agencia.',
         summerLi1: '🎓 Cursos intensivos de idiomas y universidad',
         summerLi2: '💼 Prácticas y trabajo en Valencia',
         summerLi3: '🌍 Programas Erasmus de verano',
-        summerLi4: '📍 A 5 min de la UPV y Universidad de Valencia',
+        summerLi4: '📍 A 5 min de la UPV - Universidad Politécnica de Valencia y UV-Universidad de Valencia',
         summerDemandTitle: '⚡ Alta demanda en meses de verano',
         summerDemandPara: 'Valencia es uno de los destinos académicos más demandados en verano. Las habitaciones en Plaza Xúquer suelen reservarse con antelación, especialmente para programas internacionales.',
         summerDemandNote: 'Se recomienda consultar disponibilidad con tiempo.',
@@ -633,13 +633,13 @@ const translations = {
 
         // Summer extras
         summerBadge: '☀️ July & August',
-        summerPara: 'Located at Plaza Xúquer, a 5-minute walk from UPV and the University of Valencia, this flat offers a safe, well-equipped and ideally situated option for combining studies or work with summer in Valencia.',
+        summerPara: 'Located at Plaza Xúquer, a 5-minute walk from UPV - Universidad Politécnica de Valencia y UV-Universidad de Valencia, this flat offers a safe, well-equipped and ideally situated option for combining studies or work with summer in Valencia.',
         summerInfoTitle: 'Ideal for intensive courses, international programmes and summer work placements.',
         summerInfoPara: 'Monthly or fortnightly stays · all-inclusive · no agency fees',
         summerLi1: '🎓 Intensive language and university courses',
         summerLi2: '💼 Internships and work placements in Valencia',
         summerLi3: '🌍 Summer Erasmus programmes',
-        summerLi4: '📍 5 min from UPV and the University of Valencia',
+        summerLi4: '📍 5 min from UPV - Universidad Politécnica de Valencia y UV-Universidad de Valencia',
         summerDemandTitle: '⚡ High demand during summer months',
         summerDemandPara: 'Valencia is one of the most sought-after academic destinations in summer. Rooms at Plaza Xúquer tend to be booked in advance, especially for international programmes.',
         summerDemandNote: 'Early booking is highly recommended.',
