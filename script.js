@@ -648,7 +648,7 @@ const translations = {
         // Living in Valencia links
         lifeCityLink1: 'What to Visit in Valencia',
         lifeCityLink2: 'Valencia in 3 Days',
-        lifeBeachLink1: "Valencia's Beaches",
+        lifeBeachLink1: "Valencia Beaches",
         lifeNightLink1: 'Nightlife & Entertainment',
         lifeNightLink2: 'Trendy Neighbourhoods',
         lifePoiLink1: 'Nature in Valencia',
