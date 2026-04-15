@@ -468,7 +468,7 @@ const translations = {
         lifeNightTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🌙</span>Nightlife',
         lifePoiTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🌳</span>Key Attractions',
         lifeShopTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🛍️</span>Shopping',
-        lifeSecretTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🥘</span>Secrets & Festivals',
+        lifeSecretTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🥘</span>Festivals',
         lifeMoveTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🚲</span>Get Around',
         lifePhoneTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">📞</span>Info Numbers',
         lifePhoneEmergency: 'Emergencies: 112',
