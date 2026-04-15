@@ -461,7 +461,7 @@ const translations = {
 
         // Lifestyle
         lifeTitle: 'Living in Valencia',
-        lifeCityTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🏙️</span>Discover the City',
+        lifeCityTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🏙️</span>Explore Valencia',
         lifeBeachTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🏖️</span>The Beach',
         lifeNightTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🌙</span>Nightlife',
         lifePoiTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🌳</span>Points of Interest',
