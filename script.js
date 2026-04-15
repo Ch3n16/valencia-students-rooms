@@ -461,14 +461,14 @@ const translations = {
 
         // Lifestyle
         lifeTitle: 'Living in Valencia',
-        lifeCityTitle: '🏙️ Discover the City',
-        lifeBeachTitle: '🏖️ The Beach',
-        lifeNightTitle: '🌙 Nightlife',
-        lifePoiTitle: '🌳 Points of Interest',
-        lifeShopTitle: '🛍️ Shopping',
-        lifeSecretTitle: '🥘 Secrets & Festivals',
-        lifeMoveTitle: '🚲 Get Around',
-        lifePhoneTitle: '📞 Useful Phone Numbers',
+        lifeCityTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🏙️</span>Discover the City',
+        lifeBeachTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🏖️</span>The Beach',
+        lifeNightTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🌙</span>Nightlife',
+        lifePoiTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🌳</span>Points of Interest',
+        lifeShopTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🛍️</span>Shopping',
+        lifeSecretTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🥘</span>Secrets & Festivals',
+        lifeMoveTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🚲</span>Get Around',
+        lifePhoneTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">📞</span>Useful Phone Numbers',
 
         // FAQs
         faqTitle: 'Frequently Asked Questions',
