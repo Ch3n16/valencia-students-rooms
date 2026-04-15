@@ -465,10 +465,10 @@ const translations = {
 
         // Lifestyle
         lifeTitle: 'Living in Valencia',
-        lifeCityTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🏙️</span>Explore Valencia',
+        lifeCityTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🏙️</span>Guide',
         lifeBeachTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🏖️</span>The Beach',
         lifeNightTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🌙</span>Nightlife',
-        lifePoiTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🌳</span>Key Attractions',
+        lifePoiTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🌳</span>Nature',
         lifeShopTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🛍️</span>Shopping',
         lifeSecretTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🥘</span>Festivals',
         lifeMoveTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🚲</span>Get Around',
