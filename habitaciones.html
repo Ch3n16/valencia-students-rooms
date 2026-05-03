@@ -788,14 +788,16 @@
         <div class="container">
             <div class="grid" style="grid-template-columns: 1.3fr 1fr; gap: 2.5rem;">
                 <div>
-                    <div class="room-mosaic room-mosaic-1">
+                    <div class="room-mosaic room-mosaic-2">
                         <div class="rm-tile rm-main">
                             <img src="h6%20principal.png" alt="Habitación 6 luminosa y serena"
                                 onclick="openGallery(6, 0)">
                             <div id="room-6-overlay" class="tag-overlay" style="background: var(--accent); color: white;">Habitación 6</div>
                         </div>
-                        <div class="rm-tile rm-t1"><img src="h6%20s1.png" alt="Detalle habitación 6"
+                        <div class="rm-tile rm-t1"><img src="h6%20s1.png" alt="Detalle 1"
                                 onclick="openGallery(6, 1)"></div>
+                        <div class="rm-tile rm-t2"><img src="h6%20s2.png" alt="Detalle 2"
+                                onclick="openGallery(6, 2)"></div>
                     </div>
                 </div>
                 <div>
@@ -908,13 +910,13 @@
     <script>
         // Gallery data for each room (main + 3 details)
         const roomGalleries = {
-            1: ['h1%20chica.png', 'h1%20s1.png', 'h1%20s2.png', 'h1%20s3.png', 'h1%20s4.png'],
+            1: ['h1%20chica.png', 'h1%20s1.png', 'h1%20s2.png', 'h1%20s3.png', 'h1%20s4.png', 'h1%20s5.png', 'h1%20s6.png'],
             2: ['h2%20principal.png', 'h2%20s1.png', 'h2%20s2.png'],
             3: ['h3%20principal.png', 'h3%20s1.png', 'h3%20s2.png', 'h3%20s3.png', 'h3%20s4.png'],
-            4: ['h4%20principal.png', 'h4%20s1.png', 'h4%20s2.png', 'h4%20s3.png', 'h4%20s4.png', 'h4%20s5.png'],
+            4: ['h4%20principal.png', 'h4%20s1.png', 'h4%20s2.png', 'h4%20s3.png', 'h4%20s4.png'],
             5: ['h5%20principal.png', 'h5%20s1.png'],
-            6: ['h6%20principal.png', 'h6%20s1.png'],
-            7: ['h7%20s1.png', 'h7%20s2.png', 'h7%20s3.png']
+            6: ['h6%20principal.png', 'h6%20s1.png', 'h6%20s2.png'],
+            7: ['h7%20s1.png', 'h7%20s2.png', 'h7%20s3.png', 'h7%20s4.png']
         };
 
         let currentRoom = 1;
