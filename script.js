@@ -296,8 +296,12 @@ const translations = {
         zcCtaBook: 'Reservar habitación →',
         zcCtaRooms: 'Ver habitaciones',
 
+        // Dropdown
+        dropdownCommon: '🛋️ Zonas Comunes',
+
         // Verano extras
         summerBadge: '☀️ Julio & Agosto',
+        summerOverlayDate: 'Julio & Agosto 2026',
         summerPara: 'Ubicado en Plaza Xúquer, a 5 minutos andando de la UPV - Universidad Politécnica de Valencia y UV-Universidad de Valencia, este piso ofrece una opción segura, equipada y bien situada para combinar estudio o trabajo y verano en Valencia.',
         summerInfoTitle: 'Ideal para cursos intensivos, programas internacionales y estancias por motivos laborales en verano.',
         summerInfoPara: 'Alquiler mensual o quincenal, con todos los suministros incluidos y sin comisiones de agencia.',
@@ -644,8 +648,12 @@ const translations = {
         zcCtaBook: 'Book a room →',
         zcCtaRooms: 'View rooms',
 
+        // Dropdown
+        dropdownCommon: '🛋️ Shared Spaces',
+
         // Summer extras
         summerBadge: '☀️ July & August',
+        summerOverlayDate: 'July & August 2026',
         summerPara: 'Located at Plaza Xúquer, a 5-minute walk from UPV - Universidad Politécnica de Valencia y UV-Universidad de Valencia, this flat offers a safe, well-equipped and ideally situated option for combining studies or work with summer in Valencia.',
         summerInfoTitle: 'Ideal for intensive courses, international programmes and summer work placements.',
         summerInfoPara: 'Monthly or fortnightly stays · all-inclusive · no agency fees',
@@ -751,7 +759,7 @@ const TRANSLATABLE_IDS = [
     'zc-srv-3-title', 'zc-srv-3-sub', 'zc-srv-4-title', 'zc-srv-4-sub',
     'zc-srv-5-title', 'zc-srv-5-sub', 'zc-srv-6-title', 'zc-srv-6-sub',
     'zc-srv-cta', 'zc-mobile-sub', 'zc-cta-book', 'zc-cta-rooms',
-    'summer-badge', 'summer-para', 'summer-info-title', 'summer-info-para',
+    'summer-badge', 'summer-overlay-date', 'summer-para', 'summer-info-title', 'summer-info-para',
     'summer-li-1', 'summer-li-2', 'summer-li-3', 'summer-li-4',
     'summer-demand-title', 'summer-demand-para', 'summer-demand-note', 'summer-demand-cta',
     'life-city-link-1', 'life-city-link-2',
