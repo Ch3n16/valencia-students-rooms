@@ -5,9 +5,10 @@ const translations = {
         navLoc: 'Ubicación',
         navRooms: 'Habitaciones',
         navSummer: 'Estancias de Verano',
-        navLife: 'Vivir en Valencia',
+        navLife: 'Valencia Guide',
         navFaqs: 'FAQs',
         navBook: 'Reservar',
+        navBlog: 'Life in Valencia',
 
         // Form
         contactMainTitle: 'Contacta con nosotros',
@@ -102,7 +103,7 @@ const translations = {
         commonGallerySub: 'Pasa el ratón (o pulsa) para ampliar.',
 
         // Lifestyle
-        lifeTitle: 'Vivir en Valencia',
+        lifeTitle: 'Valencia Guide',
         lifeCityTitle: '🏙️ Conoce la Ciudad',
         lifeBeachTitle: '🏖️ La Playa',
         lifeNightTitle: '🌙 La Noche',
@@ -296,7 +297,14 @@ const translations = {
         zcCtaBook: 'Reservar habitación →',
         zcCtaRooms: 'Ver habitaciones',
 
+        // Blog
+        blogBadge: 'Muy pronto',
+        blogTitle: 'Nuestro blog de experiencias',
+        blogDesc: 'Estamos preparando un espacio donde compartir fotos, experiencias y consejos de nuestras estudiantes sobre la vida en Valencia. Pronto podrás descubrir todo lo que te espera.',
+        blogCta: 'Reservar habitación',
+
         // Dropdown
+        dropdownRooms: '🛏️ Habitaciones',
         dropdownCommon: '🛋️ Zonas Comunes',
 
         // Verano extras
@@ -313,6 +321,8 @@ const translations = {
         summerDemandPara: 'Valencia es uno de los destinos académicos más demandados en verano. Las habitaciones en Plaza Xúquer suelen reservarse con antelación, especialmente para programas internacionales.',
         summerDemandNote: 'Se recomienda consultar disponibilidad con tiempo.',
         summerDemandCta: 'Consultar Disponibilidad en Verano',
+        summerMinStay: 'Estancia mínima: 3 semanas +',
+        summerCustomRates: 'Precio personalizado según duración de la estancia',
 
         // Vivir en Valencia links
         lifeCityLink1: 'Qué Visitar en Valencia',
@@ -344,9 +354,10 @@ const translations = {
         navLoc: 'Location',
         navRooms: 'Rooms',
         navSummer: 'Summer Stays',
-        navLife: 'Living in Valencia',
+        navLife: 'Valencia Guide',
         navFaqs: 'FAQs',
         navBook: 'Book Now',
+        navBlog: 'Life in Valencia',
 
         // Form
         contactMainTitle: 'Contact Us',
@@ -468,7 +479,7 @@ const translations = {
         commonGallerySub: 'Hover (or tap) to enlarge.',
 
         // Lifestyle
-        lifeTitle: 'Living in Valencia',
+        lifeTitle: 'Valencia Guide',
         lifeCityTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🏙️</span>Guide',
         lifeBeachTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🏖️</span>The Beach',
         lifeNightTitle: '<span style="display:block;font-size:2rem;margin-bottom:0.4rem;">🌙</span>Nightlife',
@@ -636,7 +647,7 @@ const translations = {
         zcSrv2Title: 'Full kitchen',
         zcSrv2Sub: 'Dishwasher and kitchenware included',
         zcSrv3Title: '2 combi fridges',
-        zcSrv3Sub: 'Assigned space per room',
+        zcSrv3Sub: 'Assigned spaces',
         zcSrv4Title: '8kg washing machine',
         zcSrv4Sub: 'Iron and vacuum cleaner included',
         zcSrv5Title: 'Full climate control',
@@ -648,7 +659,14 @@ const translations = {
         zcCtaBook: 'Book a room →',
         zcCtaRooms: 'View rooms',
 
+        // Blog
+        blogBadge: 'Coming Soon',
+        blogTitle: 'Our experience blog',
+        blogDesc: 'We are preparing a space to share photos, experiences and tips from our students about life in Valencia. Soon you will be able to discover everything that awaits you.',
+        blogCta: 'Book a room',
+
         // Dropdown
+        dropdownRooms: '🛏️ Rooms',
         dropdownCommon: '🛋️ Shared Spaces',
 
         // Summer extras
@@ -665,6 +683,8 @@ const translations = {
         summerDemandPara: 'Valencia is one of the most sought-after academic destinations in summer. Rooms at Plaza Xúquer tend to be booked in advance, especially for international programmes.',
         summerDemandNote: 'Early booking is highly recommended.',
         summerDemandCta: 'Check Summer Availability',
+        summerMinStay: 'Minimum stay: 3 weeks +',
+        summerCustomRates: 'Custom rates depending on your stay length',
 
         // Living in Valencia links
         lifeCityLink1: 'What to Visit in Valencia',
@@ -694,7 +714,7 @@ const translations = {
 
 // IDs de todos los elementos traducibles — compartido entre snapshot y changeLanguage
 const TRANSLATABLE_IDS = [
-    'top-bar-text', 'nav-home', 'nav-loc', 'nav-rooms', 'nav-summer', 'nav-life', 'nav-faqs', 'nav-book',
+    'top-bar-text', 'nav-home', 'nav-loc', 'nav-rooms', 'nav-summer', 'nav-life', 'nav-blog', 'nav-faqs', 'nav-book',
     'contact-main-title', 'contact-subtitle', 'contact-phone-label', 'contact-hours-label', 'contact-days',
     'form-title', 'lbl-name', 'lbl-surname', 'lbl-phone', 'lbl-age', 'lbl-gender', 'lbl-country', 'lbl-uni', 'form-avail-title', 'lbl-period',
     'opt-curso', 'opt-curso-ext', 'opt-sem1', 'opt-sem2', 'opt-summer-jul', 'opt-summer-ago', 'opt-summer',
@@ -761,7 +781,7 @@ const TRANSLATABLE_IDS = [
     'zc-srv-cta', 'zc-mobile-sub', 'zc-cta-book', 'zc-cta-rooms',
     'summer-badge', 'summer-overlay-date', 'summer-para', 'summer-info-title', 'summer-info-para',
     'summer-li-1', 'summer-li-2', 'summer-li-3', 'summer-li-4',
-    'summer-demand-title', 'summer-demand-para', 'summer-demand-note', 'summer-demand-cta',
+    'summer-demand-title', 'summer-demand-para', 'summer-demand-note', 'summer-demand-cta', 'summer-min-stay', 'summer-custom-rates',
     'life-city-link-1', 'life-city-link-2',
     'life-beach-link-1', 'life-beach-link-2', 'life-beach-link-3', 'life-beach-link-4', 'life-beach-link-5', 'life-beach-link-6',
     'life-night-link-1', 'life-night-link-2',

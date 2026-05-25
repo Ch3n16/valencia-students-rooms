@@ -31,12 +31,13 @@
                 <div class="dropdown-container">
                     <a href="habitaciones.html" id="nav-rooms">Habitaciones ▾</a>
                     <div class="dropdown-menu">
-                        <a href="habitaciones.html" class="dropdown-item">🛏️ Habitaciones</a>
+                        <a href="habitaciones.html" class="dropdown-item" data-tr="dropdownRooms">🛏️ Habitaciones</a>
                         <a href="zonas-comunes.html" class="dropdown-item" data-tr="dropdownCommon">🛋️ Zonas Comunes</a>
                     </div>
                 </div>
                 <a href="verano.html" class="active" id="nav-summer">Estancias de Verano</a>
-                <a href="vivir-valencia.html" id="nav-life">Vivir en Valencia</a>
+                <a href="blog.html" id="nav-blog">Life in Valencia</a>
+                <a href="vivir-valencia.html" id="nav-life">Valencia Guide</a>
                 <a href="faqs.html" id="nav-faqs">FAQs</a>
                 <a href="contacto.html" class="btn btn-primary" id="nav-book">Reservar</a>
 
@@ -85,42 +86,49 @@
 
     <!-- Segunda slide: info + alta demanda en un solo vistazo -->
     <section class="summer-second-section"
-        style="height: 100vh; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; padding: 5.5rem 0 1.5rem;">
+        style="min-height: 100vh; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; padding: 5.5rem 0 3rem;">
         <div class="container">
             <div class="summer-info-grid"
-                style="display: grid; grid-template-columns: 1fr 1.3fr; gap: 1.75rem; align-items: stretch;">
+                style="display: grid; grid-template-columns: 1fr 1.3fr; gap: 2.5rem; align-items: stretch;">
 
                 <!-- Info card -->
                 <div class="card"
-                    style="background: white; padding: 2rem 2.25rem; display: flex; flex-direction: column; justify-content: center; gap: 1rem;">
-                    <h2 id="summer-info-title" style="font-size: clamp(1.2rem, 2vw, 1.5rem); margin: 0;">Ideal para
+                    style="background: white; padding: 2.5rem 2.5rem; display: flex; flex-direction: column; justify-content: center; gap: 1.25rem;">
+                    <h2 id="summer-info-title" style="font-size: clamp(1.3rem, 2.2vw, 1.65rem); margin: 0;">Ideal para
                         cursos intensivos, programas internacionales y estancias por motivos laborales en verano.</h2>
-                    <p id="summer-info-para" style="color: var(--text-light); font-size: 1.05rem; margin: 0;">Alquiler
+                    <p id="summer-info-para" style="color: var(--text-light); font-size: 1.1rem; margin: 0;">Alquiler
                         mensual o quincenal, con todos los suministros incluidos y sin comisiones de agencia.</p>
                     <ul
-                        style="display: flex; flex-direction: column; gap: 0.5rem; margin: 0; padding: 0; list-style: none;">
-                        <li id="summer-li-1" style="font-size: 0.95rem;">🎓 Cursos intensivos de idiomas y universidad
+                        style="display: flex; flex-direction: column; gap: 0.6rem; margin: 0; padding: 0; list-style: none;">
+                        <li id="summer-li-1" style="font-size: 1rem;">🎓 Cursos intensivos de idiomas y universidad
                         </li>
-                        <li id="summer-li-2" style="font-size: 0.95rem;">💼 Prácticas y trabajo en Valencia</li>
-                        <li id="summer-li-3" style="font-size: 0.95rem;">🌍 Programas Erasmus de verano</li>
-                        <li id="summer-li-4" style="font-size: 0.95rem;">📍 A 5 min de la UPV - Universidad Politécnica de Valencia y UV-Universidad de Valencia
+                        <li id="summer-li-2" style="font-size: 1rem;">💼 Prácticas y trabajo en Valencia</li>
+                        <li id="summer-li-3" style="font-size: 1rem;">🌍 Programas Erasmus de verano</li>
+                        <li id="summer-li-4" style="font-size: 1rem;">📍 A 5 min de la UPV - Universidad Politécnica de Valencia y UV-Universidad de Valencia
                         </li>
                     </ul>
+                    <div style="margin-top: 0.5rem; padding-top: 1rem; border-top: 1.5px solid #ececec;">
+                        <span id="summer-min-stay" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 1rem; background: rgba(255, 102, 0, 0.08); border: 1px solid rgba(255, 102, 0, 0.2); border-radius: 50px; font-size: 0.85rem; font-weight: 700; color: #FF6600;">Estancia mínima: 3 semanas +</span>
+                    </div>
                 </div>
 
                 <!-- Alta demanda -->
                 <div
-                    style="background: linear-gradient(135deg, #FF6600 0%, #FF8833 100%); padding: 2.5rem 2.25rem; border-radius: var(--radius); color: white; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;">
+                    style="background: linear-gradient(135deg, #FF6600 0%, #FF8833 100%); padding: 3rem 2.5rem; border-radius: var(--radius); color: white; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.25rem;">
                     <h2 id="summer-demand-title"
-                        style="color: white; margin: 0; font-size: clamp(1.5rem, 2.5vw, 2.2rem);">⚡ Alta demanda en
+                        style="color: white; margin: 0; font-size: clamp(1.6rem, 2.8vw, 2.4rem);">⚡ Alta demanda en
                         meses de verano</h2>
                     <p id="summer-demand-para"
-                        style="font-size: 0.95rem; color: rgba(255,255,255,0.95); max-width: 480px; margin: 0; line-height: 1.65;">
+                        style="font-size: 1.05rem; color: rgba(255,255,255,0.95); max-width: 520px; margin: 0; line-height: 1.7;">
                         Valencia es uno de los destinos académicos más demandados en verano. Las habitaciones en Plaza
                         Xúquer suelen reservarse con antelación, especialmente para programas internacionales.</p>
-                    <span id="summer-demand-note" style="display: inline-block; background: white; color: #1a5fb4; font-weight: 700; font-size: 0.95rem; padding: 0.75rem 2rem; border-radius: 50px;">Se recomienda consultar disponibilidad con tiempo.</span>
-                    <a href="contacto.html?period=Verano26" class="btn" id="summer-demand-cta"
-                        style="background: white; color: var(--accent); font-weight: 700; padding: 0.9rem 2.5rem; font-size: 1rem; border-radius: 50px; margin-top: 0.5rem;">Consulta la disponibilidad de Julio y/o Agosto</a>
+                    <span id="summer-demand-note" style="display: inline-block; background: white; color: #1a5fb4; font-weight: 700; font-size: 1rem; padding: 0.85rem 2.25rem; border-radius: 50px;">Se recomienda consultar disponibilidad con tiempo.</span>
+                    <div style="display: flex; flex-direction: column; gap: 0.75rem; align-items: center; margin-top: 0.5rem;">
+                        <a href="contacto.html?period=Verano26" class="btn" id="summer-demand-cta"
+                            style="background: white; color: var(--accent); font-weight: 700; padding: 1rem 2.5rem; font-size: 1.05rem; border-radius: 50px;">Consulta la disponibilidad de Julio y/o Agosto</a>
+                        <a href="contacto.html?period=Verano26" class="btn" id="summer-custom-rates"
+                            style="background: transparent; color: white; font-weight: 600; padding: 0.85rem 2.25rem; font-size: 0.95rem; border-radius: 50px; border: 2px solid rgba(255,255,255,0.6); transition: all 0.2s;">Precio personalizado según duración de la estancia</a>
+                    </div>
                 </div>
 
             </div>
